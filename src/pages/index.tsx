@@ -24,7 +24,64 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="About"></div>
+      <div id="About">
+        <div>
+          {/* className="lg:flex lg:h-[60vh]" */}
+          <div>
+            {/* className="lg:w-2/5" */}
+            <Image
+              src="/img/about.jpg"
+              alt="About Image"
+              width={1920}
+              height={988}
+              className="h-full object-cover"
+            />
+          </div>
+          <div className="mx-6 mt-9">
+            <h1 className="uppercase text-4xl mb-14">About Us</h1>
+            <div className="flex flex-col items-end">
+              <div className="w-3/4 max-w-lg">
+                <p className="text-sm leading-normal tracking-wider">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                  nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                  aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                  dolor in hendrerit in vulputate velit esse molestie consequat,
+                  vel illum dolore eu feugiat nulla facilisis at vero eros et
+                </p>
+                <p className="mt-4 text-sm font-medium leading-normal tracking-wider">
+                  PT. ASYA KREASI DAHAYU
+                </p>
+              </div>
+              <div className="mt-14 w-3/4 max-w-lg">
+                <h2 className="mb-4 uppercase text-2xl tracking-wide">Visi</h2>
+                <p className="text-sm leading-normal tracking-wider">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                  nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                  aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                  dolor in hendrerit in vulputate velit esse molestie consequat,
+                  vel illum dolore eu feugiat nulla facilisis at vero eros et
+                </p>
+              </div>
+              <div className="mt-14 w-3/4 max-w-lg">
+                <h2 className="mb-4 uppercase text-2xl tracking-wide">Misi</h2>
+                <p className="text-sm leading-normal tracking-wider">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                  nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                  aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                  dolor in hendrerit in vulputate velit esse molestie consequat,
+                  vel illum dolore eu feugiat nulla facilisis at vero eros et
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div id="Service"></div>
 
