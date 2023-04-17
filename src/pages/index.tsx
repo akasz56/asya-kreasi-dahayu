@@ -24,7 +24,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="About" className="md:flex md:h-[60vh]">
+      <div
+        id="About"
+        className="border-b border-neutral-400 md:flex md:h-[60vh]"
+      >
         <div className="md:w-2/5">
           <Image
             src="/img/about.jpg"
@@ -79,11 +82,38 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="Service"></div>
+      <div
+        id="Service"
+        className="border-b border-neutral-400 mx-6 mt-12 lg:mt-16"
+      >
+        <h1 className="uppercase text-4xl mb-14">Our Service</h1>
+        <div className="mb-20 md:mb-24 lg:mb-32 grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[...Array(4)].map((x, i) => (
+            <div key={i} className="relative bg-black aspect-square">
+              <p className="absolute inset-x-4 bottom-4 uppercase tracking-wider text-xs sm:text-base lg:text-lg text-white">
+                Lorem Ipsum Dolor Sit Amet
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="mb-16 flex justify-end">
+          <div className="w-3/4 max-w-lg">
+            <p className="text-sm leading-normal tracking-wider">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+              tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+              consequat. Duis autem vel eum iriure dolor in hendrerit in
+              vulputate velit esse molestie consequat, vel illum dolore eu
+              feugiat nulla facilisis at vero eros et
+            </p>
+          </div>
+        </div>
+      </div>
 
-      <div id="Project"></div>
+      <div id="Project" className="border-b border-neutral-400 "></div>
 
-      <div id="Contact"></div>
+      <div id="Contact" className="border-b border-neutral-400 "></div>
     </>
   );
 }
