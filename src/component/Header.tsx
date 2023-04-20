@@ -14,7 +14,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-neutral-900">
+    <header className="fixed w-full top-0 z-40 bg-neutral-900">
       <nav
         className="mx-auto px-6 lg:px-4 max-w-screen-2xl h-24 flex items-center justify-between"
         aria-label="Global"
@@ -53,8 +53,16 @@ export default function Header() {
         </div>
       </nav>
       <Transition.Root as={Fragment} show={mobileMenuOpen}>
-        <Dialog as="div" className="relative z-10" onClose={setMobileMenuOpen}>
-          <div className="fixed inset-0" />
+        <Dialog as="div" className="relative z-50" onClose={setMobileMenuOpen}>
+          <Transition.Child
+            className="fixed inset-0 bg-black"
+            enter="transition-opacity ease-in-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-50"
+            leave="transition-opacity ease-in-out duration-300"
+            leaveFrom="opacity-50"
+            leaveTo="opacity-0"
+          ></Transition.Child>
           <div className="fixed inset-0 overflow-hidden">
             <div className="absolute inset-0 overflow-hidden">
               <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
