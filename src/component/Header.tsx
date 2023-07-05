@@ -126,16 +126,16 @@ export default function Header() {
       </div>
       <ul className="flex gap-28">
         <li className="text-asya-dark text-xl font-medium tracking-widest">
-          About
+          <Link href="/about">About</Link>
         </li>
         <li className="text-asya-dark text-xl font-medium tracking-widest">
-          Service
+          <Link href="/services">Service</Link>
         </li>
         <li className="text-asya-dark text-xl font-medium tracking-widest">
-          Works
+          <Link href="/works">Works</Link>
         </li>
         <li className="text-asya-dark text-xl font-medium tracking-widest">
-          Contact
+          <Link href="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

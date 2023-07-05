@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-      <div id="Hero" className="relative isolate h-screen">
+      <div id="hero" className="relative isolate h-screen">
         <Image
           src="/images/hero.jpg"
           alt="Hero Background"
@@ -29,7 +29,7 @@ export default function Home() {
           >
             Get started
           </a>
-          <a href="#About" className="absolute bottom-36">
+          <a href="#about" className="absolute bottom-36">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="About" className="px-48 py-20 flex bg-asya-dark">
+      <div id="about" className="px-48 py-20 flex bg-asya-dark">
         <h1 className="self-center w-2/5 uppercase text-asya-light text-5xl font-medium tracking-widest">
           About Us
         </h1>
@@ -62,7 +62,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div id="Service" className="px-48 py-20 bg-white">
+      <div id="service" className="px-48 py-20 bg-white">
         <div className="flex mb-40">
           <h1 className="self-center w-2/5 uppercase text-asya-dark text-5xl font-medium tracking-widest">
             Our Services
