@@ -12,8 +12,8 @@ module.exports = {
     extend: {
       colors: {
         asya: {
-          DEFAULT: "#B6CD65",
-          dark: "#4A5842",
+          light: "#D3EF70",
+          dark: "#598A3D",
         },
       },
     },
