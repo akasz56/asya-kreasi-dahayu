@@ -2,16 +2,19 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Header() {
   // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
-  // const pages = [
-  //   { title: "About", href: "/about" },
-  //   { title: "Services", href: "/services" },
-  //   { title: "Works", href: "/works" },
-  //   { title: "Contact", href: "/contact" },
-  // ];
+  const pages = [
+    { title: "About", href: "/about" },
+    { title: "Services", href: "/services" },
+    { title: "Works", href: "/works" },
+    { title: "Product", href: "/product" },
+    { title: "Contact", href: "/contact" },
+  ];
 
   return (
     // <header className="fixed w-full top-0 z-40 bg-asya">
@@ -125,18 +128,23 @@ export default function Header() {
         Asya Kreasi Dahayu
       </div>
       <ul className="flex gap-28">
-        <li className="text-asya-dark text-xl font-medium tracking-widest">
-          <Link href="/about">About</Link>
-        </li>
-        <li className="text-asya-dark text-xl font-medium tracking-widest">
-          <Link href="/services">Service</Link>
-        </li>
-        <li className="text-asya-dark text-xl font-medium tracking-widest">
-          <Link href="/works">Works</Link>
-        </li>
-        <li className="text-asya-dark text-xl font-medium tracking-widest">
-          <Link href="/contact">Contact</Link>
-        </li>
+        {pages.map((item, key) => (
+          <li
+            key={key}
+            className="text-asya-dark text-xl font-medium tracking-widest"
+          >
+            <Link
+              href={item.href}
+              className={
+                router.pathname === item.href
+                  ? "underline underline-offset-4"
+                  : ""
+              }
+            >
+              {item.title}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
