@@ -37,7 +37,10 @@ export default function About() {
       </div>
 
       <div className="px-48 bg-white">
-        <div id="visi" className="py-36 flex justify-between border-b">
+        <div
+          id="visi"
+          className="py-36 flex justify-between border-b-2 border-asya-dark"
+        >
           <div>
             <h1 className="uppercase text-asya-dark text-4xl font-medium tracking-widest">
               Visi Asya Kreasi Dahayu
@@ -54,7 +57,10 @@ export default function About() {
             perekonomian negara. 
           </p>
         </div>
-        <div id="misi" className="py-36 flex justify-between border-b">
+        <div
+          id="misi"
+          className="py-36 flex justify-between border-b-2 border-asya-dark"
+        >
           <div>
             <h1 className="uppercase text-asya-dark text-4xl font-medium tracking-widest">
               Misi Asya Kreasi Dahayu
@@ -84,7 +90,7 @@ export default function About() {
           <h1 className="self-center w-2/5 uppercase text-asya-dark text-5xl font-medium tracking-widest">
             Our Team
           </h1>
-          <p className="flex-1 text-asya-dark text-xl font-light tracking-widest leading-relaxed">
+          <p className="flex-1 text-asya-dark text-xl tracking-widest leading-relaxed">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exercita. Lorem
@@ -95,7 +101,20 @@ export default function About() {
         </div>
         <div className="grid grid-cols-4 gap-4">
           {[...Array(16)].map((item, key) => (
-            <div key={key} className="h-96 w-full bg-asya-dark"></div>
+            <a
+              href="#"
+              key={key}
+              className="aspect-square transition ease-out bg-blend-multiply bg-cover bg-[url('/images/our-team.jpg')] hover:bg-asya-light"
+            >
+              <div className="p-4 h-full flex flex-col justify-between opacity-0 hover:opacity-100">
+                <h6 className="uppercase text-2xl font-bold text-white leading-normal tracking-widest">
+                  John Doe
+                </h6>
+                <p className="text-lg text-white leading-normal tracking-widest">
+                  Jabatan Staff Lorem Ipsum
+                </p>
+              </div>
+            </a>
           ))}
         </div>
       </div>
