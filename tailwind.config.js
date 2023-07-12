@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "hero-landing": "url('/images/hero.jpg')",
+        "hero-about": "url('/images/about.jpg')",
+      },
       colors: {
         asya: {
           light: "#D3EF70",
