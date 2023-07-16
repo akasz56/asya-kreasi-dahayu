@@ -123,29 +123,37 @@ export default function Header() {
     //     </Dialog>
     //   </Transition.Root>
     // </header>
-    <nav className="px-24 py-6 flex bg-asya-light">
-      <div className="flex-1 uppercase text-asya-dark text-xl font-medium tracking-widest">
-        Asya Kreasi Dahayu
-      </div>
-      <ul className="flex gap-28">
-        {pages.map((item, key) => (
-          <li
-            key={key}
-            className="text-asya-dark text-xl font-medium tracking-widest"
+
+    <nav className="sticky top-0 w-full z-10 py-6 bg-asya-light">
+      <div className="container mx-auto flex justify-between">
+        <div className="mx-16">
+          <Link
+            href={"/"}
+            className="uppercase text-asya-dark text-xl font-medium tracking-widest"
           >
-            <Link
-              href={item.href}
-              className={
-                router.pathname === item.href
-                  ? "underline underline-offset-4"
-                  : ""
-              }
+            Asya Kreasi Dahayu
+          </Link>
+        </div>
+        <ul className="mx-16 flex gap-24">
+          {pages.map((item, key) => (
+            <li
+              key={key}
+              className="text-asya-dark text-xl font-medium tracking-widest"
             >
-              {item.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+              <Link
+                href={item.href}
+                className={
+                  router.pathname === item.href
+                    ? "underline underline-offset-4"
+                    : ""
+                }
+              >
+                {item.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 }

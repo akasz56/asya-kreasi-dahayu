@@ -8,7 +8,7 @@ export default function About() {
         id="hero"
         className="relative h-screen bg-hero-about bg-cover bg-center flex flex-col gap-8 justify-center items-center"
       >
-        <p className="text-asya-light text-2xl md:text-4xl lg:text-5xl text-center font-medium leading-normal tracking-widest">
+        <p className="text-asya-light text-center text-2xl md:text-4xl lg:text-5xl font-medium leading-normal md:leading-normal lg:leading-normal tracking-widest">
           Get To Know Asya Kreasi Dahayu, <br /> Lorem Ipsum Dolor Sit Amet
           Consect
         </p>
@@ -30,16 +30,13 @@ export default function About() {
         </a>
       </div>
 
-      <div className="py-36 bg-white">
-        <div className="container mx-auto grid grid-cols-8 gap-4">
-          <div className="col-span-5">
-            <h1 className="uppercase text-asya-dark text-4xl font-medium tracking-widest">
+      <div id="visi">
+        <div className="container mx-auto px-16 pt-36">
+          <div className="flex flex-wrap justify-between pb-36 border-b-2 border-asya-dark">
+            <h1 className="basis-5/12 uppercase text-asya-dark text-4xl font-medium tracking-widest">
               Visi Asya Kreasi Dahayu
             </h1>
-            <div className="mt-40 w-3/5 aspect-square bg-asya-light"></div>
-          </div>
-          <div className="col-span-3">
-            <p className="text-asya-dark text-xl tracking-widest leading-relaxed">
+            <p className="basis-5/12 text-asya-dark tracking-widest leading-relaxed">
               Visi utama kami adalah memberikan pelayanan paling unggul dan
               perhatian yang tinggi kepada para kreator dengan ekosistem kerja
               yang inovatif dan produktif. Hal ini dilandasi dari cita-cita kami
@@ -47,43 +44,48 @@ export default function About() {
               di Indonesia dalam hal pelayanan dan kinerja untuk klien dan mitra
               kerja agar dapat menjadi pilar perekonomian negara. 
             </p>
-          </div>
-        </div>
-
-        <div className="mt-36 container mx-auto grid grid-cols-8 gap-4">
-          <div className="col-span-5">
-            <h1 className="uppercase text-asya-dark text-4xl font-medium tracking-widest">
-              Misi Asya Kreasi Dahayu
-            </h1>
-            <div className="mt-40 w-3/5 aspect-square bg-asya-light"></div>
-          </div>
-          <div className="col-span-3">
-            <p className="mb-4 text-asya-dark text-xl tracking-widest leading-relaxed">
-              Dalam mewujudkan visi kami, kesejahteraan tim serta keseimbangan
-              ekosistem kerja adalah yang utama. Kami menciptakan lingkungan
-              kerja yang aman dan nyaman serta memberikan kesempatan berkembang
-              dengan membina dan meningkatkan semangat yang tinggi kepada tim
-              kami agar setiap level dari tim dapat bekerja sama untuk
-              mewujudkan pelayanan terbaik dan berkualitas sehingga tercipta
-              hubungan kerja sama yang kuat dengan pelanggan dan mitra kerja.
-            </p>
-            <p className="text-asya-dark text-xl tracking-widest leading-relaxed">
-              Selain itu, kami menerapkan manajemen proyek yang terintegrasi
-              dengan wilayah operasi di Indonesia agar dapat memberikan kepuasan
-              untuk pelanggan, anggota, dan perusahaan serta meningkatkan nilai
-              yang tinggi bagi investor atau pemegang saham.
-            </p>
+            <div className="basis-5/12 aspect-square bg-asya-light"></div>
           </div>
         </div>
       </div>
 
-      <div id="team" className="py-20 bg-white">
-        <div className="container md:mx-auto">
-          <div className="mb-40 grid grid-cols-8 gap-4">
+      <div id="misi">
+        <div className="container mx-auto px-16 pt-36">
+          <div className="flex flex-wrap justify-between pb-36 border-b-2 border-asya-dark">
+            <h1 className="basis-5/12 uppercase text-asya-dark text-4xl font-medium tracking-widest">
+              Misi Asya Kreasi Dahayu
+            </h1>
+            <div className="basis-5/12 text-asya-dark tracking-widest leading-relaxed">
+              <p className="mb-4">
+                Dalam mewujudkan visi kami, kesejahteraan tim serta keseimbangan
+                ekosistem kerja adalah yang utama. Kami menciptakan lingkungan
+                kerja yang aman dan nyaman serta memberikan kesempatan
+                berkembang dengan membina dan meningkatkan semangat yang tinggi
+                kepada tim kami agar setiap level dari tim dapat bekerja sama
+                untuk mewujudkan pelayanan terbaik dan berkualitas sehingga
+                tercipta hubungan kerja sama yang kuat dengan pelanggan dan
+                mitra kerja.
+              </p>
+              <p>
+                Selain itu, kami menerapkan manajemen proyek yang terintegrasi
+                dengan wilayah operasi di Indonesia agar dapat memberikan
+                kepuasan untuk pelanggan, anggota, dan perusahaan serta
+                meningkatkan nilai yang tinggi bagi investor atau pemegang
+                saham.
+              </p>
+            </div>
+            <div className="basis-5/12 aspect-square bg-asya-light"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="team">
+        <div className="container mx-auto px-16">
+          <div className="py-36 grid grid-cols-8 gap-4">
             <h1 className="col-span-3 self-center uppercase text-asya-dark text-5xl font-medium tracking-widest">
               Our Team
             </h1>
-            <p className="col-span-5 text-asya-dark sm:text-xl font-light tracking-widest leading-relaxed">
+            <p className="col-span-5 text-asya-dark font-light tracking-widest leading-relaxed">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
               erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
@@ -93,7 +95,7 @@ export default function About() {
               nostrud exercita.
             </p>
           </div>
-          <div className="mx-4 grid grid-cols-4 gap-4">
+          <div className="pb-36 grid grid-cols-4 gap-4">
             {[...Array(16)].map((item, key) => (
               <a
                 href="#"
