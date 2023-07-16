@@ -44,12 +44,10 @@ export default function Home() {
       </div>
 
       <div id="about" className="bg-asya-dark">
-        <div className="container mx-auto px-16 py-20">
-          <div className="grid grid-cols-8 gap-4">
-            <h1 className="col-span-3 self-center uppercase text-asya-light text-5xl font-medium tracking-widest">
-              About Us
-            </h1>
-            <p className="col-span-5 text-asya-light font-light tracking-widest leading-relaxed">
+        <div className="asya-row py-20">
+          <div className="asya-section-title">
+            <h1 className="text-asya-light">About Us</h1>
+            <p className="text-asya-light">
               Asya Kreasi Dahayu merupakan perusahaan yang bergerak di bidang
               industri kreatif dan pengembangan sumber daya manusia. Sejak
               September 2022, kami memberikan pelayanan untuk memudahkan anda
@@ -63,12 +61,10 @@ export default function Home() {
       </div>
 
       <div id="service">
-        <div className="container mx-auto px-16">
-          <div className="py-36 grid grid-cols-8 gap-4">
-            <h1 className="col-span-3 self-center uppercase text-asya-dark text-5xl font-medium tracking-widest">
-              Our Services
-            </h1>
-            <p className="col-span-5 text-asya-dark font-light tracking-widest leading-relaxed">
+        <div className="asya-row">
+          <div className="py-36 asya-section-title">
+            <h1 className="text-asya-dark">Our Services</h1>
+            <p className="text-asya-dark">
               Sejak berdiri, Asya Kreasi Dahayu telah membantu banyak kreator di
               bidang industri kreatif dari seluruh Indonesia. Fokus kami adalah
               menyediakan solusi dengan menjadi media penghubung untuk

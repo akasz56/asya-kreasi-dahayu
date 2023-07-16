@@ -31,7 +31,7 @@ export default function About() {
       </div>
 
       <div id="visi">
-        <div className="container mx-auto px-16 pt-36">
+        <div className="asya-row pt-36">
           <div className="flex flex-wrap justify-between pb-36 border-b-2 border-asya-dark">
             <h1 className="basis-5/12 uppercase text-asya-dark text-4xl font-medium tracking-widest">
               Visi Asya Kreasi Dahayu
@@ -50,7 +50,7 @@ export default function About() {
       </div>
 
       <div id="misi">
-        <div className="container mx-auto px-16 pt-36">
+        <div className="asya-row pt-36">
           <div className="flex flex-wrap justify-between pb-36 border-b-2 border-asya-dark">
             <h1 className="basis-5/12 uppercase text-asya-dark text-4xl font-medium tracking-widest">
               Misi Asya Kreasi Dahayu
@@ -80,12 +80,10 @@ export default function About() {
       </div>
 
       <div id="team">
-        <div className="container mx-auto px-16">
-          <div className="py-36 grid grid-cols-8 gap-4">
-            <h1 className="col-span-3 self-center uppercase text-asya-dark text-5xl font-medium tracking-widest">
-              Our Team
-            </h1>
-            <p className="col-span-5 text-asya-dark font-light tracking-widest leading-relaxed">
+        <div className="asya-row">
+          <div className="py-36 asya-section-title">
+            <h1 className="text-asya-dark">Our Team</h1>
+            <p className="text-asya-dark">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
               erat volutpat. Ut wisi enim ad minim veniam, quis nostrud

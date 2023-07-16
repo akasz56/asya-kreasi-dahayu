@@ -1,7 +1,6 @@
 import Display from "@/component/Display";
 import React from "react";
 
-// TODO: bg > rows > cols > content
 export default function Works() {
   const works = [
     "PROJECT A, 2019",
@@ -21,11 +20,11 @@ export default function Works() {
         Works Asya Kreasi Dahayu, Lorem <br /> Ipsum Dolor Sit Amet Consect
       </h1>
 
-      <div id="display" className="container mx-auto px-16">
+      <div id="display" className="asya-row">
         <Display contents={works} />
       </div>
 
-      <div id="clients" className="container mx-auto my-32 px-16 pt-16">
+      <div id="clients" className="asya-row my-32 pt-16">
         <h1 className="uppercase text-asya-dark text-5xl font-medium leading-normal tracking-widest">
           Clients
         </h1>

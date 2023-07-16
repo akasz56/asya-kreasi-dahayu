@@ -133,8 +133,19 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Layouts */
+.asya-row {
+  @apply container mx-auto px-16;
+}
+
+.asya-section-title {
+  @apply grid grid-cols-8 gap-4;
+}
+
+.asya-section-title > h1 {
+  @apply col-span-3 self-center uppercase text-5xl font-medium tracking-widest;
+}
+
+.asya-section-title > p {
+  @apply col-span-5 self-center font-light tracking-widest leading-relaxed;
 }

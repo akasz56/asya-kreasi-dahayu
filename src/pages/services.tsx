@@ -20,7 +20,7 @@ export default function Services() {
         id="hero"
         className="h-screen bg-asya-light flex flex-col justify-evenly"
       >
-        <div className="container mx-auto px-16">
+        <div className="asya-row">
           <div className="grid grid-cols-2 items-center">
             <h1 className="uppercase text-asya-dark text-5xl font-medium tracking-widest">
               Our Services
@@ -33,7 +33,7 @@ export default function Services() {
             </p>
           </div>
         </div>
-        <div className="container mx-auto px-16">
+        <div className="asya-row">
           <div className="grid grid-cols-4 items-center">
             {services.map((item, key) => (
               <div key={key}>
@@ -49,12 +49,10 @@ export default function Services() {
 
       {services.map((item, key) => (
         <div key={key} id={"section" + key} className="my-32">
-          <div className="container mx-auto px-16">
-            <div className="mb-24 grid grid-cols-8 gap-4">
-              <h1 className="col-span-3 self-center uppercase text-asya-dark text-5xl font-medium tracking-widest">
-                {item}
-              </h1>
-              <p className="col-span-5 self-center text-asya-dark font-light tracking-widest leading-relaxed">
+          <div className="asya-row">
+            <div className="mb-24 asya-section-title">
+              <h1 className="text-asya-dark">{item}</h1>
+              <p className="text-asya-dark">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
                 diam nonummy nibh euismod tincidunt ut laoreet dolore magna
                 aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
