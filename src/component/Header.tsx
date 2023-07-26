@@ -1,12 +1,37 @@
-import { Fragment, useState } from "react";
+import { useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { motion, useScroll } from "framer-motion";
 
 export default function Header() {
-  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const router = useRouter();
+
+  const { scrollY } = useScroll();
+  const [show, setShow] = useState(true);
+
+  useEffect(() => {
+    let previous = scrollY.get();
+
+    const handleChangeScroll = (latest: number) => {
+      if (latest > previous) {
+        setShow(false);
+        previous = latest;
+      } else if (latest < previous) {
+        setShow(true);
+        previous = latest;
+      }
+    };
+
+    const unsubScroll = scrollY.on("change", handleChangeScroll);
+
+    return () => {
+      unsubScroll();
+    };
+  }, [scrollY]);
+
+  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const pages = [
     { title: "About", href: "/about" },
@@ -15,6 +40,11 @@ export default function Header() {
     { title: "Product", href: "/product" },
     { title: "Contact", href: "/contact" },
   ];
+
+  const variants = {
+    visible: { y: 0 },
+    hidden: { y: "-100%" },
+  };
 
   return (
     // <header className="fixed w-full top-0 z-40 bg-asya">
@@ -124,7 +154,13 @@ export default function Header() {
     //   </Transition.Root>
     // </header>
 
-    <nav className="sticky top-0 w-full z-10 py-6 bg-asya-light">
+    <motion.nav
+      initial={"hidden"}
+      animate={show ? "visible" : "hidden"}
+      variants={variants}
+      transition={{ ease: "easeOut" }}
+      className="sticky top-0 w-full z-10 py-6 bg-asya-light"
+    >
       <div className="container mx-auto flex justify-between">
         <div className="mx-16">
           <Link
@@ -154,6 +190,6 @@ export default function Header() {
           ))}
         </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

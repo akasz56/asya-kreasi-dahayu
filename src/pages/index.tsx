@@ -1,5 +1,6 @@
 import Display from "@/component/Display";
-import Image from "next/image";
+import ScrollArrow from "@/component/ScrollArrow";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const services = [
@@ -9,39 +10,44 @@ export default function Home() {
     "Garment & Fashion",
   ];
 
+  const section = {
+    visible: { transition: { staggerChildren: 0.5 } },
+  };
+
+  const item = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+    hidden: { opacity: 0, y: 25 },
+  };
+
   return (
     <>
-      <div
+      <motion.div
         id="hero"
+        initial="hidden"
+        variants={section}
+        whileInView="visible"
         className="relative h-screen bg-hero-landing bg-cover bg-center flex flex-col gap-8 justify-center items-center"
       >
-        <p className="text-asya-light text-center text-2xl md:text-4xl lg:text-5xl font-medium leading-normal md:leading-normal lg:leading-normal tracking-widest">
+        <motion.p
+          variants={item}
+          className="text-asya-light text-center text-2xl md:text-4xl lg:text-5xl font-medium leading-normal md:leading-normal lg:leading-normal tracking-widest"
+        >
           Menghidupkan ambisi dalam berkreasi. <br /> Bersama Asya nyalakan
           kembali asa.
-        </p>
-        <a
+        </motion.p>
+        <motion.a
           href="#"
+          variants={item}
           className="px-8 py-3 rounded-md bg-asya-light shadow-sm uppercase text-asya-dark text-sm font-medium tracking-widest transition-opacity hover:opacity-50"
         >
           Get started
-        </a>
-        <a href="#about" className="absolute bottom-36">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-12 h-12 text-asya-light"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
-            />
-          </svg>
-        </a>
-      </div>
+        </motion.a>
+        <ScrollArrow scrollTo="#about" />
+      </motion.div>
 
       <div id="about" className="bg-asya-dark">
         <div className="asya-row py-20">

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ScrollArrow from "@/component/ScrollArrow";
 import React from "react";
 
 export default function About() {
@@ -12,22 +12,7 @@ export default function About() {
           Get To Know Asya Kreasi Dahayu, <br /> Lorem Ipsum Dolor Sit Amet
           Consect
         </p>
-        <a href="#visi" className="absolute bottom-36">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-12 h-12 text-asya-light"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
-            />
-          </svg>
-        </a>
+        <ScrollArrow scrollTo="#visi" />
       </div>
 
       <div id="visi">
