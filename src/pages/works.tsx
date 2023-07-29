@@ -1,4 +1,5 @@
 import Display from "@/component/Display";
+import { motion } from "framer-motion";
 import React from "react";
 
 export default function Works() {
@@ -13,12 +14,14 @@ export default function Works() {
 
   return (
     <>
-      <h1
+      <motion.h1
         id="title"
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
         className="py-36 text-asya-dark text-5xl text-center font-medium leading-normal tracking-widest"
       >
         Works Asya Kreasi Dahayu, Lorem <br /> Ipsum Dolor Sit Amet Consect
-      </h1>
+      </motion.h1>
 
       <div id="display" className="asya-row">
         <Display contents={works} />

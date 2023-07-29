@@ -22,7 +22,7 @@ export default function Product() {
         initial="hidden"
         variants={section}
         whileInView="visible"
-        className="relative py-60 bg-hero-landing bg-cover bg-center flex flex-col gap-8 justify-center items-center"
+        className="relative py-40 bg-hero-landing bg-cover bg-center flex flex-col gap-8 justify-center items-center"
       >
         <motion.p
           variants={item}
@@ -33,7 +33,7 @@ export default function Product() {
       </motion.div>
 
       <div id="catalog">
-        <div className="grid grid-cols-10 py-[8vw]">
+        <div className="grid grid-cols-10 py-[5vw]">
           <div className="col-span-2 flex flex-col items-center">
             <Sidebar />
           </div>
@@ -65,7 +65,7 @@ function Sidebar() {
   };
 
   return (
-    <>
+    <div>
       <ul className="mb-8">
         <li className="text-asya-dark font-bold text-xl tracking-widest leading-relaxed mb-8">
           {allCollection.title}
@@ -96,7 +96,7 @@ function Sidebar() {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 

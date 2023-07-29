@@ -1,20 +1,39 @@
 import ScrollArrow from "@/component/ScrollArrow";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import React from "react";
 
 export default function About() {
+  const section = {
+    visible: { transition: { staggerChildren: 0.5 } },
+  };
+
+  const item = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+    hidden: { opacity: 0, y: 25 },
+  };
+
   return (
     <>
-      <div
+      <motion.div
         id="hero"
+        initial="hidden"
+        variants={section}
+        whileInView="visible"
         className="relative h-screen bg-hero-about bg-cover bg-center flex flex-col gap-8 justify-center items-center"
       >
-        <p className="text-asya-light text-center text-2xl md:text-4xl lg:text-5xl font-medium leading-normal md:leading-normal lg:leading-normal tracking-widest">
+        <motion.p
+          variants={item}
+          className="text-asya-light text-center text-2xl md:text-4xl lg:text-5xl font-medium leading-normal md:leading-normal lg:leading-normal tracking-widest"
+        >
           Get To Know Asya Kreasi Dahayu, <br /> Lorem Ipsum Dolor Sit Amet
           Consect
-        </p>
+        </motion.p>
         <ScrollArrow scrollTo="#visi" />
-      </div>
+      </motion.div>
 
       <div id="visi">
         <div className="asya-row pt-36">

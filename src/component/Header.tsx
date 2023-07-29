@@ -155,7 +155,7 @@ export default function Header() {
     // </header>
 
     <motion.nav
-      initial={"hidden"}
+      initial="hidden"
       animate={show ? "visible" : "hidden"}
       variants={variants}
       transition={{ ease: "easeOut" }}
