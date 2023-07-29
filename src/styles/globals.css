@@ -133,6 +133,11 @@ a {
   text-decoration: none;
 }
 
+.asya-member-photo {
+  background-color: white;
+  background-blend-mode: multiply, luminosity;
+}
+
 /* Layouts */
 .asya-row {
   @apply grid grid-cols-12 mx-4 gap-5 xl:gap-4;

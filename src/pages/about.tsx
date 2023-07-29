@@ -1,4 +1,5 @@
 import ScrollArrow from "@/component/ScrollArrow";
+import Image from "next/image";
 import React from "react";
 
 export default function About() {
@@ -83,7 +84,8 @@ export default function About() {
               <a
                 href="#"
                 key={key}
-                className="aspect-square transition ease-out bg-blend-multiply bg-cover bg-[url('/images/our-team.jpg')] hover:bg-asya-light"
+                className="aspect-square bg-cover asya-member-photo bg-[url('/images/our-team.jpg')]
+                hover:bg-[linear-gradient(0deg,rgb(211_239_112),rgb(211_239_112)),url('/images/our-team.jpg')]"
               >
                 <div className="p-4 h-full flex flex-col justify-between opacity-0 hover:opacity-100">
                   <h6 className="uppercase text-2xl font-bold text-white leading-normal tracking-widest">
