@@ -1,13 +1,17 @@
 import React from "react";
 
 interface DisplaysProps {
-  className?: string;
   contents: string[];
+  className?: string;
+  gap?: string;
 }
 
-export default function Display({ className, contents }: DisplaysProps) {
+export default function Display({ contents, className, gap }: DisplaysProps) {
+  className = className ?? "";
+  gap = gap ? "gap-" + gap : "gap-12";
+
   return (
-    <div className={className + " grid grid-cols-2 gap-16"}>
+    <div className={className + " grid grid-cols-2 " + gap}>
       {contents.map((item, key) => (
         <div key={key} className="flex flex-col justify-between gap-8">
           <div className="rounded-3xl aspect-square bg-asya-light"></div>

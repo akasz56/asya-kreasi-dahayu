@@ -34,7 +34,7 @@ export default function Home() {
       >
         <motion.p
           variants={item}
-          className="text-asya-light text-center text-2xl md:text-4xl lg:text-5xl font-medium leading-normal md:leading-normal lg:leading-normal tracking-widest"
+          className="text-asya-light text-center text-4xl 2xl:text-5xl font-medium leading-normal 2xl:leading-normal tracking-widest"
         >
           Menghidupkan ambisi dalam berkreasi. <br /> Bersama Asya nyalakan
           kembali asa.
@@ -81,7 +81,7 @@ export default function Home() {
               untuk berkembang dan ruang untuk saling berkolaborasi.
             </p>
           </div>
-          <Display contents={services} className="pb-28" />
+          <Display contents={services} className="pb-28" gap="16" />
         </div>
       </div>
     </>

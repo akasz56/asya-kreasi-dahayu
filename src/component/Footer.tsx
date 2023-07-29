@@ -2,19 +2,12 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="py-20 bg-asya-dark">
-      <div className="container mx-auto">
-        <div className="mx-16 flex justify-between">
-          <div>
-            <h2 className="uppercase text-asya-light text-4xl font-medium tracking-widest">
-              Asya Kreasi Dahayu
-            </h2>
-            <p className="mt-16 text-asya-light text-lg tracking-widest">
-              Jl. Ring Road Bubulak No. A-4, Kelurahan Bubulak, <br /> Kec.
-              Bogor Barat, Kota Bogor, Provinsi Jawa Barat, 16115 <br /> +628
-              1234 5678
-            </p>
-          </div>
+    <footer className="bg-asya-dark">
+      <div className="asya-row py-20">
+        <div className="flex justify-between items-center">
+          <h2 className="uppercase text-asya-light text-4xl font-medium tracking-widest">
+            Asya Kreasi Dahayu
+          </h2>
           <div>
             <p className="text-asya-light text-xl font-medium tracking-widest">
               We’d love to talk to you about our approach <br /> and how we

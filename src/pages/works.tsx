@@ -30,14 +30,16 @@ export default function Works() {
         </h1>
         <ul className="mt-48 ml-48">
           {[...Array(12)].map((item, key) => (
-            <li key={key} className="flex gap-16 mb-12">
-              <span className="text-asya-dark text-xl tracking-widest leading-relaxed">
-                Nama Klien Lorem Ipsum Dolor
-              </span>
-              <hr className="flex-1 self-center border-asya-dark" />
-              <span className="text-asya-dark text-xl tracking-widest leading-relaxed">
-                Jenis Bidang, 2019
-              </span>
+            <li key={key} className="mb-12">
+              <a href="#" className="flex gap-16">
+                <span className="text-asya-dark text-xl tracking-widest leading-relaxed">
+                  Nama Klien Lorem Ipsum Dolor
+                </span>
+                <hr className="flex-1 self-center border-asya-dark" />
+                <span className="text-asya-dark text-xl tracking-widest leading-relaxed">
+                  Jenis Bidang, 2019
+                </span>
+              </a>
             </li>
           ))}
         </ul>

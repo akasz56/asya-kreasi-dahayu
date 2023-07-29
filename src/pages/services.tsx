@@ -34,7 +34,7 @@ export default function Services() {
           </div>
         </div>
         <div className="asya-row">
-          <div className="grid grid-cols-4 items-center">
+          <div className="flex justify-between">
             {services.map((item, key) => (
               <div key={key}>
                 <div className="mx-auto mb-8 h-14 w-14 bg-asya-dark rounded-full"></div>
