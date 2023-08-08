@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import React from "react";
 
-export default function Product() {
+export default function Index() {
   const section = {
     visible: { transition: { staggerChildren: 0.5 } },
   };
@@ -105,7 +106,7 @@ function Catalog() {
     <ul className="flex flex-wrap justify-around">
       {[...Array(12)].map((item, key) => (
         <motion.li key={key} className="m-8" whileHover={{ scale: 1.05 }}>
-          <a href="#">
+          <Link href={"/product/product-one"}>
             <div className="w-96 h-96 bg-asya-light"></div>
             <div className="block mt-6">
               <p className="text-asya-dark text-center text-xl font-bold tracking-widest leading-relaxed">
@@ -115,7 +116,7 @@ function Catalog() {
                 Rp200.000
               </p>
             </div>
-          </a>
+          </Link>
         </motion.li>
       ))}
     </ul>
