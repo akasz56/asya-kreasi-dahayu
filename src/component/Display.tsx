@@ -1,9 +1,15 @@
+import Link from "next/link";
 import React from "react";
 
 interface DisplaysProps {
-  contents: string[];
+  contents: DisplayContentItem[];
   className?: string;
   gap?: string;
+}
+
+export interface DisplayContentItem {
+  title: string;
+  href: string;
 }
 
 export default function Display({ contents, className, gap }: DisplaysProps) {
@@ -17,14 +23,14 @@ export default function Display({ contents, className, gap }: DisplaysProps) {
           <div className="rounded-3xl aspect-square bg-asya-light"></div>
           <div className="flex gap-8">
             <h3 className="flex-1 uppercase text-asya-dark text-3xl font-medium tracking-widest">
-              {item}
+              {item.title}
             </h3>
-            <a
-              href="#"
+            <Link
+              href={item.href}
               className="self-center rounded-md bg-asya-light px-8 py-2 uppercase text-sm tracking-widest text-asya-dark shadow-sm hover:opacity-50"
             >
               Read More
-            </a>
+            </Link>
           </div>
           <p className=" text-asya-dark text-lg tracking-widest">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam

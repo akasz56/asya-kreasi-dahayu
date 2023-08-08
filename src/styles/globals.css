@@ -139,11 +139,11 @@ a {
 }
 
 /* Layouts */
-.asya-row {
+.asya-container {
   @apply grid grid-cols-12 mx-4 gap-5 xl:gap-4;
 }
 
-.asya-row > * {
+.asya-container > * {
   @apply col-start-2 col-span-10;
 }
 

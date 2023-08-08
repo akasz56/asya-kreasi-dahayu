@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="bg-asya-dark">
-      <div className="asya-row py-20">
+      <div className="asya-container py-20">
         <div className="flex justify-between items-center">
           <h2 className="uppercase text-asya-light text-4xl font-medium tracking-widest">
             Asya Kreasi Dahayu

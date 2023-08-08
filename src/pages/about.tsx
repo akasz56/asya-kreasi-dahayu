@@ -36,7 +36,7 @@ export default function About() {
       </motion.div>
 
       <div id="visi">
-        <div className="asya-row pt-36">
+        <div className="asya-container pt-36">
           <div className="flex flex-wrap justify-between pb-36 border-b-2 border-asya-dark">
             <h1 className="basis-5/12 uppercase text-asya-dark text-4xl font-medium tracking-widest">
               Visi Asya Kreasi Dahayu
@@ -47,7 +47,7 @@ export default function About() {
               yang inovatif dan produktif. Hal ini dilandasi dari cita-cita kami
               untuk menjadi lembaga industri kreatif yang terdepan dan terbesar
               di Indonesia dalam hal pelayanan dan kinerja untuk klien dan mitra
-              kerja agar dapat menjadi pilar perekonomian negara. 
+              kerja agar dapat menjadi pilar perekonomian negara.
             </p>
             <div className="basis-5/12 aspect-square bg-asya-light"></div>
           </div>
@@ -55,7 +55,7 @@ export default function About() {
       </div>
 
       <div id="misi">
-        <div className="asya-row pt-36">
+        <div className="asya-container pt-36">
           <div className="flex flex-wrap justify-between pb-36 border-b-2 border-asya-dark">
             <h1 className="basis-5/12 uppercase text-asya-dark text-4xl font-medium tracking-widest">
               Misi Asya Kreasi Dahayu
@@ -85,7 +85,7 @@ export default function About() {
       </div>
 
       <div id="team">
-        <div className="asya-row">
+        <div className="asya-container">
           <div className="py-36 asya-section-title">
             <h1 className="text-asya-dark">Our Team</h1>
             <p className="text-asya-dark">

@@ -1,15 +1,16 @@
-import Display from "@/component/Display";
+import Display, { DisplayContentItem } from "@/component/Display";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import React from "react";
 
-export default function Works() {
-  const works = [
-    "PROJECT A, 2019",
-    "PROJECT ABCDEF, 2022",
-    "PROJECT A, 2019",
-    "PROJECT ABCDEF, 2022",
-    "PROJECT A, 2019",
-    "PROJECT ABCDEF, 2022",
+export default function Index() {
+  const works: DisplayContentItem[] = [
+    { title: "PROJECT A, 2019", href: "/works/project-one" },
+    { title: "PROJECT ABCDEF, 2022", href: "/works/project-one" },
+    { title: "PROJECT A, 2019", href: "/works/project-one" },
+    { title: "PROJECT ABCDEF, 2022", href: "/works/project-one" },
+    { title: "PROJECT A, 2019", href: "/works/project-one" },
+    { title: "PROJECT ABCDEF, 2022", href: "/works/project-one" },
   ];
 
   return (
@@ -23,18 +24,18 @@ export default function Works() {
         Works Asya Kreasi Dahayu, Lorem <br /> Ipsum Dolor Sit Amet Consect
       </motion.h1>
 
-      <div id="display" className="asya-row">
+      <div id="display" className="asya-container">
         <Display contents={works} />
       </div>
 
-      <div id="clients" className="asya-row my-32 pt-16">
+      <div id="clients" className="asya-container my-32 pt-16">
         <h1 className="uppercase text-asya-dark text-5xl font-medium leading-normal tracking-widest">
           Clients
         </h1>
         <ul className="mt-48 ml-48">
           {[...Array(12)].map((item, key) => (
             <li key={key} className="mb-12">
-              <a href="#" className="flex gap-16">
+              <Link href={"/works/project-one"} className="flex gap-16">
                 <span className="text-asya-dark text-xl tracking-widest leading-relaxed">
                   Nama Klien Lorem Ipsum Dolor
                 </span>
@@ -42,7 +43,7 @@ export default function Works() {
                 <span className="text-asya-dark text-xl tracking-widest leading-relaxed">
                   Jenis Bidang, 2019
                 </span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

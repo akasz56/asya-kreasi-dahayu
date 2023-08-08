@@ -1,13 +1,13 @@
-import Display from "@/component/Display";
+import Display, { DisplayContentItem } from "@/component/Display";
 import ScrollArrow from "@/component/ScrollArrow";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  const services = [
-    "Mice & EO",
-    "Multimedia",
-    "Konsultan Kreatif",
-    "Garment & Fashion",
+  const services: DisplayContentItem[] = [
+    { title: "Mice & EO", href: "#" },
+    { title: "Multimedia", href: "#" },
+    { title: "Konsultan Kreatif", href: "#" },
+    { title: "Garment & Fashion", href: "#" },
   ];
 
   const section = {
@@ -50,7 +50,7 @@ export default function Home() {
       </motion.div>
 
       <div id="about" className="bg-asya-dark">
-        <div className="asya-row py-20">
+        <div className="asya-container py-20">
           <div className="asya-section-title">
             <h1 className="text-asya-light">About Us</h1>
             <p className="text-asya-light">
@@ -67,7 +67,7 @@ export default function Home() {
       </div>
 
       <div id="service">
-        <div className="asya-row">
+        <div className="asya-container">
           <div className="py-36 asya-section-title">
             <h1 className="text-asya-dark">Our Services</h1>
             <p className="text-asya-dark">

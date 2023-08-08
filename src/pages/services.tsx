@@ -31,7 +31,7 @@ export default function Services() {
         className="h-screen bg-asya-light flex flex-col justify-evenly"
       >
         <motion.div
-          className="asya-row"
+          className="asya-container"
           initial="hidden"
           animate="visible"
           variants={{ visible: { transition: { staggerChildren: 0.5 } } }}
@@ -55,7 +55,7 @@ export default function Services() {
           </div>
         </motion.div>
         <motion.div
-          className="asya-row"
+          className="asya-container"
           initial="hidden"
           animate="visible"
           variants={{ visible: { transition: { staggerChildren: 0.25 } } }}
@@ -79,7 +79,7 @@ export default function Services() {
 
       {services.map((item, key) => (
         <div key={key} id={"section" + key} className="my-32">
-          <div className="asya-row">
+          <div className="asya-container">
             <div className="mb-24 asya-section-title">
               <h1 className="text-asya-dark">{item}</h1>
               <p className="text-asya-dark">

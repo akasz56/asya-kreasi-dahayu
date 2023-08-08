@@ -179,7 +179,7 @@ export default function Header() {
               <Link
                 href={item.href}
                 className={
-                  router.pathname === item.href
+                  router.pathname.startsWith(item.href)
                     ? "underline underline-offset-4"
                     : ""
                 }
