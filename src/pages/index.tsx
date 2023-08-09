@@ -1,6 +1,6 @@
-import Display, { DisplayContentItem } from "@/component/Display";
+import { DisplayContentItem } from "@/component/Display";
 import ScrollArrow from "@/component/ScrollArrow";
-import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   const services: DisplayContentItem[] = [
@@ -10,67 +10,49 @@ export default function Home() {
     { title: "Garment & Fashion", href: "#" },
   ];
 
-  const section = {
-    visible: { transition: { staggerChildren: 0.5 } },
-  };
-
-  const item = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-    hidden: { opacity: 0, y: 25 },
-  };
-
   return (
     <>
-      <motion.div
+      <section
         id="hero"
-        initial="hidden"
-        variants={section}
-        whileInView="visible"
-        className="relative h-screen bg-hero-landing bg-cover bg-center flex flex-col gap-8 justify-center items-center"
+        className="relative h-screen bg-hero-landing bg-cover bg-center flex flex-col items-center justify-center gap-6"
       >
-        <motion.p
-          variants={item}
-          className="text-asya-light text-center text-4xl 2xl:text-5xl font-medium leading-normal 2xl:leading-normal tracking-widest"
-        >
+        <p className="text-center text-asya-light text-5xl font-medium tracking-widest leading-normal">
           Menghidupkan ambisi dalam berkreasi. <br /> Bersama Asya nyalakan
           kembali asa.
-        </motion.p>
-        <motion.a
+        </p>
+        <a
           href="#"
-          variants={item}
-          className="px-8 py-3 rounded-md bg-asya-light shadow-sm uppercase text-asya-dark text-sm font-medium tracking-widest transition-opacity hover:opacity-50"
+          className="px-6 py-4 rounded-md bg-asya-light uppercase text-asya-dark font-medium tracking-widest"
         >
           Get started
-        </motion.a>
-        <ScrollArrow scrollTo="#about" />
-      </motion.div>
+        </a>
+        <ScrollArrow scrollTo="#about" className="absolute bottom-0 mb-36" />
+      </section>
 
-      <div id="about" className="bg-asya-dark">
-        <div className="asya-container py-20">
-          <div className="asya-section-title">
-            <h1 className="text-asya-light">About Us</h1>
-            <p className="text-asya-light">
-              Asya Kreasi Dahayu merupakan perusahaan yang bergerak di bidang
-              industri kreatif dan pengembangan sumber daya manusia. Sejak
-              September 2022, kami memberikan pelayanan untuk memudahkan anda
-              berkreasi di dunia MICE, desain, hingga multimedia. Dengan
-              didukung oleh teknologi mutakhir dan orang-orang yang handal dan
-              berpengalaman, kami hadir memberikan asa dan ruang tumbuh yang
-              nyata untuk para kreator.
-            </p>
-          </div>
+      <section id="about" className="bg-asya-dark">
+        <div className="container flex items-center mx-auto py-20">
+          <h2 className="flex-1 uppercase text-asya-light text-3xl font-medium tracking-widest">
+            About Us
+          </h2>
+          <p className="w-[70%] text-asya-light font-light tracking-widest leading-relaxed">
+            Asya Kreasi Dahayu merupakan perusahaan yang bergerak di bidang
+            industri kreatif dan pengembangan sumber daya manusia. Sejak
+            September 2022, kami memberikan pelayanan untuk memudahkan anda
+            berkreasi di dunia MICE, desain, hingga multimedia. Dengan didukung
+            oleh teknologi mutakhir dan orang-orang yang handal dan
+            berpengalaman, kami hadir memberikan asa dan ruang tumbuh yang nyata
+            untuk para kreator.
+          </p>
         </div>
-      </div>
+      </section>
 
-      <div id="service">
-        <div className="asya-container">
-          <div className="py-36 asya-section-title">
-            <h1 className="text-asya-dark">Our Services</h1>
-            <p className="text-asya-dark">
+      <section id="service">
+        <div className="container mx-auto">
+          <div className="flex items-center py-20">
+            <h2 className="flex-1 uppercase text-asya-dark text-3xl font-medium tracking-widest">
+              Our Services
+            </h2>
+            <p className="w-[70%] text-asya-dark font-light tracking-widest leading-relaxed">
               Sejak berdiri, Asya Kreasi Dahayu telah membantu banyak kreator di
               bidang industri kreatif dari seluruh Indonesia. Fokus kami adalah
               menyediakan solusi dengan menjadi media penghubung untuk
@@ -81,9 +63,44 @@ export default function Home() {
               untuk berkembang dan ruang untuk saling berkolaborasi.
             </p>
           </div>
-          <Display contents={services} className="pb-28" gap="16" />
+          <div className="max-w-screen-xl mx-auto flex flex-wrap justify-between">
+            {services.map((item, key) => (
+              <Link key={key} href={"#"} className="w-1/2 px-8 mb-16">
+                <div className="rounded-3xl aspect-square bg-asya-light"></div>
+                <h2 className="mt-8 uppercase text-asya-dark text-3xl font-medium tracking-widest">
+                  {item.title}
+                </h2>
+                <p className="mt-4 text-asya-dark text-sm tracking-widest">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                  nostrud exercita.
+                </p>
+              </Link>
+              // <div  className="flex flex-col justify-between gap-8">
+              //   <div className="rounded-3xl aspect-square bg-asya-light"></div>
+              //   <div className="flex gap-8">
+              //     <h2 className="flex-1 uppercase text-asya-dark text-3xl font-medium tracking-widest">
+              //       {item.title}
+              //     </h2>
+              //     {/* <Link
+              //       href={item.href}
+              //       className="self-center rounded-md bg-asya-light px-8 py-2 uppercase text-sm tracking-widest text-asya-dark shadow-sm hover:opacity-50"
+              //     >
+              //       Read More
+              //     </Link> */}
+              //   </div>
+              //   <p className=" text-asya-dark text-sm tracking-widest">
+              //     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+              //     diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+              //     aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+              //     nostrud exercita.
+              //   </p>
+              // </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
