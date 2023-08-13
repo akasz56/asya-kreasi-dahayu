@@ -48,20 +48,22 @@ export default function Header() {
       animate={show ? "visible" : "hidden"}
       variants={variants}
       transition={{ ease: "easeOut" }}
-      className="sticky top-0 w-full z-10 bg-asya-light"
+      className="sticky top-0 w-full z-10 bg-asya-dark"
     >
-      <nav className="container flex mx-auto py-6">
-        <Link
-          href={"/"}
-          className="flex-1 uppercase text-asya-dark text-lg font-medium tracking-widest"
-        >
-          Asya Kreasi Dahayu
-        </Link>
-        <ul className="grid grid-cols-5 w-1/2">
+      <nav className="flex py-6">
+        <div className="flex-1 pl-[5vw]">
+          <Link
+            href={"/"}
+            className="uppercase text-white text-lg font-medium tracking-widest"
+          >
+            Asya Kreasi Dahayu
+          </Link>
+        </div>
+        <ul className="w-1/2 grid grid-cols-5">
           {pages.map((item, key) => (
             <li
               key={key}
-              className="text-center text-asya-dark text-lg font-medium tracking-widest"
+              className="text-center text-white text-lg font-medium tracking-widest"
             >
               <Link
                 href={item.href}
