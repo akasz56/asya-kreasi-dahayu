@@ -15,20 +15,34 @@ export default function Index() {
 
   return (
     <>
-      <motion.h1
-        id="title"
-        initial={{ opacity: 0, y: 25 }}
-        animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-        className="py-36 text-asya-dark text-5xl text-center font-medium leading-normal tracking-widest"
-      >
-        Works Asya Kreasi Dahayu, Lorem <br /> Ipsum Dolor Sit Amet Consect
-      </motion.h1>
+      <section>
+        <motion.h1
+          id="title"
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+          className="py-36 text-asya-dark text-5xl text-center font-medium leading-normal tracking-widest"
+        >
+          Works Asya Kreasi Dahayu, Lorem <br /> Ipsum Dolor Sit Amet Consect
+        </motion.h1>
+        <div className="container mx-auto mb-28 grid grid-cols-2 gap-16">
+          {works.map((item, key) => (
+            <Link key={key} href={item.href}>
+              <div className="aspect-square bg-asya-dark"></div>
+              <h2 className="mt-20 uppercase text-asya-dark text-3xl font-medium tracking-widest">
+                {item.title}
+              </h2>
+              <p className="mt-20 text-asya-dark tracking-widest">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exercita.
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
 
-      <div id="display" className="asya-container">
-        <Display contents={works} />
-      </div>
-
-      <div id="clients" className="asya-container my-32 pt-16">
+      <section id="clients" className="container mx-auto my-32 pt-16">
         <h1 className="uppercase text-asya-dark text-5xl font-medium leading-normal tracking-widest">
           Clients
         </h1>
@@ -47,7 +61,7 @@ export default function Index() {
             </li>
           ))}
         </ul>
-      </div>
+      </section>
     </>
   );
 }

@@ -8,18 +8,14 @@ interface ScrollArrowProps {
 
 export default function ScrollArrow({ className, scrollTo }: ScrollArrowProps) {
   return (
-    <motion.a
-      href={scrollTo}
-      whileHover={{ y: -5 }}
-      className="absolute bottom-36"
-    >
+    <motion.a href={scrollTo} whileHover={{ y: -5 }} className={className}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
-        className="w-12 h-12 text-asya-light"
+        className="w-12 h-12 text-white"
       >
         <path
           strokeLinecap="round"

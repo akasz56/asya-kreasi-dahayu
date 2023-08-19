@@ -18,7 +18,7 @@ export default function About() {
 
   return (
     <>
-      <motion.div
+      <motion.section
         id="hero"
         initial="hidden"
         variants={section}
@@ -27,16 +27,16 @@ export default function About() {
       >
         <motion.p
           variants={item}
-          className="text-asya-light text-center text-2xl md:text-4xl lg:text-5xl font-medium leading-normal md:leading-normal lg:leading-normal tracking-widest"
+          className="text-center text-white text-5xl font-medium tracking-widest leading-normal"
         >
           Get To Know Asya Kreasi Dahayu, <br /> Lorem Ipsum Dolor Sit Amet
           Consect
         </motion.p>
-        <ScrollArrow scrollTo="#visi" />
-      </motion.div>
+        <ScrollArrow scrollTo="#visi" className="absolute bottom-0 mb-[5vw]" />
+      </motion.section>
 
-      <div id="visi">
-        <div className="asya-container pt-36">
+      <section id="visi">
+        <div className="container mx-auto pt-36">
           <div className="flex flex-wrap justify-between pb-36 border-b-2 border-asya-dark">
             <h1 className="basis-5/12 uppercase text-asya-dark text-4xl font-medium tracking-widest">
               Visi Asya Kreasi Dahayu
@@ -49,13 +49,13 @@ export default function About() {
               di Indonesia dalam hal pelayanan dan kinerja untuk klien dan mitra
               kerja agar dapat menjadi pilar perekonomian negara.
             </p>
-            <div className="basis-5/12 aspect-square bg-asya-light"></div>
+            <div className="basis-5/12 aspect-square bg-asya-dark"></div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div id="misi">
-        <div className="asya-container pt-36">
+      <section id="misi">
+        <div className="container mx-auto pt-36">
           <div className="flex flex-wrap justify-between pb-36 border-b-2 border-asya-dark">
             <h1 className="basis-5/12 uppercase text-asya-dark text-4xl font-medium tracking-widest">
               Misi Asya Kreasi Dahayu
@@ -79,32 +79,33 @@ export default function About() {
                 saham.
               </p>
             </div>
-            <div className="basis-5/12 aspect-square bg-asya-light"></div>
+            <div className="basis-5/12 aspect-square bg-asya-dark"></div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div id="team">
-        <div className="asya-container">
-          <div className="py-36 asya-section-title">
-            <h1 className="text-asya-dark">Our Team</h1>
-            <p className="text-asya-dark">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-              exercita. Lorem ipsum dolor sit amet, consectetuer adipiscing
-              elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-              magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-              nostrud exercita.
-            </p>
-          </div>
+      <section id="team">
+        <div className="flex container mx-auto py-20">
+          <h2 className="flex-1 self-center uppercase text-asya-dark text-4xl font-medium tracking-widest">
+            Our Team
+          </h2>
+          <p className="w-3/5 text-asya-dark font-light tracking-widest leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat. Ut wisi enim ad minim veniam, quis nostrud exercita. Lorem
+            ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+            nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat. Ut wisi enim ad minim veniam, quis nostrud exercita.
+          </p>
+        </div>
+        <div className="container mx-auto">
           <div className="pb-36 grid grid-cols-4 gap-4">
             {[...Array(16)].map((item, key) => (
               <a
                 href="#"
                 key={key}
                 className="aspect-square bg-cover asya-member-photo bg-[url('/images/our-team.jpg')]
-                hover:bg-[linear-gradient(0deg,rgb(211_239_112),rgb(211_239_112)),url('/images/our-team.jpg')]"
+                hover:bg-[linear-gradient(0deg,rgb(89_138_61),rgb(89_138_61)),url('/images/our-team.jpg')]"
               >
                 <div className="p-4 h-full flex flex-col justify-between opacity-0 hover:opacity-100">
                   <h6 className="uppercase text-2xl font-bold text-white leading-normal tracking-widest">
@@ -118,7 +119,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -3,16 +3,106 @@ import React from "react";
 
 export default function Services() {
   const services = [
-    "Mice & EO",
-    "Multimedia",
-    "Konsultan Kreatif",
-    "Garment & Fashion",
-  ];
-
-  const characteristics = [
-    "Keunggulan",
-    "Jasa yang disediakan",
-    "Fitur tambahan",
+    {
+      title: "Mice & EO",
+      characteristics: [
+        {
+          title: "Keunggulan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+        {
+          title: "Jasa yang disediakan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+        {
+          title: "Fitur tambahan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+      ],
+    },
+    {
+      title: "Multimedia",
+      characteristics: [
+        {
+          title: "Keunggulan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+        {
+          title: "Jasa yang disediakan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+        {
+          title: "Fitur tambahan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+      ],
+    },
+    {
+      title: "Konsultan Kreatif",
+      characteristics: [
+        {
+          title: "Keunggulan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+        {
+          title: "Jasa yang disediakan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+        {
+          title: "Fitur tambahan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+      ],
+    },
+    {
+      title: "Ticketing",
+      characteristics: [
+        {
+          title: "Keunggulan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+        {
+          title: "Jasa yang disediakan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+        {
+          title: "Fitur tambahan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+      ],
+    },
+    {
+      title: "Garment & Fashion",
+      characteristics: [
+        {
+          title: "Keunggulan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+        {
+          title: "Jasa yang disediakan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+        {
+          title: "Fitur tambahan",
+          description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+        },
+      ],
+    },
   ];
 
   const heroVariants = {
@@ -28,10 +118,10 @@ export default function Services() {
     <>
       <div
         id="hero"
-        className="h-screen bg-asya-light flex flex-col justify-evenly"
+        className="h-screen bg-asya-dark flex flex-col justify-evenly"
       >
         <motion.div
-          className="asya-container"
+          className="container mx-auto"
           initial="hidden"
           animate="visible"
           variants={{ visible: { transition: { staggerChildren: 0.5 } } }}
@@ -39,13 +129,13 @@ export default function Services() {
           <div className="grid grid-cols-2 items-center">
             <motion.h1
               variants={heroVariants}
-              className="uppercase text-asya-dark text-5xl font-medium tracking-widest"
+              className="uppercase text-white text-5xl font-medium tracking-widest"
             >
               Our Services
             </motion.h1>
             <motion.p
               variants={heroVariants}
-              className="text-asya-dark font-light tracking-widest leading-relaxed"
+              className="text-white font-light tracking-widest leading-relaxed"
             >
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
@@ -55,7 +145,7 @@ export default function Services() {
           </div>
         </motion.div>
         <motion.div
-          className="asya-container"
+          className="container mx-auto"
           initial="hidden"
           animate="visible"
           variants={{ visible: { transition: { staggerChildren: 0.25 } } }}
@@ -67,9 +157,9 @@ export default function Services() {
                 href={"#section" + key}
                 variants={heroVariants}
               >
-                <div className="mx-auto mb-8 h-14 w-14 bg-asya-dark rounded-full"></div>
-                <h4 className="uppercase text-center text-asya-dark text-xl font-bold leading-normal tracking-widest">
-                  {item}
+                <div className="mx-auto mb-8 h-14 w-14 bg-white rounded-full"></div>
+                <h4 className="uppercase text-center text-white text-xl font-bold leading-normal tracking-widest">
+                  {item.title}
                 </h4>
               </motion.a>
             ))}
@@ -77,30 +167,29 @@ export default function Services() {
         </motion.div>
       </div>
 
-      {services.map((item, key) => (
+      {services.map((service, key) => (
         <div key={key} id={"section" + key} className="my-32">
-          <div className="asya-container">
-            <div className="mb-24 asya-section-title">
-              <h1 className="text-asya-dark">{item}</h1>
-              <p className="text-asya-dark">
+          <div className="container mx-auto">
+            <div className="flex mb-24">
+              <h2 className="flex-1 self-center uppercase text-asya-dark text-4xl font-medium tracking-widest">
+                {service.title}
+              </h2>
+              <p className="w-3/5 text-asya-dark font-light tracking-widest leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
                 diam nonummy nibh euismod tincidunt ut laoreet dolore magna
                 aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
                 nostrud exercita.
               </p>
             </div>
-            <div className="w-full aspect-video bg-asya-light"></div>
+            <div className="w-full aspect-video bg-asya-dark"></div>
             <ul className="mt-20 grid grid-cols-3 gap-24">
-              {characteristics.map((item, key) => (
+              {service.characteristics.map((characteristic, key) => (
                 <li key={key} className="flex flex-col justify-between">
                   <h4 className="mb-10 uppercase text-asya-dark text-2xl font-bold leading-normal tracking-widest">
-                    {item}
+                    {characteristic.title}
                   </h4>
                   <p className="text-asya-dark leading-normal tracking-widest">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed
+                    {characteristic.description}
                   </p>
                 </li>
               ))}

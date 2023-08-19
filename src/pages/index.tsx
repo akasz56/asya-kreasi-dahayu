@@ -1,6 +1,7 @@
-import Display, { DisplayContentItem } from "@/component/Display";
+import { DisplayContentItem } from "@/component/Display";
 import ScrollArrow from "@/component/ScrollArrow";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   const services: DisplayContentItem[] = [
@@ -25,16 +26,16 @@ export default function Home() {
 
   return (
     <>
-      <motion.div
+      <motion.section
         id="hero"
         initial="hidden"
         variants={section}
         whileInView="visible"
-        className="relative h-screen bg-hero-landing bg-cover bg-center flex flex-col gap-8 justify-center items-center"
+        className="relative h-screen bg-hero-landing bg-cover bg-center flex flex-col items-center justify-center gap-6"
       >
         <motion.p
           variants={item}
-          className="text-asya-light text-center text-4xl 2xl:text-5xl font-medium leading-normal 2xl:leading-normal tracking-widest"
+          className="text-center text-white text-5xl font-medium tracking-widest leading-normal"
         >
           Menghidupkan ambisi dalam berkreasi. <br /> Bersama Asya nyalakan
           kembali asa.
@@ -42,35 +43,37 @@ export default function Home() {
         <motion.a
           href="#"
           variants={item}
-          className="px-8 py-3 rounded-md bg-asya-light shadow-sm uppercase text-asya-dark text-sm font-medium tracking-widest transition-opacity hover:opacity-50"
+          className="px-6 py-2 rounded-md bg-asya-dark uppercase text-white font-medium tracking-widest"
         >
           Get started
         </motion.a>
-        <ScrollArrow scrollTo="#about" />
-      </motion.div>
+        <ScrollArrow scrollTo="#about" className="absolute bottom-0 mb-[5vw]" />
+      </motion.section>
 
-      <div id="about" className="bg-asya-dark">
-        <div className="asya-container py-20">
-          <div className="asya-section-title">
-            <h1 className="text-asya-light">About Us</h1>
-            <p className="text-asya-light">
-              Asya Kreasi Dahayu merupakan perusahaan yang bergerak di bidang
-              industri kreatif dan pengembangan sumber daya manusia. Sejak
-              September 2022, kami memberikan pelayanan untuk memudahkan anda
-              berkreasi di dunia MICE, desain, hingga multimedia. Dengan
-              didukung oleh teknologi mutakhir dan orang-orang yang handal dan
-              berpengalaman, kami hadir memberikan asa dan ruang tumbuh yang
-              nyata untuk para kreator.
-            </p>
-          </div>
+      <section id="about" className="bg-asya-dark">
+        <div className="flex container mx-auto py-20">
+          <h2 className="flex-1 self-center uppercase text-white text-4xl font-medium tracking-widest">
+            About Us
+          </h2>
+          <p className="w-3/5 text-white font-light tracking-widest leading-relaxed">
+            Asya Kreasi Dahayu merupakan perusahaan yang bergerak di bidang
+            industri kreatif dan pengembangan sumber daya manusia. Sejak
+            September 2022, kami memberikan pelayanan untuk memudahkan anda
+            berkreasi di dunia MICE, desain, hingga multimedia. Dengan didukung
+            oleh teknologi mutakhir dan orang-orang yang handal dan
+            berpengalaman, kami hadir memberikan asa dan ruang tumbuh yang nyata
+            untuk para kreator.
+          </p>
         </div>
-      </div>
+      </section>
 
-      <div id="service">
-        <div className="asya-container">
-          <div className="py-36 asya-section-title">
-            <h1 className="text-asya-dark">Our Services</h1>
-            <p className="text-asya-dark">
+      <section id="service">
+        <div className="container mx-auto">
+          <div className="flex py-32">
+            <h2 className="flex-1 self-center uppercase text-asya-dark text-4xl font-medium tracking-widest">
+              Our Service
+            </h2>
+            <p className="w-3/5 text-asya-dark font-light tracking-widest leading-relaxed">
               Sejak berdiri, Asya Kreasi Dahayu telah membantu banyak kreator di
               bidang industri kreatif dari seluruh Indonesia. Fokus kami adalah
               menyediakan solusi dengan menjadi media penghubung untuk
@@ -81,9 +84,24 @@ export default function Home() {
               untuk berkembang dan ruang untuk saling berkolaborasi.
             </p>
           </div>
-          <Display contents={services} className="pb-28" gap="16" />
+          <div className="mb-28 grid grid-cols-2 gap-16">
+            {services.map((item, key) => (
+              <Link key={key} href={"#"}>
+                <div className="rounded-3xl aspect-square bg-asya-dark"></div>
+                <h2 className="mt-20 uppercase text-asya-dark text-3xl font-medium tracking-widest">
+                  {item.title}
+                </h2>
+                <p className="mt-20 text-asya-dark tracking-widest">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                  nostrud exercita.
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

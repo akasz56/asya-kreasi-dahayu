@@ -154,42 +154,44 @@ export default function Header() {
     //   </Transition.Root>
     // </header>
 
-    <motion.nav
+    <motion.div
       initial="hidden"
       animate={show ? "visible" : "hidden"}
       variants={variants}
       transition={{ ease: "easeOut" }}
-      className="sticky top-0 w-full z-10 py-6 bg-asya-light"
+      className="sticky top-0 w-full z-10 bg-asya-dark"
     >
-      <div className="container mx-auto flex justify-between">
-        <div className="mx-16">
+      <nav className="flex py-6">
+        <div className="flex-1 pl-[5vw]">
           <Link
             href={"/"}
-            className="uppercase text-asya-dark text-xl font-medium tracking-widest"
+            className="uppercase text-white text-lg font-medium tracking-widest"
           >
             Asya Kreasi Dahayu
           </Link>
         </div>
-        <ul className="mx-16 flex gap-24">
+        <ul className="w-1/2 grid grid-cols-5">
           {pages.map((item, key) => (
             <li
               key={key}
-              className="text-asya-dark text-xl font-medium tracking-widest"
+              className="text-center text-white text-lg font-medium tracking-widest"
             >
-              <Link
-                href={item.href}
-                className={
-                  router.pathname.startsWith(item.href)
-                    ? "underline underline-offset-4"
-                    : ""
-                }
-              >
-                {item.title}
+              <Link href={item.href} className="relative">
+                <span
+                  className={
+                    "after:content-[''] after:absolute after:left-0 after:-bottom-[5px] after:h-[2px] after:bg-white " +
+                    (router.pathname.startsWith(item.href)
+                      ? "after:w-full"
+                      : "after:w-0 after:hover:w-full after:duration-300")
+                  }
+                >
+                  {item.title}
+                </span>
               </Link>
             </li>
           ))}
         </ul>
-      </div>
-    </motion.nav>
+      </nav>
+    </motion.div>
   );
 }
