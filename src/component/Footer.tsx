@@ -9,8 +9,8 @@ export default function Footer() {
         </h2>
         <div className="space-y-12">
           <p className="text-white text-md font-medium tracking-widest">
-            We'd love to talk to you about our approach <br /> and how we might
-            be able to help your brand.
+            We&apos;d love to talk to you about our approach <br /> and how we
+            might be able to help your brand.
           </p>
           <div className="relative">
             <label
