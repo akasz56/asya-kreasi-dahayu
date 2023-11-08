@@ -9,6 +9,7 @@ interface DisplaysProps {
 
 export interface DisplayContentItem {
   title: string
+  description: string
   href: string
 }
 

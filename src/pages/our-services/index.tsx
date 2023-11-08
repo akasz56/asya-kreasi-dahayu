@@ -6,7 +6,10 @@ import CustomHead from '@/layouts/CustomHead'
 const Index: NextPage = () => {
   const services = [
     {
-      title: 'Mice & EO',
+      name: 'MICE (Meeting Incentive Convention Exhibition)',
+      nickname: 'MICE',
+      description:
+        'Tim kami akan membantu kreator untuk mencapai hasil yang terbaik dengan memberikan pelayanan all-in dengan keserbagunaan untuk tumbuh di industri ini mulai dari akomodasi, transportasi, hingga publikasi.',
       characteristics: [
         {
           title: 'Keunggulan',
@@ -26,7 +29,9 @@ const Index: NextPage = () => {
       ],
     },
     {
-      title: 'Multimedia',
+      name: 'Multimedia',
+      description:
+        'Tim kami memberikan pelayanan yang lengkap mulai dari sistem, visual, dan perlengkapan lainnya dengan berkomitmen untuk kesempurnaan dan akurasi dalam berkolaborasi dengan sektor lain seperti MICE dan desain grafis.',
       characteristics: [
         {
           title: 'Keunggulan',
@@ -46,7 +51,9 @@ const Index: NextPage = () => {
       ],
     },
     {
-      title: 'Konsultan Kreatif',
+      name: 'Desain Grafis',
+      description:
+        'Tim kami membantu kreator dalam menciptakan dan membangun identitas, ide merek, dan pengalaman dengan ekspresi khas yang terhubung dan terlibat untuk melaksanakan tujuan yang telah ditetapkan.',
       characteristics: [
         {
           title: 'Keunggulan',
@@ -66,7 +73,8 @@ const Index: NextPage = () => {
       ],
     },
     {
-      title: 'Ticketing',
+      name: 'Garment & Fashion',
+      description: '',
       characteristics: [
         {
           title: 'Keunggulan',
@@ -86,7 +94,9 @@ const Index: NextPage = () => {
       ],
     },
     {
-      title: 'Garment & Fashion',
+      name: 'Konsultan Kreatif',
+      description:
+        'Tim kami membantu untuk memberikan arahan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',
       characteristics: [
         {
           title: 'Keunggulan',
@@ -143,8 +153,8 @@ const Index: NextPage = () => {
                 variants={heroVariants}
                 className='text-white font-light tracking-widest leading-relaxed'
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercita.
+                Setiap bidang pelayanan tentu saja memiliki keunikan dan kekuatannya masing-masing. Namun di sini, kami
+                membuka kesempatan para kreator untuk berkembang dan ruang untuk saling berkolaborasi.
               </motion.p>
             </div>
           </motion.div>
@@ -155,7 +165,7 @@ const Index: NextPage = () => {
             variants={{ visible: { transition: { staggerChildren: 0.25 } } }}
           >
             <div className='flex justify-between'>
-              {services.map((item, key) => (
+              {services.map((service, key) => (
                 <motion.a
                   key={key}
                   href={'#section' + key}
@@ -163,7 +173,7 @@ const Index: NextPage = () => {
                 >
                   <div className='mx-auto mb-8 h-14 w-14 bg-white rounded-full'></div>
                   <h4 className='uppercase text-center text-white text-xl font-bold leading-normal tracking-widest'>
-                    {item.title}
+                    {service.nickname ?? service.name}
                   </h4>
                 </motion.a>
               ))}
@@ -180,12 +190,9 @@ const Index: NextPage = () => {
             <div className='container mx-auto'>
               <div className='flex mb-24'>
                 <h2 className='flex-1 self-center uppercase text-asya-dark text-4xl font-medium tracking-widest'>
-                  {service.title}
+                  {service.name}
                 </h2>
-                <p className='w-3/5 text-asya-dark font-light tracking-widest leading-relaxed'>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                  laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercita.
-                </p>
+                <p className='w-3/5 text-asya-dark font-light tracking-widest leading-relaxed'>{service.description}</p>
               </div>
               <div className='w-full aspect-video bg-asya-dark'></div>
               <ul className='mt-20 grid grid-cols-3 gap-24'>

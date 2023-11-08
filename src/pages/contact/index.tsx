@@ -27,15 +27,20 @@ const Index: NextPage = () => {
         >
           <tbody>
             <tr>
-              <td className='py-2 align-top'>Phone</td>
+              <td className='py-2 align-top'>E-mail</td>
               <td className='py-2 px-8 align-top'> : </td>
-              <td className='py-2 align-top'>+6212345678</td>
+              <td className='py-2 align-top'>
+                <a href='mailto:asyascarf.2023@gmail.com'>asyascarf.2023@gmail.com</a>
+              </td>
             </tr>
             <tr>
-              <td className='py-2 align-top'>Email</td>
+              <td className='py-2 align-top'>Hotline</td>
               <td className='py-2 px-8 align-top'> : </td>
-              <td className='py-2 align-top'>Info@asya.com</td>
+              <td className='py-2 align-top'>
+                <a href='https://wa.me/+6281290900114'>0812-9090-0114</a>
+              </td>
             </tr>
+
             <tr>
               <td className='py-2 align-top'>Address</td>
               <td className='py-2 px-8 align-top'> : </td>

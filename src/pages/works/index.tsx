@@ -7,12 +7,37 @@ import CustomHead from '@/layouts/CustomHead'
 
 const Index: NextPage = () => {
   const works: DisplayContentItem[] = [
-    { title: 'PROJECT A, 2019', href: '/works/project-one' },
-    { title: 'PROJECT ABCDEF, 2022', href: '/works/project-one' },
-    { title: 'PROJECT A, 2019', href: '/works/project-one' },
-    { title: 'PROJECT ABCDEF, 2022', href: '/works/project-one' },
-    { title: 'PROJECT A, 2019', href: '/works/project-one' },
-    { title: 'PROJECT ABCDEF, 2022', href: '/works/project-one' },
+    {
+      title:
+        'Bimtek Anggota DRPD Provinsi & DPRD Kabupaten Kota se Banten, Jawa Barat dan DKI Jakarta (EO, Multimedia)',
+      description:
+        'Kami memberikan pelayanan all-in dalam persiapan teknis dan perlengkapan acara mulai dari sistem, visual, dan akomodasi sebagai komitmen dalam pelayanan sektor pengembangan.',
+      href: '/works/project-one',
+    },
+    {
+      title: 'Outing RSUD Kota Depok (Multimedia)',
+      description:
+        'Kami memberikan pelayanan berupa pendampingan sebagai pemandu wisata dan dokumentasi kegiatan dalam acara outing karyawan di Bulukumba, Sulawesi Selatan.',
+      href: '/works/project-one',
+    },
+    {
+      title: 'PT Rajawali Perkasa Furniture (EO)',
+      description:
+        'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
+      href: '/works/project-one',
+    },
+    {
+      title: 'PT Sam and Andy (EO)',
+      description:
+        'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
+      href: '/works/project-one',
+    },
+    {
+      title: 'PT Maesindo Indonesia (EO)',
+      description:
+        'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
+      href: '/works/project-one',
+    },
   ]
 
   return (
@@ -31,17 +56,14 @@ const Index: NextPage = () => {
             Works Asya Kreasi Dahayu, Lorem <br /> Ipsum Dolor Sit Amet Consect
           </motion.h1>
           <div className='container mx-auto mb-28 grid grid-cols-2 gap-16'>
-            {works.map((item, key) => (
+            {works.map((work, key) => (
               <Link
                 key={key}
-                href={item.href}
+                href={work.href}
               >
                 <div className='aspect-square bg-asya-dark'></div>
-                <h2 className='mt-20 uppercase text-asya-dark text-3xl font-medium tracking-widest'>{item.title}</h2>
-                <p className='mt-20 text-asya-dark tracking-widest'>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                  laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercita.
-                </p>
+                <h2 className='mt-20 uppercase text-asya-dark text-3xl font-medium tracking-widest'>{work.title}</h2>
+                <p className='mt-20 text-asya-dark tracking-widest'>{work.description}</p>
               </Link>
             ))}
           </div>

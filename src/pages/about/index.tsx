@@ -35,7 +35,7 @@ const Index: NextPage = () => {
             variants={item}
             className='text-center text-white text-5xl font-medium tracking-widest leading-normal'
           >
-            Get To Know Asya Kreasi Dahayu, <br /> Lorem Ipsum Dolor Sit Amet Consect
+            Get To Know Asya Kreasi Dahayu, <br /> Where The Idea Starts
           </motion.p>
           <ScrollArrow
             scrollTo='#visi'
@@ -91,10 +91,10 @@ const Index: NextPage = () => {
               Our Team
             </h2>
             <p className='w-3/5 text-asya-dark font-light tracking-widest leading-relaxed'>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-              laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercita. Lorem
-              ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-              dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercita.
+              Sesuai visi Asya, tujuan kami adalah menggunakan keterampilan kreatif kami untuk memberikan pelayanan
+              paling unggul dalam membantu dan membimbing para kreator menciptakan karya yang terlihat menarik dan
+              berkelanjutan. Kami ingin membagikan energi kami untuk menginspirasi orang-orang yang menikmati
+              pekerjaannya dan membantu mereka mencapai hasil terbaik.
             </p>
           </div>
           <div className='container mx-auto'>

@@ -8,10 +8,33 @@ import CustomHead from '@/layouts/CustomHead'
 
 const Home: NextPage = () => {
   const services: DisplayContentItem[] = [
-    { title: 'Mice & EO', href: '#' },
-    { title: 'Multimedia', href: '#' },
-    { title: 'Konsultan Kreatif', href: '#' },
-    { title: 'Garment & Fashion', href: '#' },
+    {
+      title: 'MICE (Meeting Incentive Convention Exhibition)',
+      description:
+        'Kami memberikan pelayanan dan edukasi untuk bidang yang masih minim atensi: “the meetings industry”.',
+      href: '#',
+    },
+    {
+      title: 'Multimedia',
+      description: 'Kami menciptakan hasil eksplorasi dengan realisasi ide yang unik dan berkelanjutan.',
+      href: '#',
+    },
+    {
+      title: 'Desain Grafis',
+      description: 'Kami merancang pola visual yang tidak hanya menarik perhatian, namun memberikan inspirasi.',
+      href: '#',
+    },
+    {
+      title: 'Garment & Fashion',
+      description: 'Kami menciptakan mode yang inovatif namun tak lekang oleh waktu.',
+      href: '#',
+    },
+    {
+      title: 'Konsultan Kreatif',
+      description:
+        'Kami memberikan strategi dalam desain untuk membekali kreator dalam bertumbuh dan menciptakan mahakarya ke depannya.',
+      href: '#',
+    },
   ]
 
   const section = {
@@ -96,10 +119,7 @@ const Home: NextPage = () => {
                 >
                   <div className='rounded-3xl aspect-square bg-asya-dark'></div>
                   <h2 className='mt-20 uppercase text-asya-dark text-3xl font-medium tracking-widest'>{item.title}</h2>
-                  <p className='mt-20 text-asya-dark tracking-widest'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercita.
-                  </p>
+                  <p className='mt-20 text-asya-dark tracking-widest'>{item.description}</p>
                 </Link>
               ))}
             </div>
