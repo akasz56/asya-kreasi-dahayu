@@ -70,7 +70,7 @@ const Home: NextPage = () => {
             Menghidupkan ambisi dalam berkreasi. <br /> Bersama Asya nyalakan kembali asa.
           </motion.p>
           <motion.a
-            href='#'
+            href='/our-services'
             variants={item}
             className='px-6 py-2 rounded-md bg-asya-dark uppercase text-white font-medium tracking-widest'
           >
