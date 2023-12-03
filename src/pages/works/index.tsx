@@ -12,31 +12,31 @@ const Index: NextPage = () => {
         'Bimtek Anggota DRPD Provinsi & DPRD Kabupaten Kota se Banten, Jawa Barat dan DKI Jakarta (EO, Multimedia)',
       description:
         'Kami memberikan pelayanan all-in dalam persiapan teknis dan perlengkapan acara mulai dari sistem, visual, dan akomodasi sebagai komitmen dalam pelayanan sektor pengembangan.',
-      href: '/works/project-one',
+      href: '/works/1',
     },
     {
       title: 'Outing RSUD Kota Depok (Multimedia)',
       description:
         'Kami memberikan pelayanan berupa pendampingan sebagai pemandu wisata dan dokumentasi kegiatan dalam acara outing karyawan di Bulukumba, Sulawesi Selatan.',
-      href: '/works/project-one',
+      href: '/works/2',
     },
     {
       title: 'PT Rajawali Perkasa Furniture (EO)',
       description:
         'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
-      href: '/works/project-one',
+      href: '/works/3',
     },
     {
       title: 'PT Sam and Andy (EO)',
       description:
         'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
-      href: '/works/project-one',
+      href: '/works/4',
     },
     {
       title: 'PT Maesindo Indonesia (EO)',
       description:
         'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
-      href: '/works/project-one',
+      href: '/works/5',
     },
   ]
 
