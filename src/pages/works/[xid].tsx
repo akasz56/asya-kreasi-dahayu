@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import Image from 'next/image'
 import CustomHead from '@/layouts/CustomHead'
 import { useRouter } from 'next/router'
+import { workData, WorkDataInterface, Work } from './constant'
 
 interface WorkDetailProps {
     xid: string
@@ -22,6 +23,10 @@ const WorkDetail: NextPage<WorkDetailProps> = ({ xid }) => {
             temp = "Detail work"
         }
    }
+
+   const filteredData: Work[] = workData.work.filter((item) => item.xid === temp)
+   console.log(filteredData)
+
   return (
     <CustomHead
       title={temp}
@@ -44,19 +49,11 @@ const WorkDetail: NextPage<WorkDetailProps> = ({ xid }) => {
           <div className='w-1/2'>
             <div className='h-screen sticky top-0 ml-36 py-32 flex flex-col'>
               <h3 className='flex-1 uppercase text-asya-dark text-4xl font-bold tracking-widest leading-normal'>
-                {router.query.xid}
-                <span className='block text-xl font-normal tracking-widest'>Service Lorem Ipsum</span>
+                {filteredData[0].xid}
+                <span className='block text-xl font-normal tracking-widest'>{filteredData[0].subtitle}</span>
               </h3>
               <p className='text-asya-dark text-base tracking-widest leading-normal'>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
-                in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-                vero eros Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
-                facilisis at vero eros
+                {filteredData[0].description}
               </p>
             </div>
           </div>
