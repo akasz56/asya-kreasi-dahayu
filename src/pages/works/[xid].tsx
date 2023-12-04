@@ -1,45 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NextPage } from 'next'
 import Image from 'next/image'
 import CustomHead from '@/layouts/CustomHead'
 import { useRouter } from 'next/router'
-import { workData, WorkDataInterface, Work } from './constant'
+import { worksData, Work } from './constant'
 
-interface WorkDetailProps {
-    xid: string
-}
-
-const WorkDetail: NextPage<WorkDetailProps> = ({ xid }) => {
-   const router = useRouter()
-
-    let temp = ""
-
-   if (router.query.xid) {
-        if (typeof(router.query.xid) == 'string') {
-            temp = router.query.xid
-        } else if (Array.isArray(router.query.xid) && router.query.xid.every((item) => typeof item === 'string')) {
-            temp = router.query.xid[0]
-        } else {
-            temp = "Detail work"
-        }
-   }
-
-   const filteredData: Work[] = workData.work.filter((item) => item.xid === temp)
-   console.log(filteredData)
+const WorkDetail: NextPage = () => {
+  const router = useRouter()
+  if (!router.query.xid) router.push('/works')
+  if (typeof router.query.xid !== 'string') router.push('/works')
+  const worksDetail: Work = worksData.filter((item) => item.xid === router.query.xid)[0]
+  if (!worksDetail) router.push('/works')
 
   return (
     <CustomHead
-      title={temp}
-      description={temp}
+      title={worksDetail?.title ?? 'Detail Work'}
+      description={worksDetail?.description}
     >
       <div className='asya-container'>
         <div className='flex'>
           <div className='w-1/2 space-y-12'>
-            {[...Array(4)].map((item, key) => (
+            {worksDetail?.asset.map((item, key) => (
               <Image
                 key={key}
                 src={'/images/hero.jpg'}
-                alt={'image'}
+                alt={item.alt ?? ''}
                 width={1080}
                 height={1080}
                 className='block object-cover'
@@ -49,12 +34,10 @@ const WorkDetail: NextPage<WorkDetailProps> = ({ xid }) => {
           <div className='w-1/2'>
             <div className='h-screen sticky top-0 ml-36 py-32 flex flex-col'>
               <h3 className='flex-1 uppercase text-asya-dark text-4xl font-bold tracking-widest leading-normal'>
-                {filteredData[0].xid}
-                <span className='block text-xl font-normal tracking-widest'>{filteredData[0].subtitle}</span>
+                {worksDetail?.title}
+                <span className='block text-xl font-normal tracking-widest'>{worksDetail?.subtitle}</span>
               </h3>
-              <p className='text-asya-dark text-base tracking-widest leading-normal'>
-                {filteredData[0].description}
-              </p>
+              <p className='text-asya-dark text-base tracking-widest leading-normal'>{worksDetail?.description}</p>
             </div>
           </div>
         </div>

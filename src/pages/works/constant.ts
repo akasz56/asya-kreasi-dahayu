@@ -1,51 +1,66 @@
-export interface WorkDataInterface {
-  work: Work[]
+export interface Asset {
+  src: string
+  type: string
+  alt?: string
 }
 
 export interface Work {
   xid: string
+  title: string
   subtitle: string
   description: string
-  asset: string
+  asset: Asset[]
 }
 
-export const workData: WorkDataInterface = {
-  work: [
-    {
-      xid: '1',
-      subtitle:
-        'BIMTEK ANGGOTA DRPD PROVINSI & DPRD KABUPATEN KOTA SE BANTEN, JAWA BARAT DAN DKI JAKARTA (EO, MULTIMEDIA)',
-      description:
-        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut la reet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros 1',
-      asset: 'asdasdasdasds',
-    },
-    {
-      xid: '2',
-      subtitle: 'OUTING RSUD KOTA DEPOK (MULTIMEDIA)',
-      description:
-        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut la reet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros 2',
-      asset: 'asdasdasdasdxs',
-    },
-    {
-      xid: '3',
-      subtitle: 'PT RAJAWALI PERKASA FURNITURE (EO)',
-      description:
-        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut la reet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros 3',
-      asset: 'asdasdasdasdxs',
-    },
-    {
-      xid: '4',
-      subtitle: 'PT SAM AND ANDY (EO)',
-      description:
-        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut la reet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros 4',
-      asset: 'asdasdasdasdxs',
-    },
-    {
-      xid: '5',
-      subtitle: 'PT MAESINDO INDONESIA (EO)',
-      description:
-        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut la reet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros 5',
-      asset: 'asdasdasdasdxs',
-    },
-  ],
-}
+export const worksData: Work[] = [
+  {
+    xid: '1',
+    title: 'BIMTEK ANGGOTA DRPD PROVINSI & DPRD KABUPATEN KOTA SE BANTEN, JAWA BARAT DAN DKI JAKARTA',
+    subtitle: 'EO, MULTIMEDIA',
+    description: 'Kami memberikan pelayanan all-in dalam persiapan teknis dan perlengkapan acara mulai dari sistem, visual, dan akomodasi sebagai komitmen dalam pelayanan sektor pengembangan.',
+    asset: [
+      { src: '/asset/bimtek2024/asset (1).jpg', type: 'image', },
+      { src: '/asset/bimtek2024/asset (2).jpg', type: 'image', },
+      { src: '/asset/bimtek2024/asset (3).jpg', type: 'image', },
+      { src: '/asset/bimtek2024/asset (4).jpg', type: 'image', },
+      { src: '/asset/bimtek2024/asset (5).jpg', type: 'image', },
+      { src: '/asset/bimtek2024/asset (6).jpg', type: 'image', },
+      { src: '/asset/bimtek2024/asset (7).jpg', type: 'image', },
+      { src: '/asset/bimtek2024/asset (8).jpg', type: 'image', },
+      { src: '/asset/bimtek2024/asset (9).jpg', type: 'image', },
+      { src: '/asset/bimtek2024/asset (10).jpg', type: 'image', },
+    ],
+  },
+  {
+    xid: '2',
+    title: 'OUTING RSUD KOTA DEPOK',
+    subtitle: 'MULTIMEDIA',
+    description:
+      'Kami memberikan pelayanan berupa pendampingan sebagai pemandu wisata dan dokumentasi kegiatan dalam acara outing karyawan di Bulukumba, Sulawesi Selatan.',
+    asset: [],
+  },
+  {
+    xid: '3',
+    title: 'PT RAJAWALI PERKASA FURNITURE',
+    subtitle: 'EO',
+    description:
+      'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
+    asset: [],
+  },
+  {
+    xid: '4',
+    title: 'PT SAM AND ANDY',
+    subtitle: 'EO',
+    description:
+      'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
+    asset: [],
+  },
+  {
+    xid: '5',
+    title: 'PT MAESINDO INDONESIA',
+    subtitle: 'EO',
+    description:
+      'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
+    asset: [],
+  },
+];

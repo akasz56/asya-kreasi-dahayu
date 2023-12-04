@@ -1,44 +1,12 @@
 import React from 'react'
 import { NextPage } from 'next'
-import Display, { DisplayContentItem } from '@/components/Display'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
+import { Work, worksData } from './constant'
 
 const Index: NextPage = () => {
-  const works: DisplayContentItem[] = [
-    {
-      title:
-        'Bimtek Anggota DRPD Provinsi & DPRD Kabupaten Kota se Banten, Jawa Barat dan DKI Jakarta (EO, Multimedia)',
-      description:
-        'Kami memberikan pelayanan all-in dalam persiapan teknis dan perlengkapan acara mulai dari sistem, visual, dan akomodasi sebagai komitmen dalam pelayanan sektor pengembangan.',
-      href: '/works/1',
-    },
-    {
-      title: 'Outing RSUD Kota Depok (Multimedia)',
-      description:
-        'Kami memberikan pelayanan berupa pendampingan sebagai pemandu wisata dan dokumentasi kegiatan dalam acara outing karyawan di Bulukumba, Sulawesi Selatan.',
-      href: '/works/2',
-    },
-    {
-      title: 'PT Rajawali Perkasa Furniture (EO)',
-      description:
-        'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
-      href: '/works/3',
-    },
-    {
-      title: 'PT Sam and Andy (EO)',
-      description:
-        'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
-      href: '/works/4',
-    },
-    {
-      title: 'PT Maesindo Indonesia (EO)',
-      description:
-        'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
-      href: '/works/5',
-    },
-  ]
+  const works: Work[] = worksData
 
   return (
     <>
@@ -59,7 +27,7 @@ const Index: NextPage = () => {
             {works.map((work, key) => (
               <Link
                 key={key}
-                href={work.href}
+                href={'/works/' + work.xid}
               >
                 <div className='aspect-square bg-asya-dark'></div>
                 <h2 className='mt-20 uppercase text-asya-dark text-3xl font-medium tracking-widest'>{work.title}</h2>
