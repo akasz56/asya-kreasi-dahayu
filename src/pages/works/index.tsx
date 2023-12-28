@@ -29,9 +29,11 @@ const Index: NextPage = () => {
                 key={key}
                 href={'/works/' + work.xid}
               >
-                <div className='aspect-square bg-asya-dark'></div>
-                <h2 className='mt-20 uppercase text-asya-dark text-3xl font-medium tracking-widest'>{work.title}</h2>
-                <p className='mt-20 text-asya-dark tracking-widest'>{work.description}</p>
+                <div className='mb-20 aspect-square bg-asya-dark'></div>
+                <h2 className='mb-20 uppercase text-asya-dark text-3xl font-medium tracking-widest overflow-hidden whitespace-nowrap text-ellipsis hover:overflow-visible hover:whitespace-normal'>
+                  {work.title}
+                </h2>
+                <p className='text-asya-dark tracking-widest'>{work.description}</p>
               </Link>
             ))}
           </div>

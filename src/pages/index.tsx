@@ -117,9 +117,11 @@ const Home: NextPage = () => {
                   key={key}
                   href={'#'}
                 >
-                  <div className='rounded-3xl aspect-square bg-asya-dark'></div>
-                  <h2 className='mt-20 uppercase text-asya-dark text-3xl font-medium tracking-widest'>{item.title}</h2>
-                  <p className='mt-20 text-asya-dark tracking-widest'>{item.description}</p>
+                  <div className='mb-20 rounded-3xl aspect-square bg-asya-dark'></div>
+                  <h2 className='mb-20 uppercase text-asya-dark text-3xl font-medium tracking-widest overflow-hidden whitespace-nowrap text-ellipsis hover:overflow-visible hover:whitespace-normal'>
+                    {item.title}
+                  </h2>
+                  <p className='text-asya-dark tracking-widest'>{item.description}</p>
                 </Link>
               ))}
             </div>
