@@ -9,7 +9,7 @@ const Index: NextPage = () => {
     visible: { transition: { staggerChildren: 0.5 } },
   }
 
-  const item = {
+  const itemEffect = {
     visible: {
       opacity: 1,
       y: 0,
@@ -31,7 +31,7 @@ const Index: NextPage = () => {
         className='relative h-screen bg-hero-about bg-cover bg-center flex flex-col gap-8 justify-center items-center'
       >
         <motion.p
-          variants={item}
+          variants={itemEffect}
           className='text-center text-white text-5xl font-medium tracking-widest leading-normal'
         >
           Get To Know Asya Kreasi Dahayu, <br /> Where The Idea Starts
@@ -103,10 +103,13 @@ const Index: NextPage = () => {
                 className="aspect-square bg-cover asya-member-photo bg-[url('/images/our-team.jpg')]
   hover:bg-[linear-gradient(0deg,rgb(89_138_61),rgb(89_138_61)),url('/images/our-team.jpg')]"
               >
-                <div className='p-4 h-full flex flex-col justify-between opacity-0 hover:opacity-100 transition-opacity duration-700'>
+                <motion.div
+                  className='p-4 h-full flex flex-col justify-between opacity-0 hover:opacity-100 transition-opacity'
+                  whileHover={{ x: 10, transition: { duration: 0.5 } }}
+                >
                   <h6 className='uppercase text-2xl font-bold text-white leading-normal tracking-widest'>John Doe</h6>
                   <p className='text-lg text-white leading-normal tracking-widest'>Jabatan Staff Lorem Ipsum</p>
-                </div>
+                </motion.div>
               </a>
             ))}
           </div>
