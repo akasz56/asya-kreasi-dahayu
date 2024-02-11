@@ -5,6 +5,7 @@ import ScrollArrow from '@/components/ScrollArrow'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
+import { Carousel } from 'flowbite-react'
 
 const Home: NextPage = () => {
   const services: DisplayContentItem[] = [
@@ -55,7 +56,60 @@ const Home: NextPage = () => {
       title='Home'
       description='Home Page Asya Kreasi Dahayu'
     >
-      <motion.section
+      <div>
+        <Carousel>
+          <motion.section
+            id='hero'
+            initial='hidden'
+            variants={section}
+            whileInView='visible'
+            style={{ height: '91.5vh' }}
+            className='relative bg-hero-landing bg-cover bg-center flex flex-col items-center justify-center gap-6'
+          >
+            <motion.p
+              variants={item}
+              className='text-center text-white text-5xl font-medium tracking-widest leading-normal'
+            >
+              Menghidupkan ambisi dalam berkreasi. <br /> Bersama Asya nyalakan kembali asa.
+            </motion.p>
+            <motion.a
+              href='/our-services'
+              variants={item}
+              className='px-6 py-2 rounded-md bg-asya-dark uppercase text-white font-medium tracking-widest'
+            >
+              Get started
+            </motion.a>
+            <ScrollArrow
+              scrollTo='#about'
+              className='absolute bottom-0 mb-[5vw]'
+            />
+          </motion.section>
+          <div className='video-responsive'>
+            <iframe
+              src='https://www.youtube.com/embed/KRaWnd3LJfs'
+              allow='autoplay; encrypted-media'
+              allowFullScreen
+              title='video'
+              className='w-screen'
+              style={{ height: '91.5vh' }}
+            />
+          </div>
+          <img
+            src='https://flowbite.com/docs/images/carousel/carousel-3.svg'
+            alt='...'
+          />
+          <img
+            src='https://flowbite.com/docs/images/carousel/carousel-4.svg'
+            alt='...'
+          />
+          <img
+            src='https://flowbite.com/docs/images/carousel/carousel-5.svg'
+            alt='...'
+          />
+        </Carousel>
+      </div>
+
+      {/* <motion.section
         id='hero'
         initial='hidden'
         variants={section}
@@ -79,7 +133,7 @@ const Home: NextPage = () => {
           scrollTo='#about'
           className='absolute bottom-0 mb-[5vw]'
         />
-      </motion.section>
+      </motion.section> */}
 
       <section
         id='about'

@@ -160,6 +160,7 @@ export default function Header() {
       variants={variants}
       transition={{ ease: 'easeOut' }}
       className='sticky top-0 w-full z-10 bg-asya-dark'
+      style={{ height: '8.5vh' }}
     >
       <nav className='flex py-6'>
         <div className='flex-1 pl-[5vw]'>
