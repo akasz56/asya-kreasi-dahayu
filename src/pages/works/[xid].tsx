@@ -3,19 +3,19 @@ import { NextPage } from 'next'
 import Image from 'next/image'
 import CustomHead from '@/layouts/CustomHead'
 import { useRouter } from 'next/router'
-import { worksData, Work } from './constant'
+import { worksData, Work } from '../../components/constant'
 
 const WorkDetail: NextPage = () => {
   const router = useRouter()
   const [workDetail, setWorkDetail] = useState<Work>()
-  
+
   useEffect(() => {
     if (!router.query.xid) router.push('/works')
     if (typeof router.query.xid !== 'string') router.push('/works')
 
     setWorkDetail(worksData.filter((item) => item.xid === router.query.xid)[0])
     if (!worksData.filter((item) => item.xid === router.query.xid)[0]) router.push('/works')
-  }, [router.query.xid])
+  }, [router])
 
   return (
     <CustomHead

@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
-import { Work, worksData } from './constant'
+import { Work, worksData } from '../../components/constant'
 
 const Index: NextPage = () => {
   const works: Work[] = worksData
