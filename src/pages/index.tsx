@@ -5,10 +5,13 @@ import ScrollArrow from '@/components/ScrollArrow'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
+<<<<<<< HEAD
 import { Carousel } from 'flowbite-react'
 import { Dialog, Transition } from '@headlessui/react'
 import Image from 'next/image'
 import HeroImage from '../../public/images/hero.jpg'
+=======
+>>>>>>> parent of 5254746 (feat(home): add carousel)
 
 const Home: NextPage = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false)
@@ -62,6 +65,7 @@ const Home: NextPage = () => {
       title='Home'
       description='Home Page Asya Kreasi Dahayu'
     >
+<<<<<<< HEAD
       <div>
         <Carousel>
           <motion.section
@@ -196,6 +200,9 @@ const Home: NextPage = () => {
       </div>
 
       {/* <motion.section
+=======
+      <motion.section
+>>>>>>> parent of 5254746 (feat(home): add carousel)
         id='hero'
         initial='hidden'
         variants={section}
@@ -219,7 +226,7 @@ const Home: NextPage = () => {
           scrollTo='#about'
           className='absolute bottom-0 mb-[5vw]'
         />
-      </motion.section> */}
+      </motion.section>
 
       <section
         id='about'
