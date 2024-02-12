@@ -1,10 +1,12 @@
-import { useRef } from 'react'
+import { useRef, useState, Fragment } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Carousel } from 'flowbite-react'
 import ScrollArrow from '@/components/ScrollArrow'
+import { Dialog, Transition } from '@headlessui/react'
 
 export default function HeroCarousel() {
+  const [modalOpen, setModalOpen] = useState<boolean>(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   const variants = {
@@ -79,18 +81,82 @@ export default function HeroCarousel() {
         />
       </motion.div>
 
-      <video
-        loop
-        className='h-screen object-cover object-center cursor-pointer'
-        ref={videoRef}
-        onClick={onclickVideo}
-      >
-        <source
-          src='/videos/hero_compro.mp4'
-          type='video/mp4'
-        />
-        Your browser does not support the video tag.
-      </video>
+      <div>
+        {/* 1. The button */}
+        <button
+          className='relative flex justify-center items-center focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 rounded-3xl group'
+          onClick={() => {
+            setModalOpen(true)
+          }}
+          aria-label='Watch the video'
+        >
+          <video
+            loop
+            controls
+            autoPlay
+            className='h-screen w-screen object-cover object-center cursor-pointer'
+          >
+            <source
+              src='./videos/hero_compro.mp4'
+              type='video/mp4'
+              className='w-screen'
+            />
+            Your browser does not support the video tag.
+          </video>
+        </button>
+
+        <Transition
+          show={modalOpen}
+          as={Fragment}
+          afterEnter={() => videoRef.current?.play()}
+        >
+          <Dialog
+            initialFocus={videoRef}
+            onClose={() => setModalOpen(false)}
+          >
+            {/* 2. The backdrop layer */}
+            <Transition.Child
+              className='fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity'
+              enter='transition ease-out duration-200'
+              enterFrom='opacity-0'
+              enterTo='opacity-100'
+              leave='transition ease-out duration-100'
+              leaveFrom='opacity-100'
+              leaveTo='opacity-0'
+              aria-hidden='true'
+            />
+
+            {/* 3. The modal video */}
+            <Transition.Child
+              className='fixed inset-0 z-[99999] flex p-6'
+              enter='transition ease-out duration-300'
+              enterFrom='opacity-0 scale-75'
+              enterTo='opacity-100 scale-100'
+              leave='transition ease-out duration-200'
+              leaveFrom='opacity-100 scale-100'
+              leaveTo='opacity-0 scale-75'
+            >
+              <div className='max-w-5xl mx-auto h-full flex items-center'>
+                <Dialog.Panel className='w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden'>
+                  <video
+                    width='1920'
+                    height='1080'
+                    loop
+                    controls
+                    ref={videoRef}
+                  >
+                    <source
+                      src='./videos/hero_compro.mp4'
+                      type='video/mp4'
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </Dialog.Panel>
+              </div>
+            </Transition.Child>
+          </Dialog>
+        </Transition>
+      </div>
 
       <Image
         src={'/images/hero2.jpg'}
