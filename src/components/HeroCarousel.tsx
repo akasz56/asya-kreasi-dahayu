@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Carousel } from 'flowbite-react'
 import ScrollArrow from '@/components/ScrollArrow'
-import styles from '../styles/HeroCarousel.module.css'
 
 export default function HeroCarousel() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -59,10 +58,7 @@ export default function HeroCarousel() {
         initial='hidden'
         variants={variants}
         whileInView='visible'
-        className={
-          styles.bgHero1 +
-          " relative h-screen bg-[url('/images/hero1.jpg')] bg-cover bg-center flex flex-col items-center justify-center gap-6"
-        }
+        className="relative h-screen bg-[url('/images/hero1.jpg')] bg-cover bg-center flex flex-col items-center justify-center gap-6"
       >
         <motion.p
           variants={firstChildVariant}
