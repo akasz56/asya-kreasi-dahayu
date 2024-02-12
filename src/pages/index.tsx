@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, Fragment, useRef } from 'react'
 import { NextPage } from 'next'
 import { DisplayContentItem } from '@/components/Display'
 import ScrollArrow from '@/components/ScrollArrow'
@@ -6,8 +6,14 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
 import { Carousel } from 'flowbite-react'
+import { Dialog, Transition } from '@headlessui/react'
+import Image from 'next/image'
+import HeroImage from '../../public/images/hero.jpg'
 
 const Home: NextPage = () => {
+  const [modalOpen, setModalOpen] = useState<boolean>(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
   const services: DisplayContentItem[] = [
     {
       title: 'MICE (Meeting Incentive Convention Exhibition)',
@@ -84,16 +90,96 @@ const Home: NextPage = () => {
               className='absolute bottom-0 mb-[5vw]'
             />
           </motion.section>
-          <div className='video-responsive'>
+          <div>
+            {/* 1. The button */}
+            <button
+              className='relative flex justify-center items-center focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 rounded-3xl group'
+              onClick={() => {
+                setModalOpen(true)
+              }}
+              aria-label='Watch the video'
+            >
+              <video
+                width='100%'
+                height='91.5vh'
+                loop
+                controls
+                autoPlay
+                className='w-screen bg-black'
+                style={{ height: '91.5vh' }}
+              >
+                <source
+                  src='./videos/carousel.mp4'
+                  type='video/mp4'
+                  className='w-screen'
+                  style={{ height: '91.5vh' }}
+                />
+                Your browser does not support the video tag.
+              </video>
+            </button>
+
+            <Transition
+              show={modalOpen}
+              as={Fragment}
+              afterEnter={() => videoRef.current?.play()}
+            >
+              <Dialog
+                initialFocus={videoRef}
+                onClose={() => setModalOpen(false)}
+              >
+                {/* 2. The backdrop layer */}
+                <Transition.Child
+                  className='fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity'
+                  enter='transition ease-out duration-200'
+                  enterFrom='opacity-0'
+                  enterTo='opacity-100'
+                  leave='transition ease-out duration-100'
+                  leaveFrom='opacity-100'
+                  leaveTo='opacity-0'
+                  aria-hidden='true'
+                />
+
+                {/* 3. The modal video */}
+                <Transition.Child
+                  className='fixed inset-0 z-[99999] flex p-6'
+                  enter='transition ease-out duration-300'
+                  enterFrom='opacity-0 scale-75'
+                  enterTo='opacity-100 scale-100'
+                  leave='transition ease-out duration-200'
+                  leaveFrom='opacity-100 scale-100'
+                  leaveTo='opacity-0 scale-75'
+                >
+                  <div className='max-w-5xl mx-auto h-full flex items-center'>
+                    <Dialog.Panel className='w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden'>
+                      <video
+                        width='1920'
+                        height='1080'
+                        loop
+                        controls
+                        ref={videoRef}
+                      >
+                        <source
+                          src='./videos/carousel.mp4'
+                          type='video/mp4'
+                        />
+                        Your browser does not support the video tag.
+                      </video>
+                    </Dialog.Panel>
+                  </div>
+                </Transition.Child>
+              </Dialog>
+            </Transition>
+          </div>
+          {/* <div className='video-responsive'>
             <iframe
-              src='https://www.youtube.com/embed/KRaWnd3LJfs'
+              src='/videos/carousel.mp4'
               allow='autoplay; encrypted-media'
               allowFullScreen
               title='video'
               className='w-screen'
               style={{ height: '91.5vh' }}
             />
-          </div>
+          </div> */}
           <img
             src='https://flowbite.com/docs/images/carousel/carousel-3.svg'
             alt='...'
