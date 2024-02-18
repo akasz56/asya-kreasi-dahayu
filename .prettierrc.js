@@ -9,5 +9,5 @@ module.exports = {
     bracketSpacing: true,
     bracketSameLine: false,
     singleAttributePerLine: true,
-    plugins: [],
+    plugins: ["prettier-plugin-tailwindcss"],
 }

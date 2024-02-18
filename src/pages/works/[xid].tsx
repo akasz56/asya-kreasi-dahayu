@@ -37,12 +37,12 @@ const WorkDetail: NextPage = () => {
             ))}
           </div>
           <div className='w-1/2'>
-            <div className='h-screen sticky top-0 ml-36 py-32 flex flex-col'>
-              <h3 className='flex-1 uppercase text-asya-dark text-4xl font-bold tracking-widest leading-normal'>
+            <div className='sticky top-0 ml-36 flex h-screen flex-col py-32'>
+              <h3 className='flex-1 text-4xl font-bold uppercase leading-normal tracking-widest text-asya-dark'>
                 {workDetail?.title}
                 <span className='block text-xl font-normal tracking-widest'>{workDetail?.subtitle}</span>
               </h3>
-              <p className='text-asya-dark text-base tracking-widest leading-normal'>{workDetail?.description}</p>
+              <p className='text-base leading-normal tracking-widest text-asya-dark'>{workDetail?.description}</p>
             </div>
           </div>
         </div>

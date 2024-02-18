@@ -11,19 +11,19 @@ const Index: NextPage = () => {
     >
       <div
         id='contact'
-        className='container mx-auto py-32 space-y-24'
+        className='container mx-auto space-y-24 py-32'
       >
         <motion.h1
           initial={{ opacity: 0, x: -25 }}
           animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
-          className='w-1/2 text-asya-dark text-5xl font-medium leading-normal tracking-widest'
+          className='w-1/2 text-5xl font-medium leading-normal tracking-widest text-asya-dark'
         >
           Lorem Ipsum Dolor Sit, <br /> Contact Us Through
         </motion.h1>
         <motion.table
           initial={{ opacity: 0, x: 25 }}
           animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
-          className='w-1/2 ml-auto text-asya-dark text-2xl'
+          className='ml-auto w-1/2 text-2xl text-asya-dark'
         >
           <tbody>
             <tr>

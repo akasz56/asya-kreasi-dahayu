@@ -159,23 +159,23 @@ export default function Header() {
       animate={show ? 'visible' : 'hidden'}
       variants={variants}
       transition={{ ease: 'easeOut' }}
-      className='sticky top-0 w-full z-10 bg-asya-dark'
+      className='sticky top-0 z-10 w-full bg-asya-dark'
       style={{ height: '8.5vh' }}
     >
       <nav className='flex py-6'>
         <div className='flex-1 pl-[5vw]'>
           <Link
             href={'/'}
-            className='uppercase text-white text-lg font-medium tracking-widest'
+            className='text-lg font-medium uppercase tracking-widest text-white'
           >
             Asya Kreasi Dahayu
           </Link>
         </div>
-        <ul className='w-1/2 grid grid-cols-5'>
+        <ul className='grid w-1/2 grid-cols-5'>
           {pages.map((item, key) => (
             <li
               key={key}
-              className='text-center text-white text-lg font-medium tracking-widest'
+              className='text-center text-lg font-medium tracking-widest text-white'
             >
               <Link
                 href={item.href}
@@ -183,10 +183,10 @@ export default function Header() {
               >
                 <span
                   className={
-                    "after:content-[''] after:absolute after:left-0 after:-bottom-[5px] after:h-[2px] after:bg-white " +
+                    "after:absolute after:left-0 after:-bottom-[5px] after:h-[2px] after:bg-white after:content-[''] " +
                     (router.pathname.startsWith(item.href)
                       ? 'after:w-full'
-                      : 'after:w-0 after:hover:w-full after:duration-300')
+                      : 'after:w-0 after:duration-300 after:hover:w-full')
                   }
                 >
                   {item.title}

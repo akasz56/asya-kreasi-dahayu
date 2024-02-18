@@ -39,11 +39,11 @@ const Index: NextPage = () => {
           initial='hidden'
           variants={section}
           whileInView='visible'
-          className='relative py-40 bg-hero-landing bg-cover bg-center flex flex-col gap-8 justify-center items-center'
+          className='bg-hero-landing relative flex flex-col items-center justify-center gap-8 bg-cover bg-center py-40'
         >
           <motion.p
             variants={item}
-            className='text-white text-center text-4xl 2xl:text-5xl font-medium leading-normal 2xl:leading-normal tracking-widest'
+            className='text-center text-4xl font-medium leading-normal tracking-widest text-white 2xl:text-5xl 2xl:leading-normal'
           >
             Our Newest Collection “Lorem Ipsum”
           </motion.p>
@@ -103,18 +103,18 @@ const Index: NextPage = () => {
 
         <section
           id='catalog'
-          className='flex container mx-auto py-[5vw]'
+          className='container mx-auto flex py-[5vw]'
         >
-          <div className='w-1/4 flex flex-col items-center space-y-8'>
+          <div className='flex w-1/4 flex-col items-center space-y-8'>
             <ul>
-              <li className='text-asya-dark font-bold text-xl tracking-widest leading-relaxed mb-8'>
+              <li className='mb-8 text-xl font-bold leading-relaxed tracking-widest text-asya-dark'>
                 {collections.title}
               </li>
               {collections.collections.map((item, key) => (
                 <li key={key}>
                   <a
                     href='#'
-                    className='asya-link text-asya-dark text-xl tracking-widest leading-relaxed'
+                    className='asya-link text-xl leading-relaxed tracking-widest text-asya-dark'
                   >
                     <span className='after:bg-asya-dark'>{item}</span>
                   </a>
@@ -122,14 +122,14 @@ const Index: NextPage = () => {
               ))}
             </ul>
             <ul>
-              <li className='text-asya-dark font-bold text-xl tracking-widest leading-relaxed mb-8'>
+              <li className='mb-8 text-xl font-bold leading-relaxed tracking-widest text-asya-dark'>
                 {availability.title}
               </li>
               {availability.collections.map((item, key) => (
                 <li key={key}>
                   <a
                     href='#'
-                    className='asya-link text-asya-dark text-xl tracking-widest leading-relaxed'
+                    className='asya-link text-xl leading-relaxed tracking-widest text-asya-dark'
                   >
                     <span className='after:bg-asya-dark'>{item}</span>
                   </a>
@@ -137,7 +137,7 @@ const Index: NextPage = () => {
               ))}
             </ul>
           </div>
-          <ul className='flex-1 grid grid-cols-3 gap-8'>
+          <ul className='grid flex-1 grid-cols-3 gap-8'>
             {[...Array(12)].map((item, key) => (
               <motion.li
                 key={key}
@@ -146,11 +146,11 @@ const Index: NextPage = () => {
               >
                 <Link href={'/product/product-one'}>
                   <div className='aspect-square bg-asya-dark'></div>
-                  <div className='block mt-6'>
-                    <p className='text-asya-dark text-center text-xl font-bold tracking-widest leading-relaxed'>
+                  <div className='mt-6 block'>
+                    <p className='text-center text-xl font-bold leading-relaxed tracking-widest text-asya-dark'>
                       Hijab Lorem Ipsum
                     </p>
-                    <p className='text-asya-dark text-center text-xl tracking-widest leading-relaxed'>Rp200.000</p>
+                    <p className='text-center text-xl leading-relaxed tracking-widest text-asya-dark'>Rp200.000</p>
                   </div>
                 </Link>
               </motion.li>

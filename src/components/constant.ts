@@ -17,18 +17,19 @@ export const worksData: Work[] = [
     xid: '1',
     title: 'BIMTEK ANGGOTA DRPD PROVINSI & DPRD KABUPATEN KOTA SE BANTEN, JAWA BARAT DAN DKI JAKARTA',
     subtitle: 'EO, MULTIMEDIA',
-    description: 'Kami memberikan pelayanan all-in dalam persiapan teknis dan perlengkapan acara mulai dari sistem, visual, dan akomodasi sebagai komitmen dalam pelayanan sektor pengembangan.',
+    description:
+      'Kami memberikan pelayanan all-in dalam persiapan teknis dan perlengkapan acara mulai dari sistem, visual, dan akomodasi sebagai komitmen dalam pelayanan sektor pengembangan.',
     asset: [
-      { src: '/asset/bimtek2024/asset (1).jpg', type: 'image', },
-      { src: '/asset/bimtek2024/asset (2).jpg', type: 'image', },
-      { src: '/asset/bimtek2024/asset (3).jpg', type: 'image', },
-      { src: '/asset/bimtek2024/asset (4).jpg', type: 'image', },
-      { src: '/asset/bimtek2024/asset (5).jpg', type: 'image', },
-      { src: '/asset/bimtek2024/asset (6).jpg', type: 'image', },
-      { src: '/asset/bimtek2024/asset (7).jpg', type: 'image', },
-      { src: '/asset/bimtek2024/asset (8).jpg', type: 'image', },
-      { src: '/asset/bimtek2024/asset (9).jpg', type: 'image', },
-      { src: '/asset/bimtek2024/asset (10).jpg', type: 'image', },
+      { src: '/asset/bimtek2024/asset (1).jpg', type: 'image' },
+      { src: '/asset/bimtek2024/asset (2).jpg', type: 'image' },
+      { src: '/asset/bimtek2024/asset (3).jpg', type: 'image' },
+      { src: '/asset/bimtek2024/asset (4).jpg', type: 'image' },
+      { src: '/asset/bimtek2024/asset (5).jpg', type: 'image' },
+      { src: '/asset/bimtek2024/asset (6).jpg', type: 'image' },
+      { src: '/asset/bimtek2024/asset (7).jpg', type: 'image' },
+      { src: '/asset/bimtek2024/asset (8).jpg', type: 'image' },
+      { src: '/asset/bimtek2024/asset (9).jpg', type: 'image' },
+      { src: '/asset/bimtek2024/asset (10).jpg', type: 'image' },
     ],
   },
   {
@@ -63,4 +64,4 @@ export const worksData: Work[] = [
       'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
     asset: [],
   },
-];
+]

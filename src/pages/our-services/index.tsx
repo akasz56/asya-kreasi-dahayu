@@ -134,7 +134,7 @@ const Index: NextPage = () => {
       >
         <div
           id='hero'
-          className='h-screen bg-asya-dark flex flex-col justify-evenly'
+          className='flex h-screen flex-col justify-evenly bg-asya-dark'
         >
           <motion.div
             className='container mx-auto'
@@ -145,13 +145,13 @@ const Index: NextPage = () => {
             <div className='grid grid-cols-2 items-center'>
               <motion.h1
                 variants={heroVariants}
-                className='uppercase text-white text-5xl font-medium tracking-widest'
+                className='text-5xl font-medium uppercase tracking-widest text-white'
               >
                 Our Services
               </motion.h1>
               <motion.p
                 variants={heroVariants}
-                className='text-white font-light tracking-widest leading-relaxed'
+                className='font-light leading-relaxed tracking-widest text-white'
               >
                 Setiap bidang pelayanan tentu saja memiliki keunikan dan kekuatannya masing-masing. Namun di sini, kami
                 membuka kesempatan para kreator untuk berkembang dan ruang untuk saling berkolaborasi.
@@ -171,8 +171,8 @@ const Index: NextPage = () => {
                   href={'#section' + key}
                   variants={heroVariants}
                 >
-                  <div className='mx-auto mb-8 h-14 w-14 bg-white rounded-full'></div>
-                  <h4 className='uppercase text-center text-white text-xl font-bold leading-normal tracking-widest'>
+                  <div className='mx-auto mb-8 h-14 w-14 rounded-full bg-white'></div>
+                  <h4 className='text-center text-xl font-bold uppercase leading-normal tracking-widest text-white'>
                     {service.nickname ?? service.name}
                   </h4>
                 </motion.a>
@@ -188,23 +188,23 @@ const Index: NextPage = () => {
             className='my-32'
           >
             <div className='container mx-auto'>
-              <div className='flex mb-24'>
-                <h2 className='flex-1 self-center uppercase text-asya-dark text-4xl font-medium tracking-widest'>
+              <div className='mb-24 flex'>
+                <h2 className='flex-1 self-center text-4xl font-medium uppercase tracking-widest text-asya-dark'>
                   {service.name}
                 </h2>
-                <p className='w-3/5 text-asya-dark font-light tracking-widest leading-relaxed'>{service.description}</p>
+                <p className='w-3/5 font-light leading-relaxed tracking-widest text-asya-dark'>{service.description}</p>
               </div>
-              <div className='w-full aspect-video bg-asya-dark'></div>
+              <div className='aspect-video w-full bg-asya-dark'></div>
               <ul className='mt-20 grid grid-cols-3 gap-24'>
                 {service.characteristics.map((characteristic, key) => (
                   <li
                     key={key}
                     className='flex flex-col justify-between'
                   >
-                    <h4 className='mb-10 uppercase text-asya-dark text-2xl font-bold leading-normal tracking-widest'>
+                    <h4 className='mb-10 text-2xl font-bold uppercase leading-normal tracking-widest text-asya-dark'>
                       {characteristic.title}
                     </h4>
-                    <p className='text-asya-dark leading-normal tracking-widest'>{characteristic.description}</p>
+                    <p className='leading-normal tracking-widest text-asya-dark'>{characteristic.description}</p>
                   </li>
                 ))}
               </ul>

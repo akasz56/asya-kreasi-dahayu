@@ -49,9 +49,9 @@ const Home: NextPage = () => {
         id='about'
         className='bg-asya-dark'
       >
-        <div className='flex container mx-auto py-20'>
-          <h2 className='flex-1 self-center uppercase text-white text-4xl font-medium tracking-widest'>About Us</h2>
-          <p className='w-3/5 text-white font-light tracking-widest leading-relaxed'>
+        <div className='container mx-auto flex py-20'>
+          <h2 className='flex-1 self-center text-4xl font-medium uppercase tracking-widest text-white'>About Us</h2>
+          <p className='w-3/5 font-light leading-relaxed tracking-widest text-white'>
             Asya Kreasi Dahayu merupakan perusahaan yang bergerak di bidang industri kreatif dan pengembangan sumber
             daya manusia. Sejak September 2022, kami memberikan pelayanan untuk memudahkan anda berkreasi di dunia MICE,
             desain, hingga multimedia. Dengan didukung oleh teknologi mutakhir dan orang-orang yang handal dan
@@ -63,10 +63,10 @@ const Home: NextPage = () => {
       <section id='service'>
         <div className='container mx-auto'>
           <div className='flex py-32'>
-            <h2 className='flex-1 self-center uppercase text-asya-dark text-4xl font-medium tracking-widest'>
+            <h2 className='flex-1 self-center text-4xl font-medium uppercase tracking-widest text-asya-dark'>
               Our Service
             </h2>
-            <p className='w-3/5 text-asya-dark font-light tracking-widest leading-relaxed'>
+            <p className='w-3/5 font-light leading-relaxed tracking-widest text-asya-dark'>
               Sejak berdiri, Asya Kreasi Dahayu telah membantu banyak kreator di bidang industri kreatif dari seluruh
               Indonesia. Fokus kami adalah menyediakan solusi dengan menjadi media penghubung untuk menunjangi para
               kreator kecil hingga menengah didukung oleh tim kami yang handal dan berpengalaman di bidangnya. Setiap
@@ -80,11 +80,11 @@ const Home: NextPage = () => {
                 key={key}
                 href={'#'}
               >
-                <div className='mb-20 rounded-3xl aspect-square bg-asya-dark'></div>
-                <h2 className='mb-20 uppercase text-asya-dark text-3xl font-medium tracking-widest overflow-hidden whitespace-nowrap text-ellipsis hover:overflow-visible hover:whitespace-normal'>
+                <div className='mb-20 aspect-square rounded-3xl bg-asya-dark'></div>
+                <h2 className='mb-20 overflow-hidden text-ellipsis whitespace-nowrap text-3xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal'>
                   {item.title}
                 </h2>
-                <p className='text-asya-dark tracking-widest'>{item.description}</p>
+                <p className='tracking-widest text-asya-dark'>{item.description}</p>
               </Link>
             ))}
           </div>
