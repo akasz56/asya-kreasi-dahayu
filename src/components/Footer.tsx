@@ -19,7 +19,7 @@ export default function Footer() {
             <input
               type='text'
               id='email'
-              className='mt-2 block w-full border-b-2 border-white bg-transparent py-1.5 text-xl font-medium tracking-widest text-white focus:outline-none'
+              className='mt-2 block w-full border-0 border-b-2 border-white bg-transparent py-1.5 text-xl font-medium tracking-widest text-white focus:outline-none'
             />
             <svg
               xmlns='http://www.w3.org/2000/svg'
