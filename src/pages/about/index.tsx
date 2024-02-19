@@ -3,6 +3,8 @@ import { NextPage } from 'next'
 import ScrollArrow from '@/components/ScrollArrow'
 import { motion } from 'framer-motion'
 import CustomHead from '@/layouts/CustomHead'
+import { team as teamData } from '@/components/team'
+import TeamPhoto from '@/components/TeamPhoto'
 
 const Index: NextPage = () => {
   const section = {
@@ -96,20 +98,11 @@ const Index: NextPage = () => {
         </div>
         <div className='container mx-auto'>
           <div className='grid grid-cols-4 gap-4 pb-36'>
-            {[...Array(16)].map((item, key) => (
-              <a
-                href='#'
+            {teamData.map((teamMember, key) => (
+              <TeamPhoto
                 key={key}
-                className="asya-member-photo aspect-square bg-[url('/images/our-team.jpg')] bg-cover hover:bg-[linear-gradient(0deg,rgb(89_138_61),rgb(89_138_61)),url('/images/our-team.jpg')]"
-              >
-                <motion.div
-                  className='flex h-full flex-col justify-between p-4 opacity-0 transition-opacity hover:opacity-100'
-                  whileHover={{ x: 10, transition: { duration: 0.5 } }}
-                >
-                  <h6 className='text-2xl font-bold uppercase leading-normal tracking-widest text-white'>John Doe</h6>
-                  <p className='text-lg leading-normal tracking-widest text-white'>Jabatan Staff Lorem Ipsum</p>
-                </motion.div>
-              </a>
+                teamMember={teamMember}
+              />
             ))}
           </div>
         </div>

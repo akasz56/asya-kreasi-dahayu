@@ -83,14 +83,12 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
+  --primary-glow: conic-gradient(from 180deg at 50% 50%,
+      #16abff33 0deg,
+      #0885ff33 55deg,
+      #54d6ff33 120deg,
+      #0071ff33 160deg,
+      transparent 360deg);
   --secondary-glow: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 
   --tile-start-rgb: 239, 245, 249;
@@ -121,15 +119,10 @@ a {
   text-decoration: none;
 }
 
-.asya-member-photo {
-  background-color: white;
-  background-blend-mode: multiply, luminosity;
-}
-
 .asya-link {
   @apply relative;
 }
 
-.asya-link > * {
+.asya-link>* {
   @apply after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:duration-300 after:content-[''] after:hover:w-full;
 }
