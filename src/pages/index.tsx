@@ -42,7 +42,7 @@ const Home: NextPage = () => {
       description='Home Page Asya Kreasi Dahayu'
     >
       <section id='hero'>
-        <HeroCarousel />
+        <HeroCarousel scrollTo={'about'} />
       </section>
 
       <section

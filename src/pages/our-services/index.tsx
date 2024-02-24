@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import { motion } from 'framer-motion'
 import CustomHead from '@/layouts/CustomHead'
 import Image from 'next/image'
+import heroImage from '../../../public/images/service.jpg'
 
 const Index: NextPage = () => {
   const services = [
@@ -138,10 +139,8 @@ const Index: NextPage = () => {
           className='relative flex h-screen flex-col justify-evenly'
         >
           <Image
-            src={'/images/service.jpg'}
-            alt={'backgroundService'}
-            width={7905}
-            height={4026}
+            src={heroImage}
+            alt={'Hero Image Service'}
             className='absolute -z-10 h-full object-cover'
           />
           <motion.div

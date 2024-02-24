@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
+import test from '../../../public/images/hero1.jpg'
 
 const ProductOne: NextPage = () => {
   return (
@@ -18,20 +19,16 @@ const ProductOne: NextPage = () => {
         >
           <div className='w-1/2'>
             <Image
-              src={'/images/hero.jpg'}
+              src={test}
               alt={'image'}
-              width={1080}
-              height={1080}
               className='aspect-square w-4/5 object-cover'
             />
             <div className='mt-3 flex gap-x-4'>
               {[...Array(3)].map((item, key) => (
                 <Image
                   key={key}
-                  src={'/images/hero.jpg'}
+                  src={test}
                   alt={'image'}
-                  width={1080}
-                  height={1080}
                   className='aspect-square w-24 object-cover'
                 />
               ))}

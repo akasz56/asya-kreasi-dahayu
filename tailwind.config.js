@@ -11,9 +11,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'hero-about': "url('/images/about.jpg')",
-      },
       colors: {
         asya: {
           light: '#D3EF70',

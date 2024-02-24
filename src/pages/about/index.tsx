@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 import CustomHead from '@/layouts/CustomHead'
 import { team as teamData } from '@/components/team'
 import TeamPhoto from '@/components/TeamPhoto'
+import Image from 'next/image'
+import heroImage from '../../../public/images/about.jpg'
 
 const Index: NextPage = () => {
   const section = {
@@ -25,24 +27,33 @@ const Index: NextPage = () => {
       title='About'
       description='About Page'
     >
-      <motion.section
+      <section
         id='hero'
-        initial='hidden'
-        variants={section}
-        whileInView='visible'
-        className='relative flex h-screen flex-col items-center justify-center gap-8 bg-hero-about bg-cover bg-center'
+        className='relative'
       >
-        <motion.p
-          variants={itemEffect}
-          className='text-center text-5xl font-medium leading-normal tracking-widest text-white'
-        >
-          Get To Know Asya Kreasi Dahayu, <br /> Where The Idea Starts
-        </motion.p>
-        <ScrollArrow
-          scrollTo='#visi'
-          className='absolute bottom-0 mb-[5vw]'
+        <Image
+          src={heroImage}
+          alt='Hero Image'
+          className='absolute'
         />
-      </motion.section>
+        <motion.div
+          initial='hidden'
+          variants={section}
+          whileInView='visible'
+          className='relative flex h-screen flex-col items-center justify-center gap-8'
+        >
+          <motion.p
+            variants={itemEffect}
+            className='text-center text-5xl font-medium leading-normal tracking-widest text-white'
+          >
+            Get To Know Asya Kreasi Dahayu, <br /> Where The Idea Starts
+          </motion.p>
+          <ScrollArrow
+            scrollTo='#visi'
+            className='absolute bottom-0 mb-[5vw]'
+          />
+        </motion.div>
+      </section>
 
       <section id='visi'>
         <div className='container mx-auto pt-36'>

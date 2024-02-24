@@ -2,6 +2,7 @@ import React from 'react'
 import { NextPage } from 'next'
 import Image from 'next/image'
 import CustomHead from '@/layouts/CustomHead'
+import test from '../../../public/images/hero.jpg'
 
 const ProjectOne: NextPage = () => {
   return (
@@ -15,10 +16,8 @@ const ProjectOne: NextPage = () => {
             {[...Array(4)].map((item, key) => (
               <Image
                 key={key}
-                src={'/images/hero.jpg'}
+                src={test}
                 alt={'image'}
-                width={1080}
-                height={1080}
                 className='block object-cover'
               />
             ))}

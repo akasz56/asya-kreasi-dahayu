@@ -1,10 +1,19 @@
 import { useRef, useState, Fragment, useEffect } from 'react'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { Carousel } from 'flowbite-react'
 import { Dialog, Transition } from '@headlessui/react'
+import { Carousel } from 'flowbite-react'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import ScrollArrow from './ScrollArrow'
+import image1 from '../../public/images/hero1.jpg'
+import image2 from '../../public/images/hero2.jpg'
+import image3 from '../../public/images/hero3.jpg'
+import image4 from '../../public/images/hero4.jpg'
 
-export default function HeroCarousel() {
+interface HeroCarouselProps {
+  scrollTo: string
+}
+
+export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
   const [modalOpen, setModalOpen] = useState<boolean>(false)
   const videoHeroRef = useRef<HTMLVideoElement>(null)
   const videoModalRef = useRef<HTMLVideoElement>(null)
@@ -34,28 +43,71 @@ export default function HeroCarousel() {
       pauseOnHover
       slideInterval={5000}
       draggable={false}
+      leftControl={
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          strokeWidth='1.5'
+          stroke='currentColor'
+          className='h-12 w-12 rotate-90 text-white'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            d='M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3'
+          />
+        </svg>
+      }
+      rightControl={
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          strokeWidth='1.5'
+          stroke='currentColor'
+          className='h-12 w-12 -rotate-90 text-white'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            d='M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3'
+          />
+        </svg>
+      }
       indicators={false}
     >
-      <motion.div
-        initial='hidden'
-        variants={variants}
-        whileInView='visible'
-        className="relative flex h-screen flex-col items-center justify-center gap-6 bg-[url('/images/hero1.jpg')] bg-cover bg-center"
-      >
-        <motion.p
-          variants={firstChildVariant}
-          className='text-center text-5xl font-medium leading-normal tracking-widest text-white'
+      <div className='relative h-screen'>
+        <Image
+          src={image1}
+          alt='Hero Picture 1'
+          className='absolute -z-10 object-cover'
+        />
+        <motion.div
+          initial='hidden'
+          variants={variants}
+          whileInView='visible'
+          className='flex h-full flex-col items-center justify-center gap-6'
         >
-          Menghidupkan ambisi dalam berkreasi. <br /> Bersama Asya nyalakan kembali asa.
-        </motion.p>
-        <motion.a
-          href='/our-services'
-          variants={firstChildVariant}
-          className='rounded-md bg-asya-dark px-6 py-2 font-medium uppercase tracking-widest text-white'
-        >
-          Get started
-        </motion.a>
-      </motion.div>
+          <motion.p
+            variants={firstChildVariant}
+            className='text-center text-5xl font-medium leading-normal tracking-widest text-white'
+          >
+            Menghidupkan ambisi dalam berkreasi. <br /> Bersama Asya nyalakan kembali asa.
+          </motion.p>
+          <motion.a
+            href='/our-services'
+            variants={firstChildVariant}
+            className='rounded-md bg-asya-dark px-6 py-2 font-medium uppercase tracking-widest text-white'
+          >
+            Get started
+          </motion.a>
+          <ScrollArrow
+            scrollTo={'#' + scrollTo}
+            className='absolute bottom-0 mb-[5vw]'
+          />
+        </motion.div>
+      </div>
 
       <div className='relative h-screen'>
         <button
@@ -131,26 +183,20 @@ export default function HeroCarousel() {
       </div>
 
       <Image
-        src={'/images/hero2.jpg'}
+        src={image2}
         alt='Hero Picture 2'
-        width={7952}
-        height={5304}
         className='relative h-screen object-cover object-center'
       />
 
       <Image
-        src={'/images/hero3.jpg'}
+        src={image3}
         alt='Hero Picture 3'
-        width={7952}
-        height={5304}
         className='relative h-screen object-cover object-center'
       />
 
       <Image
-        src={'/images/hero4.jpg'}
+        src={image4}
         alt='Hero Picture 4'
-        width={7952}
-        height={5304}
         className='relative h-screen object-cover object-center'
       />
     </Carousel>

@@ -1,6 +1,6 @@
 export interface Asset {
   src: string
-  type: string
+  type: 'image' | 'video'
   alt?: string
 }
 
@@ -19,26 +19,27 @@ export const worksData: Work[] = [
     subtitle: 'EO, MULTIMEDIA',
     description:
       'Kami memberikan pelayanan all-in dalam persiapan teknis dan perlengkapan acara mulai dari sistem, visual, dan akomodasi sebagai komitmen dalam pelayanan sektor pengembangan.',
-    asset: [
-      { src: '/asset/bimtek2024/asset (1).jpg', type: 'image' },
-      { src: '/asset/bimtek2024/asset (2).jpg', type: 'image' },
-      { src: '/asset/bimtek2024/asset (3).jpg', type: 'image' },
-      { src: '/asset/bimtek2024/asset (4).jpg', type: 'image' },
-      { src: '/asset/bimtek2024/asset (5).jpg', type: 'image' },
-      { src: '/asset/bimtek2024/asset (6).jpg', type: 'image' },
-      { src: '/asset/bimtek2024/asset (7).jpg', type: 'image' },
-      { src: '/asset/bimtek2024/asset (8).jpg', type: 'image' },
-      { src: '/asset/bimtek2024/asset (9).jpg', type: 'image' },
-      { src: '/asset/bimtek2024/asset (10).jpg', type: 'image' },
-    ],
+    asset: [],
   },
   {
     xid: '2',
-    title: 'OUTING RSUD KOTA DEPOK',
+    title: 'OUTING RSUD KOTA BULUKUMBA',
     subtitle: 'MULTIMEDIA',
     description:
       'Kami memberikan pelayanan berupa pendampingan sebagai pemandu wisata dan dokumentasi kegiatan dalam acara outing karyawan di Bulukumba, Sulawesi Selatan.',
-    asset: [],
+    asset: [
+      // { src: '/assets/outing_rsud_bulukumba/video.mp4', type: 'video' },
+      // { src: '/assets/outing_rsud_bulukumba/image (1).jpg', type: 'image' },
+      // { src: '/assets/outing_rsud_bulukumba/image (2).jpg', type: 'image' },
+      // { src: '/assets/outing_rsud_bulukumba/image (3).jpg', type: 'image' },
+      // { src: '/assets/outing_rsud_bulukumba/image (4).jpg', type: 'image' },
+      // { src: '/assets/outing_rsud_bulukumba/image (5).jpg', type: 'image' },
+      // { src: '/assets/outing_rsud_bulukumba/image (6).jpg', type: 'image' },
+      // { src: '/assets/outing_rsud_bulukumba/image (7).jpg', type: 'image' },
+      // { src: '/assets/outing_rsud_bulukumba/image (8).jpg', type: 'image' },
+      // { src: '/assets/outing_rsud_bulukumba/image (9).jpg', type: 'image' },
+      // { src: '/assets/outing_rsud_bulukumba/image (10).jpg', type: 'image' },
+    ],
   },
   {
     xid: '3',
@@ -63,15 +64,15 @@ export const worksData: Work[] = [
     description:
       'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
     asset: [
-      { src: '/assets/maesindo/asset (1).jpeg', type: 'image' },
-      { src: '/assets/maesindo/asset (2).jpeg', type: 'image' },
-      { src: '/assets/maesindo/asset (3).jpeg', type: 'image' },
-      { src: '/assets/maesindo/asset (4).jpeg', type: 'image' },
-      { src: '/assets/maesindo/asset (5).jpeg', type: 'image' },
-      { src: '/assets/maesindo/asset (6).jpeg', type: 'image' },
-      { src: '/assets/maesindo/asset (7).jpeg', type: 'image' },
-      { src: '/assets/maesindo/asset (8).jpeg', type: 'image' },
-      { src: '/assets/maesindo/asset (9).jpeg', type: 'image' },
+      // { src: '/assets/maesindo/image (1).jpeg', type: 'image' },
+      // { src: '/assets/maesindo/image (2).jpeg', type: 'image' },
+      // { src: '/assets/maesindo/image (3).jpeg', type: 'image' },
+      // { src: '/assets/maesindo/image (4).jpeg', type: 'image' },
+      // { src: '/assets/maesindo/image (5).jpeg', type: 'image' },
+      // { src: '/assets/maesindo/image (6).jpeg', type: 'image' },
+      // { src: '/assets/maesindo/image (7).jpeg', type: 'image' },
+      // { src: '/assets/maesindo/image (8).jpeg', type: 'image' },
+      // { src: '/assets/maesindo/image (9).jpeg', type: 'image' },
     ],
   },
 ]
