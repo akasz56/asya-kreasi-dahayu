@@ -62,6 +62,16 @@ export const worksData: Work[] = [
     subtitle: 'EO',
     description:
       'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
-    asset: [],
+    asset: [
+      { src: '/assets/maesindo/asset (1).jpeg', type: 'image' },
+      { src: '/assets/maesindo/asset (2).jpeg', type: 'image' },
+      { src: '/assets/maesindo/asset (3).jpeg', type: 'image' },
+      { src: '/assets/maesindo/asset (4).jpeg', type: 'image' },
+      { src: '/assets/maesindo/asset (5).jpeg', type: 'image' },
+      { src: '/assets/maesindo/asset (6).jpeg', type: 'image' },
+      { src: '/assets/maesindo/asset (7).jpeg', type: 'image' },
+      { src: '/assets/maesindo/asset (8).jpeg', type: 'image' },
+      { src: '/assets/maesindo/asset (9).jpeg', type: 'image' },
+    ],
   },
 ]
