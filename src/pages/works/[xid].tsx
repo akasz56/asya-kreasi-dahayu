@@ -38,6 +38,20 @@ const WorkDetail: NextPage = () => {
                       height={1080}
                       className='block object-cover'
                     />
+                  ) : item.type === 'video' ? (
+                    <video
+                      key={key}
+                      width={1920}
+                      height={1080}
+                      controls
+                      autoPlay
+                    >
+                      <source
+                        src={item.src}
+                        type='video/mp4'
+                      />
+                      Your browser does not support the video tag.
+                    </video>
                   ) : (
                     ''
                   )
