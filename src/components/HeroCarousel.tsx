@@ -1,4 +1,4 @@
-import { useRef, useState, Fragment } from 'react'
+import { useRef, useState, Fragment, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Carousel } from 'flowbite-react'
@@ -6,7 +6,15 @@ import { Dialog, Transition } from '@headlessui/react'
 
 export default function HeroCarousel() {
   const [modalOpen, setModalOpen] = useState<boolean>(false)
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const videoHeroRef = useRef<HTMLVideoElement>(null)
+  const videoModalRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    if (videoHeroRef && videoHeroRef.current) {
+      if (!modalOpen) videoHeroRef.current?.play()
+      else videoHeroRef.current?.pause()
+    }
+  }, [modalOpen, videoHeroRef])
 
   const variants = {
     visible: { transition: { staggerChildren: 0.5 } },
@@ -57,19 +65,11 @@ export default function HeroCarousel() {
           }}
           aria-label='Watch the video'
         >
-          <div className='absolute flex h-full w-full items-center justify-center bg-neutral-700 opacity-50'>
-            <svg
-              className='h-64 w-64'
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 448 512'
-            >
-              <path d='M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z' />
-            </svg>
-          </div>
           <video
             autoPlay
             loop
             muted
+            ref={videoHeroRef}
             className='h-full w-full cursor-pointer object-cover object-center'
           >
             <source
@@ -83,10 +83,10 @@ export default function HeroCarousel() {
         <Transition
           show={modalOpen}
           as={Fragment}
-          afterEnter={() => videoRef.current?.play()}
+          afterEnter={() => videoModalRef.current?.play()}
         >
           <Dialog
-            initialFocus={videoRef}
+            initialFocus={videoModalRef}
             onClose={() => setModalOpen(false)}
           >
             <Transition.Child
@@ -110,12 +110,12 @@ export default function HeroCarousel() {
               leaveTo='opacity-0 scale-75'
             >
               <div className='mx-auto flex h-full max-w-6xl items-center'>
-                <Dialog.Panel className='aspect-video max-h-full w-full overflow-hidden rounded-3xl bg-black shadow-2xl'>
+                <Dialog.Panel className='aspect-video max-h-full w-full overflow-hidden rounded-lg bg-black shadow-2xl'>
                   <video
                     width='1920'
                     height='1080'
                     controls
-                    ref={videoRef}
+                    ref={videoModalRef}
                   >
                     <source
                       src='./videos/hero_compro.mp4'

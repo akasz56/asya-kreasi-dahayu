@@ -2,6 +2,7 @@ import React from 'react'
 import { NextPage } from 'next'
 import { motion } from 'framer-motion'
 import CustomHead from '@/layouts/CustomHead'
+import Image from 'next/image'
 
 const Index: NextPage = () => {
   const services = [
@@ -134,8 +135,15 @@ const Index: NextPage = () => {
       >
         <div
           id='hero'
-          className='flex h-screen flex-col justify-evenly bg-asya-dark'
+          className='relative flex h-screen flex-col justify-evenly'
         >
+          <Image
+            src={'/images/service.jpg'}
+            alt={'backgroundService'}
+            width={7905}
+            height={4026}
+            className='absolute -z-10 h-full object-cover'
+          />
           <motion.div
             className='container mx-auto'
             initial='hidden'

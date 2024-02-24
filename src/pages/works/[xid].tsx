@@ -25,16 +25,20 @@ const WorkDetail: NextPage = () => {
       <div className='asya-container'>
         <div className='flex'>
           <div className='w-1/2 space-y-12'>
-            {workDetail?.asset.map((item, key) => (
-              <Image
-                key={key}
-                src={'/images/hero.jpg'}
-                alt={item.alt ?? ''}
-                width={1080}
-                height={1080}
-                className='block object-cover'
-              />
-            ))}
+            {workDetail?.asset.map((item, key) =>
+              item.type === 'image' ? (
+                <Image
+                  key={key}
+                  src={item.src}
+                  alt={item.alt ?? ''}
+                  width={1080}
+                  height={1080}
+                  className='block object-cover'
+                />
+              ) : (
+                ''
+              )
+            )}
           </div>
           <div className='w-1/2'>
             <div className='sticky top-0 ml-36 flex h-screen flex-col py-32'>

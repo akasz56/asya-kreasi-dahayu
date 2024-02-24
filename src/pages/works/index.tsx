@@ -4,9 +4,26 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
 import { Work, worksData } from '../../components/constant'
+import WorksItem from '@/components/WorksItem'
+import Image from 'next/image'
+
+export type Client = {
+  name: string
+  field: string
+  year: string
+  image: string
+}
 
 const Index: NextPage = () => {
   const works: Work[] = worksData
+
+  const clients: Client[] = [...Array(12)].map((_, idx) => ({
+    name: 'Nama Klien Lorem Ipsum Dolor ' + idx,
+    field: 'Jenis Bidang',
+    year: '2019',
+    image:
+      'https://and-atelier.com/media/pages/projects/1961-1992-japan/528c4a2488-1698872737/and-atelier-1961-1992-japan-3-400x.jpg',
+  }))
 
   return (
     <>
@@ -24,18 +41,29 @@ const Index: NextPage = () => {
             Works Asya Kreasi Dahayu, Lorem <br /> Ipsum Dolor Sit Amet Consect
           </motion.h1>
           <div className='container mx-auto mb-28 grid grid-cols-2 gap-16'>
-            {works.map((work, key) => (
-              <Link
-                key={key}
-                href={'/works/' + work.xid}
-              >
-                <div className='mb-20 aspect-square bg-asya-dark'></div>
-                <h2 className='mb-20 overflow-hidden text-ellipsis whitespace-nowrap text-3xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal'>
-                  {work.title}
-                </h2>
-                <p className='tracking-widest text-asya-dark'>{work.description}</p>
-              </Link>
-            ))}
+            {works.map((work, key) => {
+              const thumbnail = work.asset.filter((asset) => asset.type === 'image')[0]
+              return (
+                <Link
+                  key={key}
+                  href={'/works/' + work.xid}
+                >
+                  {thumbnail && thumbnail.src && (
+                    <Image
+                      src={thumbnail.src}
+                      alt={thumbnail.alt ?? ''}
+                      width={1080}
+                      height={1080}
+                      className='mb-16 block aspect-square object-cover'
+                    />
+                  )}
+                  <h2 className='mb-20 overflow-hidden text-ellipsis whitespace-nowrap text-3xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal'>
+                    {work.title}
+                  </h2>
+                  <p className='tracking-widest text-asya-dark'>{work.description}</p>
+                </Link>
+              )
+            })}
           </div>
         </section>
 
@@ -45,21 +73,9 @@ const Index: NextPage = () => {
         >
           <h1 className='text-5xl font-medium uppercase leading-normal tracking-widest text-asya-dark'>Clients</h1>
           <ul className='mt-48 ml-48'>
-            {[...Array(12)].map((item, key) => (
-              <li
-                key={key}
-                className='mb-12'
-              >
-                <Link
-                  href={'/works/project-one'}
-                  className='flex gap-16'
-                >
-                  <span className='text-xl leading-relaxed tracking-widest text-asya-dark'>
-                    Nama Klien Lorem Ipsum Dolor
-                  </span>
-                  <hr className='flex-1 self-center border-asya-dark' />
-                  <span className='text-xl leading-relaxed tracking-widest text-asya-dark'>Jenis Bidang, 2019</span>
-                </Link>
+            {clients.map((item, key) => (
+              <li key={key}>
+                <WorksItem client={item} />
               </li>
             ))}
           </ul>

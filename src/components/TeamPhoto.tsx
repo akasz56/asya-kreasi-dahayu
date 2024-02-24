@@ -1,35 +1,40 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { TeamMember } from './team'
+import Image from 'next/image'
 
 type TeamPhotoProps = {
   teamMember: TeamMember
 }
 
 export default function TeamPhoto({ teamMember }: TeamPhotoProps) {
-  const [isHovered, setIsHovered] = useState(false)
+  const [isHovered, setIsHovered] = useState<boolean>(false)
 
   return (
     <a
       href='#'
-      style={
-        isHovered
-          ? {
-              background: `linear-gradient(0deg, rgb(89, 138, 61), rgb(89, 138, 61)), url('${teamMember.image}') 0% 0% / cover`,
-              aspectRatio: '1 / 1',
-              backgroundBlendMode: 'multiply, luminosity',
-            }
-          : {
-              background: `url('${teamMember.image}') 0% 0% / cover`,
-              aspectRatio: '1 / 1',
-            }
-      }
+      className='relative aspect-square'
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      <Image
+        src={teamMember.image}
+        alt={teamMember.name}
+        className='absolute aspect-square object-cover'
+        // width={3422}
+        // height={3422}
+        width={1440}
+        height={1440}
+      />
+      <div
+        style={{ opacity: isHovered ? 0.5 : 0 }}
+        className='absolute h-full w-full bg-asya-dark transition-opacity'
+      />
       <motion.div
-        className='flex h-full flex-col justify-between p-4 opacity-0 transition-opacity hover:opacity-100'
-        whileHover={{ x: 10, transition: { duration: 0.5 } }}
+        style={{ opacity: isHovered ? 1 : 0 }}
+        className='flex h-full flex-col justify-between p-4 transition-opacity'
+        initial={{ x: -10 }}
+        whileHover={{ x: 0.01, transition: { duration: 0.5 } }}
       >
         <h6 className='text-2xl font-bold uppercase leading-normal tracking-widest text-white'>{teamMember.name}</h6>
         <p className='text-lg capitalize leading-normal tracking-widest text-white'>{teamMember.position}</p>

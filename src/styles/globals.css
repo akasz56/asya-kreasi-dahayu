@@ -126,3 +126,20 @@ a {
 .asya-link>* {
   @apply after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:duration-300 after:content-[''] after:hover:w-full;
 }
+
+.hover-img {
+  height: 2rem;
+  box-sizing: border-box;
+  transition: ease-in .2s;
+  position: fixed;
+  z-index: 99;
+  object-fit: cover;
+  transform: translateY(-50%) translateX(-50%);
+  top: 35%;
+  left: 50%;
+}
+
+.hover-img img {
+  max-height: 50vh;
+  max-width: 50vw;
+}
