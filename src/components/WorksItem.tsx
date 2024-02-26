@@ -40,11 +40,11 @@ export default function WorksItem(props: WorksItemProps) {
         className='hover-img'
         style={{ opacity: display ? 1 : 0 }}
       >
-        <img
+        <Image
           src={props.client.image}
           alt={props.client.name}
-          // width={200}
-          // height={200}
+          width={200}
+          height={200}
         />
       </div>
     </div>
