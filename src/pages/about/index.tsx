@@ -7,6 +7,8 @@ import { team as teamData } from '@/components/team'
 import TeamPhoto from '@/components/TeamPhoto'
 import Image from 'next/image'
 import heroImage from '../../../public/images/about.jpg'
+import visiImage from '../../../public/images/visi.jpg'
+import misiImage from '../../../public/images/misi.jpg'
 
 const Index: NextPage = () => {
   const section = {
@@ -29,18 +31,18 @@ const Index: NextPage = () => {
     >
       <section
         id='hero'
-        className='relative'
+        className='relative h-screen'
       >
         <Image
           src={heroImage}
           alt='Hero Image'
-          className='absolute'
+          className='absolute -z-10 object-cover'
         />
         <motion.div
           initial='hidden'
           variants={section}
           whileInView='visible'
-          className='relative flex h-screen flex-col items-center justify-center gap-8'
+          className='flex h-full flex-col items-center justify-center gap-8'
         >
           <motion.p
             variants={itemEffect}
@@ -57,29 +59,40 @@ const Index: NextPage = () => {
 
       <section id='visi'>
         <div className='container mx-auto pt-36'>
-          <div className='flex flex-wrap justify-between border-b-2 border-asya-dark pb-36'>
-            <h1 className='basis-5/12 text-4xl font-medium uppercase tracking-widest text-asya-dark'>
-              Visi Asya Kreasi Dahayu
-            </h1>
-            <p className='basis-5/12 leading-relaxed tracking-widest text-asya-dark'>
-              Visi utama kami adalah memberikan pelayanan paling unggul dan perhatian yang tinggi kepada para kreator
-              dengan ekosistem kerja yang inovatif dan produktif. Hal ini dilandasi dari cita-cita kami untuk menjadi
-              lembaga industri kreatif yang terdepan dan terbesar di Indonesia dalam hal pelayanan dan kinerja untuk
-              klien dan mitra kerja agar dapat menjadi pilar perekonomian negara.
-            </p>
-            <div className='aspect-square basis-5/12 bg-asya-dark'></div>
+          <div className='flex justify-between border-b-2 border-asya-dark pb-36'>
+            <div className='w-[587px] space-y-40'>
+              <h1 className='text-4xl font-medium uppercase tracking-widest text-asya-dark'>Visi Asya Kreasi Dahayu</h1>
+              <Image
+                src={visiImage}
+                alt='Visi'
+                className='aspect-square object-cover'
+              />
+            </div>
+            <div className='w-[587px] space-y-4 leading-relaxed tracking-widest text-asya-dark'>
+              <p>
+                Visi utama kami adalah memberikan pelayanan paling unggul dan perhatian yang tinggi kepada para kreator
+                dengan ekosistem kerja yang inovatif dan produktif. Hal ini dilandasi dari cita-cita kami untuk menjadi
+                lembaga industri kreatif yang terdepan dan terbesar di Indonesia dalam hal pelayanan dan kinerja untuk
+                klien dan mitra kerja agar dapat menjadi pilar perekonomian negara.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <section id='misi'>
         <div className='container mx-auto pt-36'>
-          <div className='flex flex-wrap justify-between border-b-2 border-asya-dark pb-36'>
-            <h1 className='basis-5/12 text-4xl font-medium uppercase tracking-widest text-asya-dark'>
-              Misi Asya Kreasi Dahayu
-            </h1>
-            <div className='basis-5/12 leading-relaxed tracking-widest text-asya-dark'>
-              <p className='mb-4'>
+          <div className='flex justify-between border-b-2 border-asya-dark pb-36'>
+            <div className='w-[587px] space-y-40'>
+              <h1 className='text-4xl font-medium uppercase tracking-widest text-asya-dark'>Misi Asya Kreasi Dahayu</h1>
+              <Image
+                src={misiImage}
+                alt='Misi'
+                className='aspect-square object-cover'
+              />
+            </div>
+            <div className='w-[587px] space-y-4 leading-relaxed tracking-widest text-asya-dark'>
+              <p>
                 Dalam mewujudkan visi kami, kesejahteraan tim serta keseimbangan ekosistem kerja adalah yang utama. Kami
                 menciptakan lingkungan kerja yang aman dan nyaman serta memberikan kesempatan berkembang dengan membina
                 dan meningkatkan semangat yang tinggi kepada tim kami agar setiap level dari tim dapat bekerja sama
@@ -92,7 +105,6 @@ const Index: NextPage = () => {
                 bagi investor atau pemegang saham.
               </p>
             </div>
-            <div className='aspect-square basis-5/12 bg-asya-dark'></div>
           </div>
         </div>
       </section>

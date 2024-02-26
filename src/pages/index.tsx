@@ -1,41 +1,12 @@
 import React from 'react'
 import { NextPage } from 'next'
-import { DisplayContentItem } from '@/components/Display'
 import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
 import HeroCarousel from '@/components/HeroCarousel'
+import { servicesDisplay } from '@/components/services'
+import { DisplayContentItem } from '@/components/Display'
 
 const Home: NextPage = () => {
-  const services: DisplayContentItem[] = [
-    {
-      title: 'MICE (Meeting Incentive Convention Exhibition)',
-      description:
-        'Kami memberikan pelayanan dan edukasi untuk bidang yang masih minim atensi: “the meetings industry”.',
-      href: '#',
-    },
-    {
-      title: 'Multimedia',
-      description: 'Kami menciptakan hasil eksplorasi dengan realisasi ide yang unik dan berkelanjutan.',
-      href: '#',
-    },
-    {
-      title: 'Desain Grafis',
-      description: 'Kami merancang pola visual yang tidak hanya menarik perhatian, namun memberikan inspirasi.',
-      href: '#',
-    },
-    {
-      title: 'Garment & Fashion',
-      description: 'Kami menciptakan mode yang inovatif namun tak lekang oleh waktu.',
-      href: '#',
-    },
-    {
-      title: 'Konsultan Kreatif',
-      description:
-        'Kami memberikan strategi dalam desain untuk membekali kreator dalam bertumbuh dan menciptakan mahakarya ke depannya.',
-      href: '#',
-    },
-  ]
-
   return (
     <CustomHead
       title='Home'
@@ -75,16 +46,16 @@ const Home: NextPage = () => {
             </p>
           </div>
           <div className='mb-28 grid grid-cols-2 gap-16'>
-            {services.map((item, key) => (
+            {servicesDisplay.map((service: DisplayContentItem, key: number) => (
               <Link
                 key={key}
                 href={'#'}
               >
                 <div className='mb-20 aspect-square rounded-3xl bg-asya-dark'></div>
                 <h2 className='mb-20 overflow-hidden text-ellipsis whitespace-nowrap text-3xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal'>
-                  {item.title}
+                  {service.title}
                 </h2>
-                <p className='tracking-widest text-asya-dark'>{item.description}</p>
+                <p className='tracking-widest text-asya-dark'>{service.description}</p>
               </Link>
             ))}
           </div>

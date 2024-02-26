@@ -1,3 +1,5 @@
+import { DisplayContentItem } from "./Display"
+
 export interface Service {
     name: string
     nickname: string | null
@@ -62,5 +64,35 @@ export const services: Service[] = [
         description:
             'Tim kami membantu untuk memberikan arahan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',
         feature: placeholderFeatures,
+    },
+]
+
+export const servicesDisplay: DisplayContentItem[] = [
+    {
+        title: 'MICE (Meeting Incentive Convention Exhibition)',
+        description:
+            'Kami memberikan pelayanan dan edukasi untuk bidang yang masih minim atensi: “the meetings industry”.',
+        href: '#',
+    },
+    {
+        title: 'Multimedia',
+        description: 'Kami menciptakan hasil eksplorasi dengan realisasi ide yang unik dan berkelanjutan.',
+        href: '#',
+    },
+    {
+        title: 'Desain Grafis',
+        description: 'Kami merancang pola visual yang tidak hanya menarik perhatian, namun memberikan inspirasi.',
+        href: '#',
+    },
+    {
+        title: 'Garment & Fashion',
+        description: 'Kami menciptakan mode yang inovatif namun tak lekang oleh waktu.',
+        href: '#',
+    },
+    {
+        title: 'Konsultan Kreatif',
+        description:
+            'Kami memberikan strategi dalam desain untuk membekali kreator dalam bertumbuh dan menciptakan mahakarya ke depannya.',
+        href: '#',
     },
 ]
