@@ -44,7 +44,7 @@ const WorkDetail: NextPage = () => {
                       width={1920}
                       height={1080}
                       controls
-                      autoPlay
+                      autoPlay={key === 0}
                     >
                       <source
                         src={item.src}

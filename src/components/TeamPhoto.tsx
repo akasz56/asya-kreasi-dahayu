@@ -21,8 +21,6 @@ export default function TeamPhoto({ teamMember }: TeamPhotoProps) {
         src={teamMember.image}
         alt={teamMember.name}
         className='absolute aspect-square object-cover'
-        // width={3422}
-        // height={3422}
         width={1440}
         height={1440}
       />
