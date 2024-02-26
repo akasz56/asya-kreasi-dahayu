@@ -4,121 +4,9 @@ import { motion } from 'framer-motion'
 import CustomHead from '@/layouts/CustomHead'
 import Image from 'next/image'
 import heroImage from '../../../public/images/service.jpg'
+import { Service, ServiceFeature, services } from '@/components/services'
 
 const Index: NextPage = () => {
-  const services = [
-    {
-      name: 'MICE (Meeting Incentive Convention Exhibition)',
-      nickname: 'MICE',
-      description:
-        'Tim kami akan membantu kreator untuk mencapai hasil yang terbaik dengan memberikan pelayanan all-in dengan keserbagunaan untuk tumbuh di industri ini mulai dari akomodasi, transportasi, hingga publikasi.',
-      characteristics: [
-        {
-          title: 'Keunggulan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-        {
-          title: 'Jasa yang disediakan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-        {
-          title: 'Fitur tambahan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-      ],
-    },
-    {
-      name: 'Multimedia',
-      description:
-        'Tim kami memberikan pelayanan yang lengkap mulai dari sistem, visual, dan perlengkapan lainnya dengan berkomitmen untuk kesempurnaan dan akurasi dalam berkolaborasi dengan sektor lain seperti MICE dan desain grafis.',
-      characteristics: [
-        {
-          title: 'Keunggulan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-        {
-          title: 'Jasa yang disediakan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-        {
-          title: 'Fitur tambahan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-      ],
-    },
-    {
-      name: 'Desain Grafis',
-      description:
-        'Tim kami membantu kreator dalam menciptakan dan membangun identitas, ide merek, dan pengalaman dengan ekspresi khas yang terhubung dan terlibat untuk melaksanakan tujuan yang telah ditetapkan.',
-      characteristics: [
-        {
-          title: 'Keunggulan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-        {
-          title: 'Jasa yang disediakan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-        {
-          title: 'Fitur tambahan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-      ],
-    },
-    {
-      name: 'Garment & Fashion',
-      description: '',
-      characteristics: [
-        {
-          title: 'Keunggulan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-        {
-          title: 'Jasa yang disediakan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-        {
-          title: 'Fitur tambahan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-      ],
-    },
-    {
-      name: 'Konsultan Kreatif',
-      description:
-        'Tim kami membantu untuk memberikan arahan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',
-      characteristics: [
-        {
-          title: 'Keunggulan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-        {
-          title: 'Jasa yang disediakan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-        {
-          title: 'Fitur tambahan',
-          description:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-        },
-      ],
-    },
-  ]
-
   const heroVariants = {
     visible: {
       opacity: 1,
@@ -172,7 +60,7 @@ const Index: NextPage = () => {
             variants={{ visible: { transition: { staggerChildren: 0.25 } } }}
           >
             <div className='flex justify-between'>
-              {services.map((service, key) => (
+              {services.map((service: Service, key: number) => (
                 <motion.a
                   key={key}
                   href={'#section' + key}
@@ -203,15 +91,15 @@ const Index: NextPage = () => {
               </div>
               <div className='aspect-video w-full bg-asya-dark'></div>
               <ul className='mt-20 grid grid-cols-3 gap-24'>
-                {service.characteristics.map((characteristic, key) => (
+                {service.feature.map((feature: ServiceFeature, key: number) => (
                   <li
                     key={key}
                     className='flex flex-col justify-between'
                   >
                     <h4 className='mb-10 text-2xl font-bold uppercase leading-normal tracking-widest text-asya-dark'>
-                      {characteristic.title}
+                      {feature.title}
                     </h4>
-                    <p className='leading-normal tracking-widest text-asya-dark'>{characteristic.description}</p>
+                    <p className='leading-normal tracking-widest text-asya-dark'>{feature.description}</p>
                   </li>
                 ))}
               </ul>
