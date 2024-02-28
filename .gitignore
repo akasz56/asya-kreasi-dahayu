@@ -38,3 +38,7 @@ next-env.d.ts
 
 # Contentlayer
 .contentlayer
+
+public/assets
+public/images
+public/videos
