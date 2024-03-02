@@ -5,6 +5,7 @@ import CustomHead from '@/layouts/CustomHead'
 import HeroCarousel from '@/components/HeroCarousel'
 import { servicesDisplay } from '@/components/services'
 import { DisplayContentItem } from '@/components/Display'
+import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
@@ -51,7 +52,17 @@ const Home: NextPage = () => {
                 key={key}
                 href={'#'}
               >
-                <div className='mb-20 aspect-square rounded-3xl bg-asya-dark'></div>
+                {service.image ? (
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    width={1080}
+                    height={1080}
+                    className='mb-20 aspect-square rounded-3xl'
+                  />
+                ) : (
+                  <div className='mb-20 aspect-square rounded-3xl bg-asya-dark' />
+                )}
                 <h2 className='mb-20 overflow-hidden text-ellipsis whitespace-nowrap text-3xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal'>
                   {service.title}
                 </h2>

@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
-import { Work, worksData } from '../../components/constant'
+import { Work, worksData } from '../../components/works'
 import WorksItem from '@/components/WorksItem'
 import Image from 'next/image'
 
