@@ -13,4 +13,6 @@ export const team: TeamMember[] = [
     { name: "name", position: "position", image: "/images/team/team (6).jpg" },
     { name: "name", position: "position", image: "/images/team/team (7).jpg" },
     { name: "name", position: "position", image: "/images/team/team (8).jpg" },
+    { name: "name", position: "position", image: "/images/team/team (9).jpg" },
+    { name: "name", position: "position", image: "/images/team/team (10).jpg" },
 ]
