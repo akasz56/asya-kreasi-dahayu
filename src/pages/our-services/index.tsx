@@ -63,7 +63,7 @@ const Index: NextPage = () => {
               {services.map((service: Service, key: number) => (
                 <motion.a
                   key={key}
-                  href={'#section' + key}
+                  href={'#service_' + key}
                   variants={heroVariants}
                 >
                   <div className='mx-auto mb-8 h-14 w-14 rounded-full bg-white'></div>
@@ -79,7 +79,7 @@ const Index: NextPage = () => {
         {services.map((service, key) => (
           <div
             key={key}
-            id={'section' + key}
+            id={'service_' + key}
             className='my-32'
           >
             <div className='container mx-auto'>
@@ -89,7 +89,14 @@ const Index: NextPage = () => {
                 </h2>
                 <p className='w-3/5 font-light leading-relaxed tracking-widest text-asya-dark'>{service.description}</p>
               </div>
-              <div className='aspect-video w-full bg-asya-dark'></div>
+              <Image
+                src={service.asset}
+                alt={service.name}
+                width={1920}
+                height={1080}
+                className='aspect-video w-full object-cover'
+              />
+
               <ul className='mt-20 grid grid-cols-3 gap-24'>
                 {service.feature.map((feature: ServiceFeature, key: number) => (
                   <li
