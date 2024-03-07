@@ -33,7 +33,8 @@ const placeholderFeatures: ServiceFeature[] = [
 
 export const services: Service[] = [
     {
-        name: 'MICE (Meeting Incentive Convention Exhibition)',
+        name: 'MICE & EO',
+        // name: 'MICE (Meeting Incentive Convention Exhibition)',
         asset: '/images/services/service (1).jpg',
         nickname: 'MICE',
         description:
@@ -48,23 +49,22 @@ export const services: Service[] = [
         feature: placeholderFeatures,
     },
     {
-        name: 'Desain Grafis',
-        asset: '/images/services/service (3).jpg',
+        name: 'Konsultan Kreatif',
+        asset: '/images/services/service (4).jpg',
         description:
-            'Tim kami membantu kreator dalam menciptakan dan membangun identitas, ide merek, dan pengalaman dengan ekspresi khas yang terhubung dan terlibat untuk melaksanakan tujuan yang telah ditetapkan.',
+            'Tim kami membantu untuk memberikan arahan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',
+        feature: placeholderFeatures,
+    },
+    {
+        name: 'Ticketing',
+        asset: '/images/services/service (3).jpg',
+        description: '-',
         feature: placeholderFeatures,
     },
     {
         name: 'Garment & Fashion',
-        asset: '/images/services/service (4).jpg',
-        description: '',
-        feature: placeholderFeatures,
-    },
-    {
-        name: 'Konsultan Kreatif',
         asset: '/images/services/service (5).jpg',
-        description:
-            'Tim kami membantu untuk memberikan arahan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',
+        description: '-',
         feature: placeholderFeatures,
     },
 ]
@@ -84,19 +84,19 @@ export const servicesDisplay: DisplayContentItem[] = [
         href: '#',
     },
     {
-        title: 'Desain Grafis',
-        image: '/images/services/service (3).jpg',
-        description: 'Kami merancang pola visual yang tidak hanya menarik perhatian, namun memberikan inspirasi.',
-        href: '#',
-    },
-    {
-        title: 'Garment & Fashion',
+        title: 'Konsultan Kreatif',
         image: '/images/services/service (4).jpg',
         description: 'Kami menciptakan mode yang inovatif namun tak lekang oleh waktu.',
         href: '#',
     },
     {
-        title: 'Konsultan Kreatif',
+        title: 'Ticketing',
+        image: '/images/services/service (3).jpg',
+        description: '-',
+        href: '#',
+    },
+    {
+        title: 'Garment & Fashion',
         image: '/images/services/service (5).jpg',
         description:
             'Kami memberikan strategi dalam desain untuk membekali kreator dalam bertumbuh dan menciptakan mahakarya ke depannya.',
