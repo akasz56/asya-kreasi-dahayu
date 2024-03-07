@@ -40,7 +40,7 @@ const Index: NextPage = () => {
           >
             Works Asya Kreasi Dahayu, Lorem <br /> Ipsum Dolor Sit Amet Consect
           </motion.h1>
-          <div className='container mx-auto mb-28 grid grid-cols-2 gap-16'>
+          <div className='asya-container mb-28 grid grid-cols-2 gap-16'>
             {works.map((work, key) => {
               const thumbnail = work.asset.filter((asset) => asset.type === 'image')[0]
               return (
@@ -54,10 +54,10 @@ const Index: NextPage = () => {
                       alt={thumbnail.alt ?? ''}
                       width={1080}
                       height={1080}
-                      className='mb-16 block aspect-square object-cover'
+                      className='mb-16 aspect-square object-cover'
                     />
                   )}
-                  <h2 className='mb-20 overflow-hidden text-ellipsis whitespace-nowrap text-3xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal'>
+                  <h2 className='mb-20 overflow-hidden text-ellipsis whitespace-nowrap align-baseline text-3xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal'>
                     {work.title}
                   </h2>
                   <p className='tracking-widest text-asya-dark'>{work.description}</p>
@@ -69,7 +69,7 @@ const Index: NextPage = () => {
 
         <section
           id='clients'
-          className='container mx-auto my-32 pt-16'
+          className='asya-container my-32 pt-16'
         >
           <h1 className='text-5xl font-medium uppercase leading-normal tracking-widest text-asya-dark'>Clients</h1>
           <ul className='mt-48 ml-48'>

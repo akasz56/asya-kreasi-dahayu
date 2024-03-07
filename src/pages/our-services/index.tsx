@@ -32,7 +32,7 @@ const Index: NextPage = () => {
             className='absolute -z-10 h-full object-cover'
           />
           <motion.div
-            className='container mx-auto'
+            className='asya-container'
             initial='hidden'
             animate='visible'
             variants={{ visible: { transition: { staggerChildren: 0.5 } } }}
@@ -54,7 +54,7 @@ const Index: NextPage = () => {
             </div>
           </motion.div>
           <motion.div
-            className='container mx-auto'
+            className='asya-container'
             initial='hidden'
             animate='visible'
             variants={{ visible: { transition: { staggerChildren: 0.25 } } }}
@@ -65,6 +65,7 @@ const Index: NextPage = () => {
                   key={key}
                   href={'#service_' + key}
                   variants={heroVariants}
+                  className={key === 1 ? '-mr-5' : ''}
                 >
                   <div className='mx-auto mb-8 h-14 w-14 rounded-full bg-white'></div>
                   <h4 className='text-center text-xl font-bold uppercase leading-normal tracking-widest text-white'>
@@ -82,8 +83,8 @@ const Index: NextPage = () => {
             id={'service_' + key}
             className='my-32'
           >
-            <div className='container mx-auto'>
-              <div className='mb-24 flex'>
+            <div className='asya-container-alt'>
+              <div className='mb-24 flex gap-10'>
                 <h2 className='flex-1 self-center text-4xl font-medium uppercase tracking-widest text-asya-dark'>
                   {service.name}
                 </h2>

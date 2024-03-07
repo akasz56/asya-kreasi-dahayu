@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         id='about'
         className='bg-asya-dark'
       >
-        <div className='container mx-auto flex py-20'>
+        <div className='asya-container flex py-20'>
           <h2 className='flex-1 self-center text-4xl font-medium uppercase tracking-widest text-white'>About Us</h2>
           <p className='w-3/5 font-light leading-relaxed tracking-widest text-white'>
             Asya Kreasi Dahayu merupakan perusahaan yang bergerak di bidang industri kreatif dan pengembangan sumber
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       </section>
 
       <section id='service'>
-        <div className='container mx-auto'>
+        <div className='asya-container px-20'>
           <div className='flex py-32'>
             <h2 className='flex-1 self-center text-4xl font-medium uppercase tracking-widest text-asya-dark'>
               Our Service

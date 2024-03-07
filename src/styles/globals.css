@@ -120,6 +120,15 @@ a {
   text-decoration: none;
 }
 
+.asya-container {
+  @apply container mx-auto px-20
+}
+
+.asya-container-alt {
+  max-width: 1536px;
+  @apply mx-auto px-20
+}
+
 .asya-link {
   @apply relative;
 }

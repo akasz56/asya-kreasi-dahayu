@@ -36,7 +36,7 @@ const Index: NextPage = () => {
         <Image
           src={heroImage}
           alt='Hero Image'
-          className='absolute -z-10 object-cover'
+          className='absolute -z-10 h-full object-cover object-center'
         />
         <motion.div
           initial='hidden'
@@ -58,7 +58,7 @@ const Index: NextPage = () => {
       </section>
 
       <section id='visi'>
-        <div className='container mx-auto pt-36'>
+        <div className='asya-container pt-36'>
           <div className='flex justify-between border-b-2 border-asya-dark pb-36'>
             <div className='w-[587px] space-y-40'>
               <h1 className='text-4xl font-medium uppercase tracking-widest text-asya-dark'>Visi Asya Kreasi Dahayu</h1>
@@ -81,7 +81,7 @@ const Index: NextPage = () => {
       </section>
 
       <section id='misi'>
-        <div className='container mx-auto pt-36'>
+        <div className='asya-container pt-36'>
           <div className='flex justify-between border-b-2 border-asya-dark pb-36'>
             <div className='w-[587px] space-y-40'>
               <h1 className='text-4xl font-medium uppercase tracking-widest text-asya-dark'>Misi Asya Kreasi Dahayu</h1>
@@ -110,7 +110,7 @@ const Index: NextPage = () => {
       </section>
 
       <section id='team'>
-        <div className='container mx-auto flex py-20'>
+        <div className='asya-container flex py-20'>
           <h2 className='flex-1 self-center text-4xl font-medium uppercase tracking-widest text-asya-dark'>Our Team</h2>
           <p className='w-3/5 font-light leading-relaxed tracking-widest text-asya-dark'>
             Sesuai visi Asya, tujuan kami adalah menggunakan keterampilan kreatif kami untuk memberikan pelayanan paling
@@ -119,7 +119,7 @@ const Index: NextPage = () => {
             mereka mencapai hasil terbaik.
           </p>
         </div>
-        <div className='container mx-auto'>
+        <div className='asya-container'>
           <div className='grid grid-cols-4 gap-4 pb-36'>
             {teamData.map((teamMember, key) => (
               <TeamPhoto
