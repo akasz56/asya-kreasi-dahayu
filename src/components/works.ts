@@ -18,7 +18,7 @@ export const worksData: Work[] = [
     title: 'BIMTEK ANGGOTA DRPD PROVINSI & DPRD KABUPATEN KOTA SE BANTEN, JAWA BARAT DAN DKI JAKARTA 2022',
     subtitle: 'EO, MULTIMEDIA',
     description:
-      'Kami memberikan pelayanan all-in dalam persiapan teknis dan perlengkapan acara mulai dari sistem, visual, dan akomodasi sebagai komitmen dalam pelayanan sektor pengembangan.',
+      'Sebagai bagian dari komitmen kami dalam pelayanan sektor pengembangan, kami telah dipercaya untuk menyediakan layanan persiapan teknis dan peralatan lengkap yang dalam persiapan teknis dan perlengkapan acara tahunan mulai dari sistem, visual, dokumentasi, hingga akomodasi.',
     asset: [
       { src: '/assets/bimtek_banjabar_2022/video.mp4', type: 'video' },
       { src: '/assets/bimtek_banjabar_2022/image (1).jpg', type: 'image' },
@@ -38,7 +38,7 @@ export const worksData: Work[] = [
     title: 'BIMTEK ANGGOTA DRPD PROVINSI & DPRD KABUPATEN KOTA SE BANTEN, JAWA BARAT DAN DKI JAKARTA 2023',
     subtitle: 'EO, MULTIMEDIA',
     description:
-      'Kami memberikan pelayanan all-in dalam persiapan teknis dan perlengkapan acara mulai dari sistem, visual, dan akomodasi sebagai komitmen dalam pelayanan sektor pengembangan.',
+      'Sebagai bagian dari komitmen kami dalam pelayanan sektor pengembangan, kami telah dipercaya untuk menyediakan layanan persiapan teknis dan peralatan lengkap yang dalam persiapan teknis dan perlengkapan acara tahunan mulai dari sistem, visual, dokumentasi, hingga akomodasi.',
     asset: [
       { src: '/assets/bimtek_banjabar_2023/video.mp4', type: 'video' },
       { src: '/assets/bimtek_banjabar_2023/image (1).jpg', type: 'image' },
@@ -63,7 +63,7 @@ export const worksData: Work[] = [
     title: 'OUTING RSUD KOTA DEPOK',
     subtitle: 'MULTIMEDIA',
     description:
-      'Kami memberikan pelayanan berupa pendampingan sebagai pemandu wisata dan dokumentasi kegiatan dalam acara outing karyawan di Bulukumba, Sulawesi Selatan.',
+      'Kami memberikan pelayanan maksimal dalam pendampingan sebagai pemandu wisata dan dokumentasi kegiatan dengan visual yang ciamik untuk menciptakan pengalaman baru dalam acara outing karyawan di Bulukumba, Sulawesi Selatan.',
     asset: [
       { src: '/assets/outing_rsud_bulukumba/video.mp4', type: 'video' },
       { src: '/assets/outing_rsud_bulukumba/image (1).jpg', type: 'image' },
@@ -83,7 +83,7 @@ export const worksData: Work[] = [
     title: 'PT RAJAWALI PERKASA FURNITURE',
     subtitle: 'EO',
     description:
-      'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
+      'Kami berinovasi dalam memberikan pelatihan kepada karyawan dengan materi-materi yang relevan dan sesuai dengan lapangan. Kelengkapan teknis termasuk kepada hal yang kami siapkan pula dalam mendukung kegiatan pada acara.',
     asset: [
       { src: '/assets/rajawali/image (1).jpeg', type: 'image' },
       { src: '/assets/rajawali/image (2).jpeg', type: 'image' },
@@ -104,7 +104,7 @@ export const worksData: Work[] = [
     title: 'PT SAM AND ANDY',
     subtitle: 'EO',
     description:
-      'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
+      'Kami memberikan pelayanan berjenjang sebagai komitmen kami dalam memberikan pelatihan yang tepat guna kepada karyawan dengan melakukan sosialisasi, ikut serta ke lapangan, dan juga memberikan teori dan praktik pada karyawan selama acara berlangsung.',
     asset: [
       { src: '/assets/sam_andy/image (1).jpg', type: 'image' },
       { src: '/assets/sam_andy/image (2).jpg', type: 'image' },
@@ -125,7 +125,7 @@ export const worksData: Work[] = [
     title: 'PT MAESINDO INDONESIA',
     subtitle: 'EO',
     description:
-      'Kami memberikan pelayanan persiapan teknis dan kelengkapan visual dengan keserbagunaan sebagai komitmen dalam pelayanan sektor pengembangan.',
+      'Kami berkomitmen dalam meningkatkan kepedulian pada karyawan dalam teamwork tidak hanya dengan bekal materi dan praktik, namun memberikan pelayanan dalam menyiapkan panduan dan teknis untuk mendukung kegiatan pada acara pelatihan karyawan di perusahaan.',
     asset: [
       { src: '/assets/maesindo/image (1).jpeg', type: 'image' },
       { src: '/assets/maesindo/image (2).jpeg', type: 'image' },

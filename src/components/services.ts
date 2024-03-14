@@ -52,7 +52,7 @@ export const services: Service[] = [
         name: 'Konsultan Kreatif',
         asset: '/images/services/service (4).jpg',
         description:
-            'Tim kami membantu untuk memberikan arahan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',
+            'Tim kami membantu dalam memberikan panduan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',
         feature: placeholderFeatures,
     },
     {
@@ -64,7 +64,7 @@ export const services: Service[] = [
     {
         name: 'Garment & Fashion',
         asset: '/images/services/service (5).jpg',
-        description: '-',
+        description: 'Tim kami bekerja sama dalam menciptakan keindahan melalui mode kejatmikaan. Berdedikasi merancang menggunakan bahan berkualitas yang diolah dengan baik menjadi sebuah karya yang berkualitas, nyaman, dan tak lekang oleh waktu.',
         feature: placeholderFeatures,
     },
 ]
