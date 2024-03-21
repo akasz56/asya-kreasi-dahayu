@@ -72,8 +72,8 @@ export default function Header() {
       transition={{ ease: 'easeOut' }}
       className='sticky top-0 z-10 h-20 w-full bg-asya-dark'
     >
-      <nav className='flex py-6'>
-        <div className='flex-1 pl-[5vw]'>
+      <nav className='asya-container-alt flex h-full items-center'>
+        <div className='flex-1'>
           <Link
             href={'/'}
             className='text-lg font-medium uppercase tracking-widest text-white'
@@ -81,7 +81,7 @@ export default function Header() {
             Asya Kreasi Dahayu
           </Link>
         </div>
-        <ul className='grid w-1/2 grid-cols-5'>
+        <ul className='flex w-1/2 justify-between'>
           {pages.map((item, key) => (
             <li
               key={key}
