@@ -72,7 +72,7 @@ export default function Header() {
       transition={{ ease: 'easeOut' }}
       className='sticky top-0 z-10 h-20 w-full bg-asya-dark'
     >
-      <nav className='asya-container-alt flex h-full items-center'>
+      <nav className='asya-container flex h-full items-center'>
         <div className='flex-1'>
           <Link
             href={'/'}

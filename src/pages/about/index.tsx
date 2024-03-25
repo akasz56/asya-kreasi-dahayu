@@ -59,8 +59,8 @@ const Index: NextPage = () => {
 
       <section id='visi'>
         <div className='asya-container pt-36'>
-          <div className='flex justify-between border-b-2 border-asya-dark pb-36'>
-            <div className='w-[587px] space-y-40'>
+          <div className='flex justify-between border-b-2 border-asya-dark pb-36 gap-16'>
+            <div className='w-[587px] lg:space-y-40 space-y-20'>
               <h1 className='text-4xl font-medium uppercase tracking-widest text-asya-dark'>Visi Asya Kreasi Dahayu</h1>
               <Image
                 src={visiImage}
@@ -82,8 +82,8 @@ const Index: NextPage = () => {
 
       <section id='misi'>
         <div className='asya-container pt-36'>
-          <div className='flex justify-between border-b-2 border-asya-dark pb-36'>
-            <div className='w-[587px] space-y-40'>
+          <div className='flex justify-between border-b-2 border-asya-dark pb-36 gap-16'>
+            <div className='w-[587px] lg:space-y-40 space-y-20'>
               <h1 className='text-4xl font-medium uppercase tracking-widest text-asya-dark'>Misi Asya Kreasi Dahayu</h1>
               <Image
                 src={misiImage}

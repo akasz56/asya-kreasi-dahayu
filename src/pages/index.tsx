@@ -21,8 +21,8 @@ const Home: NextPage = () => {
         id='about'
         className='bg-asya-dark'
       >
-        <div className='asya-container flex py-20'>
-          <h2 className='flex-1 self-center text-4xl font-medium uppercase tracking-widest text-white'>About Us</h2>
+        <div className='asya-container flex py-20 items-center'>
+          <h2 className='flex-1 text-4xl font-medium uppercase tracking-widest text-white'>About Us</h2>
           <p className='w-3/5 font-light leading-relaxed tracking-widest text-white'>
             Asya Kreasi Dahayu merupakan perusahaan yang bergerak di bidang industri kreatif dan pengembangan sumber
             daya manusia. Sejak September 2022, kami memberikan pelayanan untuk memudahkan anda berkreasi di dunia MICE,
@@ -34,8 +34,8 @@ const Home: NextPage = () => {
 
       <section id='service'>
         <div className='asya-container px-20'>
-          <div className='flex py-32'>
-            <h2 className='flex-1 self-center text-4xl font-medium uppercase tracking-widest text-asya-dark'>
+          <div className='flex py-32 items-center'>
+            <h2 className='flex-1 text-4xl font-medium uppercase tracking-widest text-asya-dark'>
               Our Service
             </h2>
             <p className='w-3/5 font-light leading-relaxed tracking-widest text-asya-dark'>
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
               kesempatan para kreator untuk berkembang dan ruang untuk saling berkolaborasi.
             </p>
           </div>
-          <div className='mb-28 grid grid-cols-2 gap-16'>
+          <div className='mb-28 grid grid-cols-1 lg:grid-cols-2 gap-[5vw] lg:gap-16'>
             {servicesDisplay.map((service: DisplayContentItem, key: number) => (
               <Link
                 key={key}

@@ -36,11 +36,11 @@ const Index: NextPage = () => {
             id='title'
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-            className='py-36 text-center text-5xl font-medium leading-normal tracking-widest text-asya-dark'
+            className='py-36 asya-container text-center text-5xl font-medium leading-normal tracking-widest text-asya-dark'
           >
             Works Asya Kreasi Dahayu, Lorem <br /> Ipsum Dolor Sit Amet Consect
           </motion.h1>
-          <div className='asya-container mb-28 grid grid-cols-2 gap-16'>
+          <div className='asya-container mb-28 grid grid-cols-1 lg:grid-cols-2 gap-[5vw] lg:gap-16'>
             {works.map((work, key) => {
               const thumbnail = work.asset.filter((asset) => asset.type === 'image')[0]
               return (
