@@ -2,6 +2,7 @@ import { DisplayContentItem } from "./Display"
 
 export interface Service {
     name: string
+    icon: string,
     asset: string,
     nickname?: string
     description: string
@@ -35,6 +36,7 @@ export const services: Service[] = [
     {
         name: 'MICE & EO',
         // name: 'MICE (Meeting Incentive Convention Exhibition)',
+        icon: '/assets/icons/mice.svg',
         asset: '/images/services/service (1).jpg',
         nickname: 'MICE',
         description:
@@ -43,6 +45,7 @@ export const services: Service[] = [
     },
     {
         name: 'Multimedia',
+        icon: '/assets/icons/mulmed.svg',
         asset: '/images/services/service (2).jpg',
         description:
             'Tim kami memberikan pelayanan yang lengkap mulai dari sistem, visual, dan perlengkapan lainnya dengan berkomitmen untuk kesempurnaan dan akurasi dalam berkolaborasi dengan sektor lain seperti MICE dan desain grafis.',
@@ -50,6 +53,7 @@ export const services: Service[] = [
     },
     {
         name: 'Konsultan Kreatif',
+        icon: '/assets/icons/kreatif.svg',
         asset: '/images/services/service (4).jpg',
         description:
             'Tim kami membantu dalam memberikan panduan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',
@@ -57,12 +61,14 @@ export const services: Service[] = [
     },
     {
         name: 'Ticketing',
+        icon: '/assets/icons/ticketing.svg',
         asset: '/images/services/service (3).jpg',
         description: '-',
         feature: placeholderFeatures,
     },
     {
         name: 'Garment & Fashion',
+        icon: '/assets/icons/garment.svg',
         asset: '/images/services/service (5).jpg',
         description: 'Tim kami bekerja sama dalam menciptakan keindahan melalui mode kejatmikaan. Berdedikasi merancang menggunakan bahan berkualitas yang diolah dengan baik menjadi sebuah karya yang berkualitas, nyaman, dan tak lekang oleh waktu.',
         feature: placeholderFeatures,
