@@ -31,91 +31,89 @@ const Index: NextPage = () => {
   }
 
   return (
-    <>
-      <CustomHead
-        title='Product'
-        description='Product Page'
-      >
-        <div className='relative overflow-hidden'>
-          <Image
-            src={test}
-            alt={'image'}
-            className='absolute -z-10 object-none object-bottom'
-          />
-          <motion.div
-            id='hero'
-            initial='hidden'
-            variants={section}
-            whileInView='visible'
-            className='flex flex-col items-center justify-center gap-8 bg-cover bg-center py-40'
-          >
-            <motion.p
-              variants={item}
-              className='text-center text-4xl font-medium leading-normal tracking-widest text-white 2xl:text-5xl 2xl:leading-normal'
-            >
-              Our Newest Collection “Lorem Ipsum”
-            </motion.p>
-          </motion.div>
-        </div>
-
-        <section
-          id='catalog'
-          className='container mx-auto flex py-[5vw]'
+    <CustomHead
+      title='Product'
+      description='Product Page'
+    >
+      <div className='relative h-[50vh] overflow-hidden'>
+        <Image
+          src={test}
+          alt={'image'}
+          className='absolute -bottom-64 -z-10 object-cover'
+        />
+        <motion.div
+          id='hero'
+          initial='hidden'
+          variants={section}
+          whileInView='visible'
+          className='flex h-full items-center justify-center'
         >
-          <div className='flex w-1/4 flex-col items-center space-y-8'>
-            <ul>
-              <li className='mb-8 text-xl font-bold leading-relaxed tracking-widest text-asya-dark'>
-                {collections.title}
+          <motion.p
+            variants={item}
+            className='text-center text-4xl font-medium leading-normal tracking-widest text-white 2xl:text-5xl 2xl:leading-normal'
+          >
+            Our Newest Collection “Lorem Ipsum”
+          </motion.p>
+        </motion.div>
+      </div>
+
+      <section
+        id='catalog'
+        className='asya-container flex py-20 xl:py-40'
+      >
+        <div className='flex w-1/4 flex-col items-center space-y-8'>
+          <ul>
+            <li className='mb-8 text-xl font-bold leading-relaxed tracking-widest text-asya-dark'>
+              {collections.title}
+            </li>
+            {collections.collections.map((item, key) => (
+              <li key={key}>
+                <a
+                  href='#'
+                  className='asya-link text-xl leading-relaxed tracking-widest text-asya-dark'
+                >
+                  <span className='after:bg-asya-dark'>{item}</span>
+                </a>
               </li>
-              {collections.collections.map((item, key) => (
-                <li key={key}>
-                  <a
-                    href='#'
-                    className='asya-link text-xl leading-relaxed tracking-widest text-asya-dark'
-                  >
-                    <span className='after:bg-asya-dark'>{item}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <ul>
-              <li className='mb-8 text-xl font-bold leading-relaxed tracking-widest text-asya-dark'>
-                {availability.title}
-              </li>
-              {availability.collections.map((item, key) => (
-                <li key={key}>
-                  <a
-                    href='#'
-                    className='asya-link text-xl leading-relaxed tracking-widest text-asya-dark'
-                  >
-                    <span className='after:bg-asya-dark'>{item}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <ul className='grid flex-1 grid-cols-3 gap-8'>
-            {[...Array(12)].map((item, key) => (
-              <motion.li
-                key={key}
-                className='m-8'
-                whileHover={{ scale: 1.05 }}
-              >
-                <Link href={'/product/product-one'}>
-                  <div className='aspect-square bg-asya-dark'></div>
-                  <div className='mt-6 block'>
-                    <p className='text-center text-xl font-bold leading-relaxed tracking-widest text-asya-dark'>
-                      Hijab Lorem Ipsum
-                    </p>
-                    <p className='text-center text-xl leading-relaxed tracking-widest text-asya-dark'>Rp200.000</p>
-                  </div>
-                </Link>
-              </motion.li>
             ))}
           </ul>
-        </section>
-      </CustomHead>
-    </>
+          <ul>
+            <li className='mb-8 text-xl font-bold leading-relaxed tracking-widest text-asya-dark'>
+              {availability.title}
+            </li>
+            {availability.collections.map((item, key) => (
+              <li key={key}>
+                <a
+                  href='#'
+                  className='asya-link text-xl leading-relaxed tracking-widest text-asya-dark'
+                >
+                  <span className='after:bg-asya-dark'>{item}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <ul className='grid flex-1 grid-cols-2 gap-4 lg:grid-cols-3 xl:gap-8'>
+          {[...Array(12)].map((item, key) => (
+            <motion.li
+              key={key}
+              className='m-8'
+              whileHover={{ scale: 1.05 }}
+            >
+              <Link href={'/product/product-one'}>
+                <div className='aspect-square bg-asya-dark'></div>
+                <div className='mt-6 block'>
+                  <p className='text-center text-xl font-bold leading-relaxed tracking-widest text-asya-dark'>
+                    Hijab Lorem Ipsum
+                  </p>
+                  <p className='text-center text-xl leading-relaxed tracking-widest text-asya-dark'>Rp200.000</p>
+                </div>
+              </Link>
+            </motion.li>
+          ))}
+        </ul>
+      </section>
+    </CustomHead>
   )
 }
 

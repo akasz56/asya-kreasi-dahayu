@@ -16,14 +16,14 @@ const Index: NextPage = () => {
         <motion.h1
           initial={{ opacity: 0, x: -25 }}
           animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
-          className='w-3/4 text-5xl font-medium leading-normal tracking-widest text-asya-dark'
+          className='max-w-[1032px] text-5xl font-medium leading-normal tracking-widest text-asya-dark'
         >
           Lorem Ipsum Dolor Sit, <br /> Contact Us Through
         </motion.h1>
         <motion.table
           initial={{ opacity: 0, x: 25 }}
           animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
-          className='ml-auto w-1/2 text-2xl text-asya-dark'
+          className='ml-auto max-w-[688px] text-2xl text-asya-dark'
         >
           <tbody>
             <tr>

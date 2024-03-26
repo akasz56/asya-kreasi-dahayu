@@ -61,7 +61,7 @@ const Index: NextPage = () => {
               key={key}
               href={'#service_' + key}
               variants={heroVariants}
-              className={key <= 1 ? 'ls:mr-14' : ''}
+              className={key == 1 ? 'lg:ml-8' : ''}
             >
               <Image
                 src={service.icon}

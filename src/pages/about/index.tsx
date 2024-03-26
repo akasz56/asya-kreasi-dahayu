@@ -120,7 +120,7 @@ const Index: NextPage = () => {
           </p>
         </div>
         <div className='asya-container'>
-          <div className='grid grid-cols-4 gap-4 pb-36'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pb-36'>
             {teamData.map((teamMember, key) => (
               <TeamPhoto
                 key={key}
