@@ -39,9 +39,7 @@ const Home: NextPage = () => {
             <p className='w-3/5 font-light leading-relaxed tracking-widest text-asya-dark'>
               Sejak berdiri, Asya Kreasi Dahayu telah membantu banyak kreator di bidang industri kreatif dari seluruh
               Indonesia. Fokus kami adalah menyediakan solusi dengan menjadi media penghubung untuk menunjangi para
-              kreator kecil hingga menengah didukung oleh tim kami yang handal dan berpengalaman di bidangnya. Setiap
-              bidang pelayanan tentu saja memiliki keunikan dan kekuatannya masing-masing. Namun di sini, kami membuka
-              kesempatan para kreator untuk berkembang dan ruang untuk saling berkolaborasi.
+              kreator kecil hingga menengah didukung oleh tim kami yang handal dan berpengalaman di bidangnya.
             </p>
           </div>
           <div className='mb-28 grid grid-cols-1 gap-[5vw] lg:grid-cols-2 lg:gap-16'>

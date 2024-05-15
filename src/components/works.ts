@@ -15,10 +15,10 @@ export interface Work {
 export const worksData: Work[] = [
   {
     xid: '1',
-    title: 'BIMTEK ANGGOTA DRPD PROVINSI & DPRD KABUPATEN KOTA SE BANTEN, JAWA BARAT DAN DKI JAKARTA 2022',
-    subtitle: 'EO, MULTIMEDIA',
+    title: 'Bimtek Banjabar Jakarta 2022',
+    subtitle: 'EO, Multimedia',
     description:
-      'Sebagai bagian dari komitmen kami dalam pelayanan sektor pengembangan, kami telah dipercaya untuk menyediakan layanan persiapan teknis dan peralatan lengkap yang dalam persiapan teknis dan perlengkapan acara tahunan mulai dari sistem, visual, dokumentasi, hingga akomodasi.',
+      'Sebagai bagian dari komitmen kami dalam pelayanan sektor pengembangan, kami telah dipercaya untuk menyediakan layanan persiapan teknis dan peralatan lengkap yang dalam persiapan teknis dan perlengkapan acara mulai dari sistem, visual, dokumentasi, hingga akomodasi.',
     asset: [
       { src: '/assets/bimtek_banjabar_2022/video.mp4', type: 'video' },
       { src: '/assets/bimtek_banjabar_2022/image (1).jpg', type: 'image' },
@@ -35,10 +35,9 @@ export const worksData: Work[] = [
   },
   {
     xid: '2',
-    title: 'BIMTEK ANGGOTA DRPD PROVINSI & DPRD KABUPATEN KOTA SE BANTEN, JAWA BARAT DAN DKI JAKARTA 2023',
-    subtitle: 'EO, MULTIMEDIA',
-    description:
-      'Sebagai bagian dari komitmen kami dalam pelayanan sektor pengembangan, kami telah dipercaya untuk menyediakan layanan persiapan teknis dan peralatan lengkap yang dalam persiapan teknis dan perlengkapan acara tahunan mulai dari sistem, visual, dokumentasi, hingga akomodasi.',
+    title: 'Bimtek Banjabar Jogjakarta 2023',
+    description: 'Komitmen dan loyalitas kami dalam pelayanan sektor pengembangan dipercaya untuk melanjutkan sebagai penyedia layanan persiapan teknis dan peralatan lengkap seperti sistem, visual, dokumentasi, hingga akomodasi dengan kualitas yang tetap terjaga.',
+    subtitle: 'EO, Multimedia',
     asset: [
       { src: '/assets/bimtek_banjabar_2023/video.mp4', type: 'video' },
       { src: '/assets/bimtek_banjabar_2023/image (1).jpg', type: 'image' },
@@ -60,8 +59,8 @@ export const worksData: Work[] = [
   },
   {
     xid: '3',
-    title: 'OUTING RSUD KOTA DEPOK',
-    subtitle: 'MULTIMEDIA',
+    title: 'Outing RSUD Kota Depok',
+    subtitle: 'Multimedia',
     description:
       'Kami memberikan pelayanan maksimal dalam pendampingan sebagai pemandu wisata dan dokumentasi kegiatan dengan visual yang ciamik untuk menciptakan pengalaman baru dalam acara outing karyawan di Bulukumba, Sulawesi Selatan.',
     asset: [
@@ -80,7 +79,7 @@ export const worksData: Work[] = [
   },
   {
     xid: '4',
-    title: 'PT RAJAWALI PERKASA FURNITURE',
+    title: 'PT Rajawali Perkasa Furniture',
     subtitle: 'EO',
     description:
       'Kami berinovasi dalam memberikan pelatihan kepada karyawan dengan materi-materi yang relevan dan sesuai dengan lapangan. Kelengkapan teknis termasuk kepada hal yang kami siapkan pula dalam mendukung kegiatan pada acara.',
@@ -101,7 +100,7 @@ export const worksData: Work[] = [
   },
   {
     xid: '5',
-    title: 'PT SAM AND ANDY',
+    title: 'PT Sam and Andy',
     subtitle: 'EO',
     description:
       'Kami memberikan pelayanan berjenjang sebagai komitmen kami dalam memberikan pelatihan yang tepat guna kepada karyawan dengan melakukan sosialisasi, ikut serta ke lapangan, dan juga memberikan teori dan praktik pada karyawan selama acara berlangsung.',
@@ -122,7 +121,7 @@ export const worksData: Work[] = [
   },
   {
     xid: '6',
-    title: 'PT MAESINDO INDONESIA',
+    title: 'PT Maesindo Indonesia',
     subtitle: 'EO',
     description:
       'Kami berkomitmen dalam meningkatkan kepedulian pada karyawan dalam teamwork tidak hanya dengan bekal materi dan praktik, namun memberikan pelayanan dalam menyiapkan panduan dan teknis untuk mendukung kegiatan pada acara pelatihan karyawan di perusahaan.',
