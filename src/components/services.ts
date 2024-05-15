@@ -52,27 +52,10 @@ export const services: Service[] = [
         ],
     },
     {
-        name: 'Konsultan Kreatif',
-        icon: '/assets/icons/kreatif.svg',
-        asset: '/images/services/service (4).jpg',
-        description:
-            'Tim kami membantu dalam memberikan panduan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',
-        feature: [
-            {
-                title: 'Keunggulan',
-                description: 'Kami memberikan ruang umum maupun privat untuk kenyamanan berkonsultasi dalam perencanaan proyek kreatif dengan solusi yang inovatif dari tim kami.'
-            },
-            {
-                title: 'Jasa yang disediakan',
-                description: 'Coaching clinic, pembuatan strategi dan desain, dan konsultasi branding.'
-            }
-        ],
-    },
-    {
         name: 'Ticketing',
         icon: '/assets/icons/ticketing.svg',
         asset: '/images/services/service (3).jpg',
-        description: '-',
+        description: 'Tim kami memberikan kemudahan dalam perancanaan akomodasi perjalanan kerja dengan komitmen meningkatkan kepuasan dan pengalaman yang lebih baik dibanding dengan pelayanan konvensional.',
         feature: [
             {
                 title: 'Keunggulan',
@@ -99,6 +82,23 @@ export const services: Service[] = [
                 title: 'Jasa yang disediakan',
                 description:
                     'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
+            }
+        ],
+    },
+    {
+        name: 'Konsultan Kreatif',
+        icon: '/assets/icons/kreatif.svg',
+        asset: '/images/services/service (4).jpg',
+        description:
+            'Tim kami membantu dalam memberikan panduan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',
+        feature: [
+            {
+                title: 'Keunggulan',
+                description: 'Kami memberikan ruang umum maupun privat untuk kenyamanan berkonsultasi dalam perencanaan proyek kreatif dengan solusi yang inovatif dari tim kami.'
+            },
+            {
+                title: 'Jasa yang disediakan',
+                description: 'Coaching clinic, pembuatan strategi dan desain, dan konsultasi branding.'
             }
         ],
     },

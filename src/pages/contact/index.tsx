@@ -18,7 +18,7 @@ const Index: NextPage = () => {
           animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
           className='max-w-[1032px] text-5xl font-medium leading-normal tracking-widest text-asya-dark'
         >
-          Lorem Ipsum Dolor Sit, <br /> Contact Us Through
+          Be the first to know about Asya, <br /> Contact Us Through
         </motion.h1>
         <motion.table
           initial={{ opacity: 0, x: 25 }}

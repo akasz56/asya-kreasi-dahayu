@@ -31,7 +31,7 @@ const Index: NextPage = () => {
           className='absolute -z-10 h-full object-cover'
         />
         <motion.div
-          className='grid grid-cols-2 items-center asya-container'
+          className='asya-container grid grid-cols-2 items-center'
           initial='hidden'
           animate='visible'
           variants={{ visible: { transition: { staggerChildren: 0.5 } } }}
@@ -51,7 +51,7 @@ const Index: NextPage = () => {
           </motion.p>
         </motion.div>
         <motion.div
-          className='flex justify-between asya-container-alt'
+          className='asya-container-alt flex justify-between'
           initial='hidden'
           animate='visible'
           variants={{ visible: { transition: { staggerChildren: 0.25 } } }}
@@ -99,11 +99,11 @@ const Index: NextPage = () => {
               className='aspect-video w-full object-cover'
             />
 
-            <ul className='mt-20 grid grid-cols-3 gap-24'>
+            <ul className='mt-20 grid grid-cols-2 gap-24'>
               {service.feature.map((feature: ServiceFeature, key: number) => (
                 <li
                   key={key}
-                  className='flex flex-col justify-between'
+                  className='flex flex-col'
                 >
                   <h4 className='mb-10 text-2xl font-bold uppercase leading-normal tracking-widest text-asya-dark'>
                     {feature.title}
