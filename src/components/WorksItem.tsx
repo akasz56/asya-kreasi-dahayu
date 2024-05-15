@@ -23,18 +23,16 @@ export default function WorksItem(props: WorksItemProps) {
   }, [isHovered, display])
 
   return (
-    <div className='mb-12'>
+    <li className='mb-12'>
       <Link
         href={'/works/project-one'}
-        className='flex gap-16'
+        className='flex'
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <span className='text-xl leading-relaxed tracking-widest text-asya-dark'>{props.client.name}</span>
+        <span className='w-1/2 text-xl leading-relaxed tracking-widest text-asya-dark'>{props.client.name}</span>
         <hr className='flex-1 self-center border-asya-dark' />
-        <span className='text-xl leading-relaxed tracking-widest text-asya-dark'>
-          {props.client.field}, {props.client.year}
-        </span>
+        <span className='ml-20 w-14 text-xl leading-relaxed tracking-widest text-asya-dark'>{props.client.year}</span>
       </Link>
       <div
         className='hover-img'
@@ -45,6 +43,6 @@ export default function WorksItem(props: WorksItemProps) {
           alt={props.client.name}
         />
       </div>
-    </div>
+    </li>
   )
 }

@@ -71,11 +71,17 @@ const Index: NextPage = () => {
         className='asya-container my-32 pt-16'
       >
         <h1 className='text-5xl font-medium uppercase leading-normal tracking-widest text-asya-dark'>Clients</h1>
-        <ul className='mt-48 ml-48'>
+        <ul className='mt-28'>
+          <li className='mb-10 flex'>
+            <p className='w-1/2 text-2xl font-bold leading-relaxed tracking-widest text-asya-dark'>Name</p>
+            <p className='flex-1 text-2xl font-bold leading-relaxed tracking-widest text-asya-dark'>Description</p>
+            <p className='w-14 text-2xl font-bold leading-relaxed tracking-widest text-asya-dark'>Year</p>
+          </li>
           {clients.map((item, key) => (
-            <li key={key}>
-              <WorksItem client={item} />
-            </li>
+            <WorksItem
+              key={key}
+              client={item}
+            />
           ))}
         </ul>
       </section>
