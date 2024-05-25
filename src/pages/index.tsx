@@ -22,10 +22,10 @@ const Home: NextPage = () => {
         className='bg-asya-dark'
       >
         <div className='asya-container flex-row items-center py-20 text-center lg:flex lg:text-left'>
-          <h2 className='mb-8 flex-1 text-xl font-medium uppercase tracking-widest text-white lg:mb-0 lg:flex-1 lg:text-4xl'>
+          <h2 className='mb-8 flex-1 text-xl font-medium uppercase tracking-widest text-white sm:text-2xl lg:mb-0 lg:flex-1 lg:text-4xl'>
             About Us
           </h2>
-          <p className='mx-auto max-w-sm text-xs font-light leading-relaxed tracking-widest text-white lg:w-3/5 lg:max-w-none lg:text-base'>
+          <p className='mx-auto max-w-sm text-xs font-light leading-relaxed tracking-widest text-white md:max-w-lg md:text-base lg:w-3/5 lg:max-w-none'>
             Asya Kreasi Dahayu merupakan perusahaan yang bergerak di bidang industri kreatif dan pengembangan sumber
             daya manusia. Sejak September 2022, kami memberikan pelayanan untuk memudahkan anda berkreasi di dunia MICE,
             desain, hingga multimedia. Dengan didukung oleh teknologi mutakhir dan orang-orang yang handal dan
@@ -37,10 +37,10 @@ const Home: NextPage = () => {
       <section id='service'>
         <div className='asya-container'>
           <div className='flex-row items-center py-20 text-center lg:flex lg:py-32 lg:text-left'>
-            <h2 className='mb-8 text-xl font-medium uppercase tracking-widest text-asya-dark lg:mb-0 lg:flex-1 lg:text-4xl'>
+            <h2 className='mb-8 text-xl font-medium uppercase tracking-widest text-asya-dark sm:text-2xl lg:mb-0 lg:flex-1 lg:text-4xl'>
               Our Service
             </h2>
-            <p className='mx-auto max-w-sm text-xs font-light leading-relaxed tracking-widest text-asya-dark lg:w-3/5 lg:max-w-none lg:text-base'>
+            <p className='mx-auto max-w-sm text-xs font-light leading-relaxed tracking-widest text-asya-dark md:max-w-lg md:text-base lg:w-3/5'>
               Sejak berdiri, Asya Kreasi Dahayu telah membantu banyak kreator di bidang industri kreatif dari seluruh
               Indonesia. Fokus kami adalah menyediakan solusi dengan menjadi media penghubung untuk menunjangi para
               kreator kecil hingga menengah didukung oleh tim kami yang handal dan berpengalaman di bidangnya.
@@ -63,10 +63,12 @@ const Home: NextPage = () => {
                 ) : (
                   <div className='-mx-4 mb-8 aspect-video w-screen max-w-none bg-asya-dark object-cover lg:mb-20 lg:aspect-square lg:rounded-3xl' />
                 )}
-                <h2 className='mb-10 overflow-hidden text-ellipsis whitespace-nowrap text-3xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal lg:mb-20'>
+                <h2 className='mb-10 overflow-hidden text-ellipsis whitespace-nowrap text-xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal md:text-2xl lg:mb-20 lg:text-3xl'>
                   {service.title}
                 </h2>
-                <p className='text-center tracking-widest text-asya-dark lg:text-left'>{service.description}</p>
+                <p className='text-center text-xs tracking-widest text-asya-dark md:text-base lg:text-left'>
+                  {service.description}
+                </p>
               </Link>
             ))}
           </div>

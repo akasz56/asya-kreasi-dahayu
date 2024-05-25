@@ -50,7 +50,7 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
           viewBox='0 0 24 24'
           strokeWidth='1.5'
           stroke='currentColor'
-          className='h-12 w-12 rotate-90 text-white'
+          className='hidden h-12 w-12 rotate-90 text-white md:inline'
         >
           <path
             strokeLinecap='round'
@@ -66,7 +66,7 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
           viewBox='0 0 24 24'
           strokeWidth='1.5'
           stroke='currentColor'
-          className='h-12 w-12 -rotate-90 text-white'
+          className='hidden h-12 w-12 -rotate-90 text-white md:inline'
         >
           <path
             strokeLinecap='round'
@@ -92,7 +92,7 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
         >
           <motion.p
             variants={firstChildVariant}
-            className='text-center text-xl leading-normal tracking-widest text-white lg:text-5xl lg:font-medium'
+            className='text-center text-3xl leading-normal tracking-widest text-white lg:text-5xl lg:font-medium'
           >
             Menghidupkan ambisi dalam berkreasi. <br /> Bersama Asya nyalakan kembali asa.
           </motion.p>
