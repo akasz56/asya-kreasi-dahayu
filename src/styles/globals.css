@@ -121,12 +121,22 @@ a {
 }
 
 .asya-container {
-  max-width: 1536px;
-  @apply mx-auto px-20
+  @apply mx-auto px-4
 }
 
 .asya-container-alt {
   @apply container mx-auto px-20
+}
+
+@media only screen and (min-width: 1024px) {
+  .asya-container {
+    max-width: 1536px;
+    @apply mx-auto px-20
+  }
+
+  /* .asya-container-alt {
+    @apply container mx-auto px-20
+  } */
 }
 
 .asya-link {

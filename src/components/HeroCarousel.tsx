@@ -76,12 +76,13 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
         </svg>
       }
       indicators={false}
+      className='bg-asya-dark'
     >
       <div className='relative h-screen'>
         <Image
           src={image1}
           alt='Hero Picture 1'
-          className='absolute -z-10 object-cover'
+          className='absolute -z-10 h-full object-cover'
         />
         <motion.div
           initial='hidden'
@@ -91,14 +92,14 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
         >
           <motion.p
             variants={firstChildVariant}
-            className='text-center text-5xl font-medium leading-normal tracking-widest text-white'
+            className='text-center text-xl leading-normal tracking-widest text-white lg:text-5xl lg:font-medium'
           >
             Menghidupkan ambisi dalam berkreasi. <br /> Bersama Asya nyalakan kembali asa.
           </motion.p>
           <motion.a
             href='/our-services'
             variants={firstChildVariant}
-            className='rounded-md bg-asya-dark px-6 py-2 font-medium uppercase tracking-widest text-white'
+            className='mt-7 rounded-md bg-asya-dark py-3 px-6 text-xs font-medium uppercase tracking-widest text-white lg:text-base'
           >
             Get started
           </motion.a>
