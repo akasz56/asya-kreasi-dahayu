@@ -40,7 +40,7 @@ const Home: NextPage = () => {
             <h2 className='mb-8 text-xl font-medium uppercase tracking-widest text-asya-dark sm:text-2xl lg:mb-0 lg:flex-1 lg:text-4xl'>
               Our Service
             </h2>
-            <p className='mx-auto max-w-sm text-xs font-light leading-relaxed tracking-widest text-asya-dark md:max-w-lg md:text-base lg:w-3/5'>
+            <p className='mx-auto max-w-sm text-xs font-light leading-relaxed tracking-widest text-asya-dark md:max-w-lg md:text-base lg:w-3/5 lg:max-w-none'>
               Sejak berdiri, Asya Kreasi Dahayu telah membantu banyak kreator di bidang industri kreatif dari seluruh
               Indonesia. Fokus kami adalah menyediakan solusi dengan menjadi media penghubung untuk menunjangi para
               kreator kecil hingga menengah didukung oleh tim kami yang handal dan berpengalaman di bidangnya.
