@@ -3,7 +3,6 @@ import { NextPage } from 'next'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
-import test from '../../../public/images/hero1.jpg'
 import Image from 'next/image'
 
 const Index: NextPage = () => {
@@ -37,7 +36,7 @@ const Index: NextPage = () => {
     >
       <div className='relative h-[50vh] overflow-hidden'>
         <Image
-          src={test}
+          src={'https://asyakreasidahayu.com/public/images/hero1.webp'}
           alt={'image'}
           className='absolute -bottom-64 -z-10 object-cover'
         />
