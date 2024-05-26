@@ -42,7 +42,7 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
     <Carousel
       pauseOnHover
       slideInterval={5000}
-      draggable={false}
+      draggable={true}
       leftControl={
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -110,7 +110,7 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
         </motion.div>
       </div>
 
-      <div className='relative h-screen'>
+      <div className='relative h-screen overflow-hidden'>
         <button
           className='h-full w-full'
           onClick={() => {
