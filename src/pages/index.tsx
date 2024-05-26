@@ -25,7 +25,7 @@ const Home: NextPage = () => {
           <h2 className='mb-8 flex-1 text-xl font-medium uppercase tracking-widest text-white sm:text-2xl lg:mb-0 lg:flex-1 lg:text-4xl'>
             About Us
           </h2>
-          <p className='mx-auto max-w-sm text-xs font-light leading-relaxed tracking-widest text-white md:max-w-lg md:text-base lg:w-3/5 lg:max-w-none'>
+          <p className='asya-description mx-auto max-w-sm text-white sm:max-w-lg lg:w-3/5 lg:max-w-none'>
             Asya Kreasi Dahayu merupakan perusahaan yang bergerak di bidang industri kreatif dan pengembangan sumber
             daya manusia. Sejak September 2022, kami memberikan pelayanan untuk memudahkan anda berkreasi di dunia MICE,
             desain, hingga multimedia. Dengan didukung oleh teknologi mutakhir dan orang-orang yang handal dan
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
             <h2 className='mb-8 text-xl font-medium uppercase tracking-widest text-asya-dark sm:text-2xl lg:mb-0 lg:flex-1 lg:text-4xl'>
               Our Service
             </h2>
-            <p className='mx-auto max-w-sm text-xs font-light leading-relaxed tracking-widest text-asya-dark md:max-w-lg md:text-base lg:w-3/5 lg:max-w-none'>
+            <p className='asya-description mx-auto max-w-sm text-asya-dark sm:max-w-lg lg:w-3/5 lg:max-w-none'>
               Sejak berdiri, Asya Kreasi Dahayu telah membantu banyak kreator di bidang industri kreatif dari seluruh
               Indonesia. Fokus kami adalah menyediakan solusi dengan menjadi media penghubung untuk menunjangi para
               kreator kecil hingga menengah didukung oleh tim kami yang handal dan berpengalaman di bidangnya.
@@ -66,9 +66,7 @@ const Home: NextPage = () => {
                 <h2 className='mb-10 overflow-hidden text-ellipsis whitespace-nowrap text-xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal md:text-2xl lg:mb-20 lg:text-3xl'>
                   {service.title}
                 </h2>
-                <p className='text-center text-xs tracking-widest text-asya-dark md:text-base lg:text-left'>
-                  {service.description}
-                </p>
+                <p className='asya-description text-center text-asya-dark lg:text-left'>{service.description}</p>
               </Link>
             ))}
           </div>

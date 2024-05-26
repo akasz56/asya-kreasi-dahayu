@@ -6,9 +6,9 @@ import CustomHead from '@/layouts/CustomHead'
 import { team as teamData } from '@/components/team'
 import TeamPhoto from '@/components/TeamPhoto'
 import Image from 'next/image'
-import heroImage from '../../../public/images/about.jpg'
-import visiImage from '../../../public/images/visi.jpg'
-import misiImage from '../../../public/images/misi.jpg'
+import heroImage from '../../../public/images/about.webp'
+import visiImage from '../../../public/images/visi.webp'
+import misiImage from '../../../public/images/misi.webp'
 
 const Index: NextPage = () => {
   const section = {
@@ -59,8 +59,8 @@ const Index: NextPage = () => {
 
       <section id='visi'>
         <div className='asya-container pt-36'>
-          <div className='flex justify-between border-b-2 border-asya-dark pb-36 gap-16'>
-            <div className='w-[587px] lg:space-y-40 space-y-20'>
+          <div className='flex justify-between gap-16 border-b-2 border-asya-dark pb-36'>
+            <div className='w-[587px] space-y-20 lg:space-y-40'>
               <h1 className='text-4xl font-medium uppercase tracking-widest text-asya-dark'>Visi Asya Kreasi Dahayu</h1>
               <Image
                 src={visiImage}
@@ -82,8 +82,8 @@ const Index: NextPage = () => {
 
       <section id='misi'>
         <div className='asya-container pt-36'>
-          <div className='flex justify-between border-b-2 border-asya-dark pb-36 gap-16'>
-            <div className='w-[587px] lg:space-y-40 space-y-20'>
+          <div className='flex justify-between gap-16 border-b-2 border-asya-dark pb-36'>
+            <div className='w-[587px] space-y-20 lg:space-y-40'>
               <h1 className='text-4xl font-medium uppercase tracking-widest text-asya-dark'>Misi Asya Kreasi Dahayu</h1>
               <Image
                 src={misiImage}
@@ -120,7 +120,7 @@ const Index: NextPage = () => {
           </p>
         </div>
         <div className='asya-container'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pb-36'>
+          <div className='grid grid-cols-1 gap-4 pb-36 md:grid-cols-2 lg:grid-cols-4'>
             {teamData.map((teamMember, key) => (
               <TeamPhoto
                 key={key}
