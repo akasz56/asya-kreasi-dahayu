@@ -92,7 +92,7 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
         >
           <motion.p
             variants={firstChildVariant}
-            className='text-center text-[4vw] leading-normal tracking-widest text-white sm:text-3xl lg:text-4xl lg:font-medium xl:text-5xl'
+            className='asya-display-txt'
           >
             Menghidupkan ambisi dalam berkreasi. <br /> Bersama Asya nyalakan kembali asa.
           </motion.p>

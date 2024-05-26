@@ -21,10 +21,8 @@ const Home: NextPage = () => {
         id='about'
         className='bg-asya-dark'
       >
-        <div className='asya-container flex-row items-center py-20 text-center lg:flex lg:text-left'>
-          <h2 className='mb-8 flex-1 text-xl font-medium uppercase tracking-widest text-white sm:text-2xl lg:mb-0 lg:flex-1 lg:text-4xl'>
-            About Us
-          </h2>
+        <div className='asya-container flex-row items-center py-20 lg:flex'>
+          <h2 className='asya-title flex-1 text-white lg:flex-1'>About Us</h2>
           <p className='asya-description mx-auto max-w-sm text-white sm:max-w-lg lg:w-3/5 lg:max-w-none'>
             Asya Kreasi Dahayu merupakan perusahaan yang bergerak di bidang industri kreatif dan pengembangan sumber
             daya manusia. Sejak September 2022, kami memberikan pelayanan untuk memudahkan anda berkreasi di dunia MICE,
@@ -36,10 +34,8 @@ const Home: NextPage = () => {
 
       <section id='service'>
         <div className='asya-container'>
-          <div className='flex-row items-center py-20 text-center lg:flex lg:py-32 lg:text-left'>
-            <h2 className='mb-8 text-xl font-medium uppercase tracking-widest text-asya-dark sm:text-2xl lg:mb-0 lg:flex-1 lg:text-4xl'>
-              Our Service
-            </h2>
+          <div className='flex-row items-center py-20 lg:flex lg:py-32'>
+            <h2 className='asya-title text-asya-dark lg:flex-1'>Our Service</h2>
             <p className='asya-description mx-auto max-w-sm text-asya-dark sm:max-w-lg lg:w-3/5 lg:max-w-none'>
               Sejak berdiri, Asya Kreasi Dahayu telah membantu banyak kreator di bidang industri kreatif dari seluruh
               Indonesia. Fokus kami adalah menyediakan solusi dengan menjadi media penghubung untuk menunjangi para

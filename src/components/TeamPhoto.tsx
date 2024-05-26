@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { TeamMember } from './team'
 import Image from 'next/image'
@@ -9,8 +9,35 @@ type TeamPhotoProps = {
 
 export default function TeamPhoto({ teamMember }: TeamPhotoProps) {
   const [isHovered, setIsHovered] = useState<boolean>(false)
+  const [isMobileView, setIsMobileView] = useState<boolean>(false)
 
-  return (
+  useEffect(() => {
+    function handleResize(e: any) {
+      setIsMobileView(window.innerWidth < 1024)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  return isMobileView ? (
+    <a
+      href='#'
+      className='relative aspect-square'
+    >
+      <Image
+        src={teamMember.image}
+        alt={teamMember.name}
+        className='absolute aspect-square object-cover'
+        width={1440}
+        height={1440}
+      />
+      <div className='absolute h-full w-full bg-asya-dark opacity-50' />
+      <motion.div className='flex h-full flex-col justify-between p-4'>
+        <h6 className='text-sm uppercase leading-normal tracking-widest text-white'>{teamMember.name}</h6>
+        <p className='text-xs capitalize leading-normal tracking-widest text-white'>{teamMember.position}</p>
+      </motion.div>
+    </a>
+  ) : (
     <a
       href='#'
       className='relative aspect-square'

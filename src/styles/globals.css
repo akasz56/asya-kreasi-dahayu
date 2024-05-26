@@ -147,8 +147,16 @@ a {
   @apply after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:duration-300 after:content-[''] after:hover:w-full;
 }
 
+.asya-display-txt {
+  @apply text-center text-[4vw] leading-normal tracking-widest text-white sm:text-3xl sm:leading-normal lg:text-4xl lg:font-medium lg:leading-normal xl:text-5xl xl:leading-normal
+}
+
+.asya-title {
+  @apply mb-8 text-center text-xl font-medium uppercase tracking-widest sm:text-2xl lg:mb-0 lg:text-left lg:text-4xl
+}
+
 .asya-description {
-  @apply text-xs leading-relaxed tracking-widest sm:text-base font-light
+  @apply text-center text-xs font-light leading-relaxed tracking-widest sm:text-base sm:leading-relaxed lg:text-left
 }
 
 .hover-img {
