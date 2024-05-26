@@ -30,7 +30,7 @@ const Index: NextPage = () => {
         id='hero'
         className='relative h-screen'
       >
-        <Image
+        <img
           src={'https://asyakreasidahayu.com/public/images/about.webp'}
           alt='Hero Image'
           className='absolute -z-10 h-full object-cover object-center'
@@ -59,7 +59,7 @@ const Index: NextPage = () => {
           <div className='flex justify-between gap-16 border-b-2 border-asya-dark pb-36'>
             <div className='w-[587px] space-y-20 lg:space-y-40'>
               <h1 className='text-4xl font-medium uppercase tracking-widest text-asya-dark'>Visi Asya Kreasi Dahayu</h1>
-              <Image
+              <img
                 src={'https://asyakreasidahayu.com/public/images/visi.webp'}
                 alt='Visi'
                 className='aspect-square object-cover'
@@ -82,7 +82,7 @@ const Index: NextPage = () => {
           <div className='flex justify-between gap-16 border-b-2 border-asya-dark pb-36'>
             <div className='w-[587px] space-y-20 lg:space-y-40'>
               <h1 className='text-4xl font-medium uppercase tracking-widest text-asya-dark'>Misi Asya Kreasi Dahayu</h1>
-              <Image
+              <img
                 src={'https://asyakreasidahayu.com/public/images/misi.webp'}
                 alt='Misi'
                 className='aspect-square object-cover'

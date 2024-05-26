@@ -17,7 +17,7 @@ export default function TeamPhoto({ teamMember }: TeamPhotoProps) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Image
+      <img
         src={teamMember.image}
         alt={teamMember.name}
         className='absolute aspect-square object-cover'
