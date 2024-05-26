@@ -6,9 +6,6 @@ import CustomHead from '@/layouts/CustomHead'
 import { team as teamData } from '@/components/team'
 import TeamPhoto from '@/components/TeamPhoto'
 import Image from 'next/image'
-import heroImage from '../../../public/images/about.webp'
-import visiImage from '../../../public/images/visi.webp'
-import misiImage from '../../../public/images/misi.webp'
 
 const Index: NextPage = () => {
   const section = {
@@ -34,7 +31,7 @@ const Index: NextPage = () => {
         className='relative h-screen'
       >
         <Image
-          src={heroImage}
+          src={'https://asyakreasidahayu.com/public/images/about.webp'}
           alt='Hero Image'
           className='absolute -z-10 h-full object-cover object-center'
         />
@@ -63,7 +60,7 @@ const Index: NextPage = () => {
             <div className='w-[587px] space-y-20 lg:space-y-40'>
               <h1 className='text-4xl font-medium uppercase tracking-widest text-asya-dark'>Visi Asya Kreasi Dahayu</h1>
               <Image
-                src={visiImage}
+                src={'https://asyakreasidahayu.com/public/images/visi.webp'}
                 alt='Visi'
                 className='aspect-square object-cover'
               />
@@ -86,7 +83,7 @@ const Index: NextPage = () => {
             <div className='w-[587px] space-y-20 lg:space-y-40'>
               <h1 className='text-4xl font-medium uppercase tracking-widest text-asya-dark'>Misi Asya Kreasi Dahayu</h1>
               <Image
-                src={misiImage}
+                src={'https://asyakreasidahayu.com/public/images/misi.webp'}
                 alt='Misi'
                 className='aspect-square object-cover'
               />
