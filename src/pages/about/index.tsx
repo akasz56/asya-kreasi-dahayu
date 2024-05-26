@@ -30,7 +30,7 @@ const Index: NextPage = () => {
         id='hero'
         className='relative h-screen'
       >
-        <Image
+        <img
           src={'https://asyakreasidahayu.com/public/images/about.webp'}
           alt='Hero Image'
           className='absolute -z-10 h-full object-cover object-center'

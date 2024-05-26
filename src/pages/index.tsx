@@ -49,7 +49,7 @@ const Home: NextPage = () => {
                 href={'#'}
               >
                 {service.image ? (
-                  <Image
+                  <img
                     src={service.image}
                     alt={service.title}
                     width={1080}

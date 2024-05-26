@@ -29,7 +29,7 @@ const WorkDetail: NextPage = () => {
               .sort((a) => Number(a.type === 'video'))
               .map((item, key) =>
                 item.type === 'image' ? (
-                  <Image
+                  <img
                     key={key}
                     src={item.src}
                     alt={item.alt ?? data.title + key}

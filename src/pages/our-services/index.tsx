@@ -25,7 +25,7 @@ const Index: NextPage = () => {
         id='hero'
         className='relative flex h-screen flex-col justify-evenly'
       >
-        <Image
+        <img
           src={'https://asyakreasidahayu.com/public/images/service.webp'}
           alt={'Hero Image Service'}
           className='absolute -z-10 h-full object-cover'
@@ -63,7 +63,7 @@ const Index: NextPage = () => {
               variants={heroVariants}
               className={key == 1 ? 'lg:ml-8' : ''}
             >
-              <Image
+              <img
                 src={service.icon}
                 alt={service.name}
                 width={360}
@@ -91,7 +91,7 @@ const Index: NextPage = () => {
               </h2>
               <p className='w-3/5 font-light leading-relaxed tracking-widest text-asya-dark'>{service.description}</p>
             </div>
-            <Image
+            <img
               src={service.asset}
               alt={service.name}
               width={1920}

@@ -13,7 +13,7 @@ const ProjectOne: NextPage = () => {
         <div className='flex'>
           <div className='w-1/2 space-y-12'>
             {[...Array(4)].map((item, key) => (
-              <Image
+              <img
                 key={key}
                 src={'https://asyakreasidahayu.com/public/images/hero1.webp'}
                 alt={'image'}
