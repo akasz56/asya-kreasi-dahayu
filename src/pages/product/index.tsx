@@ -35,7 +35,7 @@ const Index: NextPage = () => {
       description='Product Page'
     >
       <div className='relative h-[50vh] overflow-hidden'>
-        <Image
+        <img
           src={'https://asyakreasidahayu.com/public/images/hero1.webp'}
           alt={'image'}
           className='absolute -bottom-64 -z-10 object-cover'

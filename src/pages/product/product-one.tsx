@@ -17,14 +17,14 @@ const ProductOne: NextPage = () => {
           className='flex h-screen py-32'
         >
           <div className='w-1/2'>
-            <Image
+            <img
               src={'https://asyakreasidahayu.com/public/images/hero1.webp'}
               alt={'image'}
               className='aspect-square w-4/5 object-cover'
             />
             <div className='mt-3 flex gap-x-4'>
               {[...Array(3)].map((item, key) => (
-                <Image
+                <img
                   key={key}
                   src={'https://asyakreasidahayu.com/public/images/hero1.webp'}
                   alt={'image'}

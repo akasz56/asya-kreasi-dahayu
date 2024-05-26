@@ -75,7 +75,7 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
       className='bg-asya-dark'
     >
       <div className='relative h-screen'>
-        <Image
+        <img
           src={'https://asyakreasidahayu.com/public/images/hero1.webp'}
           alt='Hero Picture 1'
           className='absolute -z-10 h-full object-cover'
@@ -179,19 +179,19 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
         </Transition>
       </div>
 
-      <Image
+      <img
         src={'https://asyakreasidahayu.com/public/images/hero2.webp'}
         alt='Hero Picture 2'
         className='relative h-screen object-cover object-center'
       />
 
-      <Image
+      <img
         src={'https://asyakreasidahayu.com/public/images/hero3.webp'}
         alt='Hero Picture 3'
         className='relative h-screen object-cover object-center'
       />
 
-      <Image
+      <img
         src={'https://asyakreasidahayu.com/public/images/hero4.webp'}
         alt='Hero Picture 4'
         className='relative h-screen object-cover object-center'

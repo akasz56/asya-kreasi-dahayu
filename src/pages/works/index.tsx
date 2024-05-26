@@ -48,7 +48,7 @@ const Index: NextPage = () => {
                 href={'/works/' + work.xid}
               >
                 {thumbnail && thumbnail.src && (
-                  <Image
+                  <img
                     src={thumbnail.src}
                     alt={thumbnail.alt ?? ''}
                     width={1080}
