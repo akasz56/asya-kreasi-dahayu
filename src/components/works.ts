@@ -1,6 +1,6 @@
 export interface Asset {
   src: string
-  type: 'image' | 'video'
+  type: 'image' | 'video' | 'youtube'
   alt?: string
 }
 
@@ -20,7 +20,7 @@ export const worksData: Work[] = [
     description:
       'Sebagai bagian dari komitmen kami dalam pelayanan sektor pengembangan, kami telah dipercaya untuk menyediakan layanan persiapan teknis dan peralatan lengkap yang dalam persiapan teknis dan perlengkapan acara mulai dari sistem, visual, dokumentasi, hingga akomodasi.',
     asset: [
-      { src: '/assets/bimtek_banjabar_2022/video.mp4', type: 'video' },
+      { src: 'https://www.youtube.com/embed/6XzlBX031pg', type: 'youtube' },
       { src: '/assets/bimtek_banjabar_2022/image (1).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2022/image (2).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2022/image (3).jpg', type: 'image' },
@@ -39,7 +39,7 @@ export const worksData: Work[] = [
     description: 'Komitmen dan loyalitas kami dalam pelayanan sektor pengembangan dipercaya untuk melanjutkan sebagai penyedia layanan persiapan teknis dan peralatan lengkap seperti sistem, visual, dokumentasi, hingga akomodasi dengan kualitas yang tetap terjaga.',
     subtitle: 'EO, Multimedia',
     asset: [
-      { src: '/assets/bimtek_banjabar_2023/video.mp4', type: 'video' },
+      { src: 'https://www.youtube.com/embed/SVnCennKvtU', type: 'youtube' },
       { src: '/assets/bimtek_banjabar_2023/image (1).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2023/image (2).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2023/image (3).jpg', type: 'image' },
@@ -64,7 +64,7 @@ export const worksData: Work[] = [
     description:
       'Kami memberikan pelayanan maksimal dalam pendampingan sebagai pemandu wisata dan dokumentasi kegiatan dengan visual yang ciamik untuk menciptakan pengalaman baru dalam acara outing karyawan di Bulukumba, Sulawesi Selatan.',
     asset: [
-      { src: '/assets/outing_rsud_bulukumba/video.mp4', type: 'video' },
+      { src: 'https://www.youtube.com/embed/4511zwz1cvs', type: 'youtube' },
       { src: '/assets/outing_rsud_bulukumba/image (1).jpg', type: 'image' },
       { src: '/assets/outing_rsud_bulukumba/image (2).jpg', type: 'image' },
       { src: '/assets/outing_rsud_bulukumba/image (3).jpg', type: 'image' },
