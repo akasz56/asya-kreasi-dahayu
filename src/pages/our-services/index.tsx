@@ -31,27 +31,27 @@ const Index: NextPage = () => {
           className='absolute -z-10 h-full object-cover'
         />
         <motion.div
-          className='asya-container grid grid-cols-2 items-center'
+          className='asya-container items-center lg:grid lg:grid-cols-2'
           initial='hidden'
           animate='visible'
           variants={{ visible: { transition: { staggerChildren: 0.5 } } }}
         >
           <motion.h1
             variants={heroVariants}
-            className='text-5xl font-medium uppercase tracking-widest text-white'
+            className='asya-title text-white'
           >
             Our Services
           </motion.h1>
           <motion.p
             variants={heroVariants}
-            className='font-light leading-relaxed tracking-widest text-white'
+            className='asya-description mx-auto max-w-sm text-white sm:max-w-lg lg:mx-0'
           >
             Setiap bidang pelayanan tentu saja memiliki keunikan dan kekuatannya masing-masing. Namun di sini, kami
             membuka kesempatan para kreator untuk berkembang dan ruang untuk saling berkolaborasi.
           </motion.p>
         </motion.div>
         <motion.div
-          className='asya-container-alt flex justify-between'
+          className='asya-container-alt flex flex-wrap justify-evenly xl:justify-between'
           initial='hidden'
           animate='visible'
           variants={{ visible: { transition: { staggerChildren: 0.25 } } }}
@@ -61,7 +61,7 @@ const Index: NextPage = () => {
               key={key}
               href={'#service_' + key}
               variants={heroVariants}
-              className={key == 1 ? 'lg:ml-8' : ''}
+              className={'mb-16 min-w-[33%] xl:mb-0 xl:min-w-0' + (key == 1 ? ' xl:ml-8' : '')}
             >
               <Image
                 src={service.icon}
@@ -85,30 +85,30 @@ const Index: NextPage = () => {
           className='my-32'
         >
           <div className='asya-container'>
-            <div className='mb-24 flex gap-10'>
-              <h2 className='flex-1 self-center text-4xl font-medium uppercase tracking-widest text-asya-dark'>
-                {service.name}
-              </h2>
-              <p className='w-3/5 font-light leading-relaxed tracking-widest text-asya-dark'>{service.description}</p>
+            <div className='mb-24 flex flex-col lg:flex-row lg:gap-10'>
+              <h2 className='asya-title text-asya-dark lg:flex-1 lg:self-center'>{service.name}</h2>
+              <p className='asya-description mx-auto max-w-sm text-asya-dark sm:max-w-lg lg:mx-0 lg:w-3/5 lg:max-w-none'>
+                {service.description}
+              </p>
             </div>
             <Image
               src={service.asset}
               alt={service.name}
               width={1920}
               height={1080}
-              className='aspect-video w-full object-cover'
+              className='-mx-4 aspect-video w-screen max-w-none object-cover lg:mx-0 lg:w-full'
             />
 
-            <ul className='mt-20 grid grid-cols-2 gap-24'>
+            <ul className='mx-8 mt-5 flex justify-between lg:mx-0 lg:mt-20 lg:grid lg:grid-cols-2 lg:gap-24'>
               {service.feature.map((feature: ServiceFeature, key: number) => (
                 <li
                   key={key}
                   className='flex flex-col'
                 >
-                  <h4 className='mb-10 text-2xl font-bold uppercase leading-normal tracking-widest text-asya-dark'>
+                  <h4 className='text-xl uppercase leading-normal tracking-widest text-asya-dark lg:mb-10 lg:text-2xl lg:font-bold'>
                     {feature.title}
                   </h4>
-                  <p className='leading-normal tracking-widest text-asya-dark'>{feature.description}</p>
+                  <p className='hidden leading-normal tracking-widest text-asya-dark lg:block'>{feature.description}</p>
                 </li>
               ))}
             </ul>
