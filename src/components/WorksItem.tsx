@@ -10,6 +10,7 @@ interface WorksItemProps {
 export default function WorksItem(props: WorksItemProps) {
   const [isHovered, setIsHovered] = useState(false)
   const [display, setDisplay] = useState(false)
+  const [isMobileView, setIsMobileView] = useState<boolean>(false)
 
   const ref = useRef(null)
   const isInFrame = useInView(ref)
@@ -25,6 +26,15 @@ export default function WorksItem(props: WorksItemProps) {
     if (!isHovered) setDisplay(false)
   }, [isHovered, display])
 
+  useEffect(() => {
+    function handleResize() {
+      console.log(window.innerWidth)
+      setIsMobileView(window.innerWidth < 1024)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
     <li
       className='mb-12'
@@ -36,11 +46,15 @@ export default function WorksItem(props: WorksItemProps) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <span className='w-1/2 text-xl leading-relaxed tracking-widest text-asya-dark'>{props.client.name}</span>
-        <hr className='flex-1 self-center border-asya-dark' />
+        <span className='w-3/4 text-xl leading-relaxed tracking-widest text-asya-dark lg:w-1/2'>
+          {props.client.name}
+        </span>
+        <span className='hidden flex-1 self-center text-xl leading-relaxed tracking-widest text-asya-dark lg:block'>
+          {props.client.description}
+        </span>
         <span className='ml-20 w-14 text-xl leading-relaxed tracking-widest text-asya-dark'>{props.client.year}</span>
       </Link>
-      {isInFrame && (
+      {isInFrame && !isMobileView && (
         <div
           className='hover-img'
           style={{ opacity: display ? 1 : 0 }}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NextPage } from 'next'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 export type Client = {
   name: string
-  field: string
+  description: string
   year: string
   image: string
 }
@@ -19,7 +19,7 @@ const Index: NextPage = () => {
 
   const clients: Client[] = [...Array(12)].map((_, idx) => ({
     name: 'Nama Klien Lorem Ipsum Dolor ' + idx,
-    field: 'Jenis Bidang',
+    description: 'Dolor Sit Amet, Lorem Ipsum Dolor Amet Sit',
     year: '2019',
     image:
       'https://and-atelier.com/media/pages/projects/1961-1992-japan/528c4a2488-1698872737/and-atelier-1961-1992-japan-3-400x.jpg',
@@ -35,11 +35,11 @@ const Index: NextPage = () => {
           id='title'
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-          className='asya-container py-36 text-center text-5xl font-medium leading-normal tracking-widest text-asya-dark'
+          className='asya-container py-16 text-center text-2xl font-medium leading-normal tracking-widest text-asya-dark md:text-3xl md:leading-normal md:tracking-widest lg:py-36 lg:text-4xl lg:leading-normal lg:tracking-widest'
         >
           Works Asya Kreasi Dahayu, Where <br /> The Collaboration Begins
         </motion.h1>
-        <div className='asya-container mb-28 grid grid-cols-1 gap-[5vw] lg:grid-cols-2 lg:gap-16'>
+        <div className='asya-container grid grid-cols-2 gap-[5vw] lg:mb-28 lg:gap-16'>
           {works.map((work, key) => {
             const thumbnail = work.asset.filter((asset) => asset.type === 'image')[0]
             return (
@@ -53,13 +53,13 @@ const Index: NextPage = () => {
                     alt={thumbnail.alt ?? ''}
                     width={1080}
                     height={1080}
-                    className='mb-16 aspect-square object-cover'
+                    className='mb-5 aspect-square object-cover lg:mb-16'
                   />
                 )}
-                <h2 className='mb-20 overflow-hidden text-ellipsis whitespace-nowrap align-baseline text-3xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal'>
+                <h2 className='mb-20 overflow-hidden text-ellipsis align-baseline text-lg font-medium uppercase leading-normal tracking-widest text-asya-dark md:text-xl md:leading-normal md:tracking-widest lg:whitespace-nowrap lg:text-3xl lg:tracking-widest lg:hover:overflow-visible lg:hover:whitespace-normal'>
                   {work.title}
                 </h2>
-                <p className='tracking-widest text-asya-dark'>{work.description}</p>
+                <p className='hidden tracking-widest text-asya-dark lg:block'>{work.description}</p>
               </Link>
             )
           })}
@@ -68,14 +68,18 @@ const Index: NextPage = () => {
 
       <section
         id='clients'
-        className='asya-container my-32 pt-16'
+        className='asya-container mb-32 lg:my-32 lg:pt-16'
       >
-        <h1 className='text-5xl font-medium uppercase leading-normal tracking-widest text-asya-dark'>Clients</h1>
-        <ul className='mt-28'>
+        <h1 className='text-3xl font-medium uppercase leading-normal tracking-widest text-asya-dark lg:text-5xl'>
+          Clients
+        </h1>
+        <ul className='mt-12 lg:mt-28'>
           <li className='mb-10 flex'>
-            <p className='w-1/2 text-2xl font-bold leading-relaxed tracking-widest text-asya-dark'>Name</p>
-            <p className='flex-1 text-2xl font-bold leading-relaxed tracking-widest text-asya-dark'>Description</p>
-            <p className='w-14 text-2xl font-bold leading-relaxed tracking-widest text-asya-dark'>Year</p>
+            <p className='w-3/4 text-2xl font-bold leading-relaxed tracking-widest text-asya-dark lg:w-1/2'>Name</p>
+            <p className='hidden flex-1 text-2xl font-bold leading-relaxed tracking-widest text-asya-dark lg:block'>
+              Description
+            </p>
+            <p className='ml-20 w-14 text-2xl font-bold leading-relaxed tracking-widest text-asya-dark'>Year</p>
           </li>
           {clients.map((item, key) => (
             <WorksItem
