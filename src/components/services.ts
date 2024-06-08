@@ -19,7 +19,7 @@ export const services: Service[] = [
         name: 'MICE & EO',
         // name: 'MICE (Meeting Incentive Convention Exhibition)',
         icon: '/assets/icons/mice.svg',
-        asset: '/images/services/service (1).jpg',
+        asset: '/images/services/service (1).webp',
         nickname: 'MICE',
         description:
             'Tim kami akan membantu kreator untuk mencapai hasil yang terbaik dengan memberikan pelayanan all-in dengan keserbagunaan untuk tumbuh di industri ini mulai dari akomodasi, transportasi, hingga publikasi.',
@@ -37,7 +37,7 @@ export const services: Service[] = [
     {
         name: 'Multimedia',
         icon: '/assets/icons/mulmed.svg',
-        asset: '/images/services/service (2).jpg',
+        asset: '/images/services/service (2).webp',
         description:
             'Tim kami memberikan pelayanan yang lengkap mulai dari sistem, visual, dan perlengkapan lainnya dengan berkomitmen untuk kesempurnaan dan akurasi dalam berkolaborasi dengan sektor lain seperti MICE dan desain grafis.',
         feature: [
@@ -54,7 +54,7 @@ export const services: Service[] = [
     {
         name: 'Ticketing',
         icon: '/assets/icons/ticketing.svg',
-        asset: '/images/services/service (3).jpg',
+        asset: '/images/services/service (3).webp',
         description: 'Tim kami memberikan kemudahan dalam perancanaan akomodasi perjalanan kerja dengan komitmen meningkatkan kepuasan dan pengalaman yang lebih baik dibanding dengan pelayanan konvensional.',
         feature: [
             {
@@ -70,7 +70,7 @@ export const services: Service[] = [
     {
         name: 'Garment & Fashion',
         icon: '/assets/icons/garment.svg',
-        asset: '/images/services/service (5).jpg',
+        asset: '/images/services/service (5).webp',
         description: 'Tim kami bekerja sama dalam menciptakan keindahan melalui mode kejatmikaan. Berdedikasi merancang menggunakan bahan berkualitas yang diolah dengan baik menjadi sebuah karya yang berkualitas, nyaman, dan tak lekang oleh waktu.',
         feature: [
             {
@@ -88,7 +88,7 @@ export const services: Service[] = [
     {
         name: 'Konsultan Kreatif',
         icon: '/assets/icons/kreatif.svg',
-        asset: '/images/services/service (4).jpg',
+        asset: '/images/services/service (4).webp',
         description:
             'Tim kami membantu dalam memberikan panduan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',
         feature: [
@@ -107,31 +107,31 @@ export const services: Service[] = [
 export const servicesDisplay: DisplayContentItem[] = [
     {
         title: 'MICE (Meeting Incentive Convention Exhibition)',
-        image: '/images/services/service (1).jpg',
+        image: '/images/services/service (1).webp',
         description: 'Kami memberikan pelayanan dan edukasi untuk bidang yang masih minim atensi: “the meetings industry”.',
         href: '#',
     },
     {
         title: 'Multimedia',
-        image: '/images/services/service (2).jpg',
+        image: '/images/services/service (2).webp',
         description: 'Kami menciptakan hasil eksplorasi dengan realisasi ide yang unik dan berkelanjutan.',
         href: '#',
     },
     {
         title: 'Garment and Fashion',
-        image: '/images/services/service (5).jpg',
+        image: '/images/services/service (5).webp',
         description: 'Kami menciptakan mode yang inovatif namun tak lekang oleh waktu.',
         href: '#',
     },
     {
         title: 'Ticketing',
-        image: '/images/services/service (3).jpg',
+        image: '/images/services/service (3).webp',
         description: 'Kami memberikan solusi untuk kemudahan dalam perancanaan bepergian.',
         href: '#',
     },
     {
         title: 'Konsultan Kreatif',
-        image: '/images/services/service (4).jpg',
+        image: '/images/services/service (4).webp',
         description: 'Kami memberikan strategi dalam desain untuk membekali kreator dalam bertumbuh dan menciptakan mahakarya ke depannya.',
         href: '#',
     },

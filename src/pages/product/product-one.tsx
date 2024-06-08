@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
-import test from '../../../public/images/hero1.jpg'
+import test from '../../../public/images/hero1.webp'
 
 const ProductOne: NextPage = () => {
   return (

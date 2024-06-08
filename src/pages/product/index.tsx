@@ -70,6 +70,7 @@ const Index: NextPage = () => {
 export default Index
 
 // Just in case you dont want to use framer-motion
+/*
 const easeInOutQuad = (t: number) => {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t
 }
@@ -145,3 +146,4 @@ const IndexManual: NextPage = () => {
     </CustomHead>
   )
 }
+*/

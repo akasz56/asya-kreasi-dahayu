@@ -2,7 +2,7 @@ import React from 'react'
 import { NextPage } from 'next'
 import Image from 'next/image'
 import CustomHead from '@/layouts/CustomHead'
-import test from '../../../public/images/hero1.jpg'
+import test from '../../../public/images/hero1.webp'
 
 const ProjectOne: NextPage = () => {
   return (

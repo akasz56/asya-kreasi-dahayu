@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import { motion } from 'framer-motion'
 import CustomHead from '@/layouts/CustomHead'
 import Image from 'next/image'
-import heroImage from '../../../public/images/service.jpg'
+import heroImage from '../../../public/images/service.webp'
 import { Service, ServiceFeature, services } from '@/components/services'
 
 const Index: NextPage = () => {

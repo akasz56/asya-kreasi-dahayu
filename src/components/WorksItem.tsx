@@ -1,5 +1,6 @@
 import { Client } from '@/pages/works'
 import { useInView } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
@@ -59,7 +60,9 @@ export default function WorksItem(props: WorksItemProps) {
           className='hover-img'
           style={{ opacity: display ? 1 : 0 }}
         >
-          <img
+          <Image
+            width={720}
+            height={720}
             src={props.client.image}
             alt={props.client.name}
           />

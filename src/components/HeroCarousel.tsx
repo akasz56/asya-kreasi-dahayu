@@ -4,10 +4,9 @@ import { Carousel } from 'flowbite-react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import ScrollArrow from './ScrollArrow'
-import image1 from '../../public/images/hero1.jpg'
-import image2 from '../../public/images/hero2.jpg'
-import image3 from '../../public/images/hero3.jpg'
-import image4 from '../../public/images/hero4.jpg'
+import image1 from '../../public/images/hero1.webp'
+import image2 from '../../public/images/hero2.webp'
+import image3 from '../../public/images/hero3.webp'
 
 interface HeroCarouselProps {
   scrollTo: string
@@ -192,12 +191,6 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
       <Image
         src={image3}
         alt='Hero Picture 3'
-        className='relative h-screen object-cover object-center'
-      />
-
-      <Image
-        src={image4}
-        alt='Hero Picture 4'
         className='relative h-screen object-cover object-center'
       />
     </Carousel>
