@@ -61,6 +61,7 @@ export default function WorksItem(props: WorksItemProps) {
           style={{ opacity: display ? 1 : 0 }}
         >
           <Image
+            className='h-72 w-72'
             width={720}
             height={720}
             src={props.client.image}
