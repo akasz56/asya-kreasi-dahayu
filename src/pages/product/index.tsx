@@ -15,7 +15,7 @@ const Index: NextPage = () => {
     }, duration)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [duration])
 
   return (
     <CustomHead

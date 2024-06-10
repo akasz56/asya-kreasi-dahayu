@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
+    "startDev": "next start",
     "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "format": "prettier -c src",
