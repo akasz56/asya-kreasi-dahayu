@@ -6,8 +6,9 @@ import React from 'react'
 export default function index() {
   return (
     <Slider>
-      {productImages.map((item) => (
+      {productImages.map((item, key) => (
         <Image
+          key={key}
           width={1920}
           height={1800}
           alt='image gallery'
