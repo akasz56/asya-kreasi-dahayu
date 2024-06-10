@@ -8,30 +8,30 @@ interface SliderProps {
 }
 
 export default function Slider({ speed, duration, children }: SliderProps) {
-  if (!children) return <></>
-
   speed ??= 0.5
   duration = duration ? duration * 1000 : 5000
 
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    if (Array.isArray(children)) {
+    if (children && Array.isArray(children)) {
       console.log([index == 0 ? children.length - 1 : index - 1, index])
     }
-  }, [index])
+  }, [children, index])
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (Array.isArray(children)) {
+      if (children && Array.isArray(children)) {
         setIndex((prevValue) => (prevValue < children.length - 1 ? prevValue + 1 : 0))
       }
     }, duration)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [children, duration])
 
-  return !Array.isArray(children) ? (
+  return !children ? (
+    <></>
+  ) : !Array.isArray(children) ? (
     <div className='h-screen overflow-hidden'>{children}</div>
   ) : (
     <AnimatePresence>

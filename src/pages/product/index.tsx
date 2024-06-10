@@ -15,7 +15,7 @@ const Index: NextPage = () => {
     }, duration)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [duration])
 
   return (
     <CustomHead
@@ -25,16 +25,12 @@ const Index: NextPage = () => {
       <AnimatePresence>
         <div className='relative overflow-hidden lg:h-screen'>
           <div className='flex w-full overflow-hidden lg:absolute lg:h-screen'>
-            <Image
-              width={1920}
-              height={1800}
+            <img
               alt='image gallery'
               src={productImages[value == 0 ? productImages.length - 1 : value - 1][0]}
               className='w-full object-cover lg:min-h-screen lg:w-1/2 lg:object-right'
             />
-            <Image
-              width={1920}
-              height={1800}
+            <img
               alt='image gallery'
               src={productImages[value == 0 ? productImages.length - 1 : value - 1][1]}
               className='hidden object-cover lg:block lg:min-h-screen lg:w-1/2 lg:object-left'
@@ -46,16 +42,12 @@ const Index: NextPage = () => {
             animate={{ y: 0, transition: { duration: 5, ease: 'easeInOut' } }}
             className='absolute top-0 flex w-full overflow-hidden lg:h-screen'
           >
-            <Image
-              width={1920}
-              height={1800}
+            <img
               alt='image gallery'
               src={productImages[value][0]}
               className='w-full object-cover lg:min-h-screen lg:w-1/2 lg:object-right'
             />
-            <Image
-              width={1920}
-              height={1800}
+            <img
               alt='image gallery'
               src={productImages[value][1]}
               className='hidden object-cover lg:block lg:min-h-screen lg:w-1/2 lg:object-left'

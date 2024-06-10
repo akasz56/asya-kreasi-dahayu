@@ -65,7 +65,7 @@ const Index: NextPage = () => {
               klien dan mitra kerja agar dapat menjadi pilar perekonomian negara.
             </p>
           </div>
-          <Image
+          <img
             src={'https://asyakreasidahayu.com/public/images/visi.webp'}
             alt='Visi'
             className='-mx-4 mt-32 aspect-video w-screen max-w-none object-cover lg:m-0 lg:aspect-square lg:w-[40vw] lg:max-w-[587px]'
@@ -90,7 +90,7 @@ const Index: NextPage = () => {
               bagi investor atau pemegang saham.
             </p>
           </div>
-          <Image
+          <img
             src={'https://asyakreasidahayu.com/public/images/misi.webp'}
             alt='Misi'
             className='-mx-4 mt-32 aspect-video w-screen max-w-none object-cover lg:m-0 lg:aspect-square lg:w-[40vw] lg:max-w-[587px]'

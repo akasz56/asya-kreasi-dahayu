@@ -24,12 +24,10 @@ export default function TeamPhoto({ teamMember }: TeamPhotoProps) {
       href='#'
       className='relative aspect-square'
     >
-      <Image
+      <img
         src={teamMember.image}
         alt={teamMember.name}
         className='absolute aspect-square object-cover'
-        width={1440}
-        height={1440}
       />
       <div className='absolute h-full w-full bg-asya-dark opacity-50' />
       <motion.div className='flex h-full flex-col justify-between p-4'>
