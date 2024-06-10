@@ -21,8 +21,7 @@ const Index: NextPage = () => {
     name: 'Nama Klien Lorem Ipsum Dolor ' + idx,
     description: 'Dolor Sit Amet, Lorem Ipsum Dolor Amet Sit',
     year: '2019',
-    image:
-      'https://and-atelier.com/media/pages/projects/1961-1992-japan/528c4a2488-1698872737/and-atelier-1961-1992-japan-3-400x.webp',
+    image: '/images/misi.webp',
   }))
 
   return (
