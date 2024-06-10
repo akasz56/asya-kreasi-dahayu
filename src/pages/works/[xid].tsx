@@ -26,7 +26,7 @@ const WorkDetail: NextPage = () => {
         <div className='space-y-12 lg:w-1/2'>
           {data &&
             data.asset
-              .sort((a) => Number(a.type === 'video'))
+              .sort((a) => Number(a.type != 'image'))
               .map((item, key) =>
                 item.type === 'image' ? (
                   <img
@@ -51,6 +51,17 @@ const WorkDetail: NextPage = () => {
                     />
                     Your browser does not support the video tag.
                   </video>
+                ) : item.type === 'youtube' ? (
+                  <iframe
+                    key={key}
+                    src={item.src + '?autoplay=1'}
+                    title={data.title}
+                    className='aspect-video w-full'
+                    allow='autoplay;'
+                    // allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                    // referrerPolicy='strict-origin-when-cross-origin'
+                    // allowFullScreen
+                  ></iframe>
                 ) : (
                   ''
                 )
