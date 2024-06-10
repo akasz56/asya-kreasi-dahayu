@@ -3,16 +3,18 @@ import React from 'react'
 export default function Footer() {
   return (
     <footer className='bg-asya-dark'>
-      <div className='asya-container flex flex-col justify-between gap-4 py-16 lg:flex-row lg:items-center'>
-        <h2 className='text-3xl font-medium uppercase tracking-widest text-white'>Asya Kreasi Dahayu</h2>
+      <div className='asya-container flex flex-col justify-between gap-4 py-8 lg:flex-row lg:items-center lg:py-16'>
+        <h2 className='text-xs font-light uppercase tracking-[.2em] text-white lg:text-3xl lg:font-medium lg:tracking-widest'>
+          Asya Kreasi Dahayu
+        </h2>
         <div className='space-y-12'>
-          <p className='text-md font-medium tracking-widest text-white'>
+          <p className='text-[3.5vw] tracking-widest text-white sm:text-lg lg:font-medium lg:tracking-widest'>
             We&apos;d love to talk to you about our approach <br /> and how we might be able to help your brand.
           </p>
           <div className='relative'>
             <label
               htmlFor='email'
-              className='text-md font-medium tracking-widest text-white'
+              className='tracking-widest text-white sm:text-lg lg:font-medium lg:tracking-widest'
             >
               Email Address
             </label>

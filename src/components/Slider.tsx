@@ -14,12 +14,6 @@ export default function Slider({ speed, duration, children }: SliderProps) {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    if (children && Array.isArray(children)) {
-      console.log([index == 0 ? children.length - 1 : index - 1, index])
-    }
-  }, [children, index])
-
-  useEffect(() => {
     const interval = setInterval(() => {
       if (children && Array.isArray(children)) {
         setIndex((prevValue) => (prevValue < children.length - 1 ? prevValue + 1 : 0))
