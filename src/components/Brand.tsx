@@ -10,7 +10,7 @@ export default function Brand({ onClick }: BrandProps) {
     <Link
       href={'/'}
       onClick={onClick}
-      className='text-lg font-medium uppercase tracking-widest text-white'
+      className='text-base font-medium uppercase tracking-widest text-white lg:text-lg'
     >
       Asya Kreasi Dahayu
     </Link>
