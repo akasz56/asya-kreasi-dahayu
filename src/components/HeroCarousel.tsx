@@ -150,11 +150,13 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
         className='relative h-screen object-cover object-center'
       />
 
-      <Image
-        src={image3}
-        alt='Hero Picture 3'
-        className='relative h-screen object-cover object-center'
-      />
+      <div className='relative h-screen'>
+        <Image
+          src={image3}
+          alt='Hero Picture 3'
+          className='absolute -right-[22.5vw] h-full max-w-fit md:-right-52 xl:static xl:right-0 xl:w-full xl:max-w-none xl:object-cover xl:object-center'
+        />
+      </div>
     </Slider>
   )
 }
