@@ -18,7 +18,7 @@ export const services: Service[] = [
     {
         name: 'MICE & EO',
         // name: 'MICE (Meeting Incentive Convention Exhibition)',
-        icon: '/assets/icons/mice.svg',
+        icon: 'https://asyakreasidahayu.com/public/assets/icons/mice.svg',
         asset: '/images/services/service (1).webp',
         nickname: 'MICE',
         description:
@@ -36,7 +36,7 @@ export const services: Service[] = [
     },
     {
         name: 'Multimedia',
-        icon: '/assets/icons/mulmed.svg',
+        icon: 'https://asyakreasidahayu.com/public/assets/icons/mulmed.svg',
         asset: '/images/services/service (2).webp',
         description:
             'Tim kami memberikan pelayanan yang lengkap mulai dari sistem, visual, dan perlengkapan lainnya dengan berkomitmen untuk kesempurnaan dan akurasi dalam berkolaborasi dengan sektor lain seperti MICE dan desain grafis.',
@@ -53,7 +53,7 @@ export const services: Service[] = [
     },
     {
         name: 'Ticketing',
-        icon: '/assets/icons/ticketing.svg',
+        icon: 'https://asyakreasidahayu.com/public/assets/icons/ticketing.svg',
         asset: '/images/services/service (3).webp',
         description: 'Tim kami memberikan kemudahan dalam perancanaan akomodasi perjalanan kerja dengan komitmen meningkatkan kepuasan dan pengalaman yang lebih baik dibanding dengan pelayanan konvensional.',
         feature: [
@@ -69,7 +69,7 @@ export const services: Service[] = [
     },
     {
         name: 'Garment & Fashion',
-        icon: '/assets/icons/garment.svg',
+        icon: 'https://asyakreasidahayu.com/public/assets/icons/garment.svg',
         asset: '/images/services/service (5).webp',
         description: 'Tim kami bekerja sama dalam menciptakan keindahan melalui mode kejatmikaan. Berdedikasi merancang menggunakan bahan berkualitas yang diolah dengan baik menjadi sebuah karya yang berkualitas, nyaman, dan tak lekang oleh waktu.',
         feature: [
@@ -87,7 +87,7 @@ export const services: Service[] = [
     },
     {
         name: 'Konsultan Kreatif',
-        icon: '/assets/icons/kreatif.svg',
+        icon: 'https://asyakreasidahayu.com/public/assets/icons/kreatif.svg',
         asset: '/images/services/service (4).webp',
         description:
             'Tim kami membantu dalam memberikan panduan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',

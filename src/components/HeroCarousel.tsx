@@ -132,7 +132,7 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
                     ref={videoModalRef}
                   >
                     <source
-                      src='./videos/hero_compro.mp4'
+                      src='https://asyakreasidahayu.com/public/videos/hero_compro.mp4'
                       type='video/mp4'
                     />
                     Your browser does not support the video tag.
