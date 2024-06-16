@@ -64,30 +64,6 @@ const Index: NextPage = () => {
           })}
         </div>
       </section>
-
-      <section
-        id='clients'
-        className='asya-container mb-32 lg:my-32 lg:pt-16'
-      >
-        <h1 className='text-3xl font-medium uppercase leading-normal tracking-widest text-asya-dark lg:text-5xl'>
-          Clients
-        </h1>
-        <ul className='mt-12 lg:mt-28'>
-          <li className='mb-10 flex'>
-            <p className='w-3/4 text-2xl font-bold leading-relaxed tracking-widest text-asya-dark lg:w-1/2'>Name</p>
-            <p className='hidden flex-1 text-2xl font-bold leading-relaxed tracking-widest text-asya-dark lg:block'>
-              Description
-            </p>
-            <p className='ml-20 w-14 text-2xl font-bold leading-relaxed tracking-widest text-asya-dark'>Year</p>
-          </li>
-          {clients.map((item, key) => (
-            <WorksItem
-              key={key}
-              client={item}
-            />
-          ))}
-        </ul>
-      </section>
     </CustomHead>
   )
 }
