@@ -55,7 +55,7 @@ const Index: NextPage = () => {
                     className='mb-5 aspect-square object-cover lg:mb-16'
                   />
                 )}
-                <h2 className='mb-20 overflow-hidden text-ellipsis align-baseline text-lg font-medium uppercase leading-normal tracking-widest text-asya-dark md:text-xl md:leading-normal md:tracking-widest lg:whitespace-nowrap lg:text-3xl lg:tracking-widest lg:hover:overflow-visible lg:hover:whitespace-normal'>
+                <h2 className='mb-20 overflow-hidden text-ellipsis align-baseline text-[14px] font-medium uppercase leading-normal tracking-widest text-asya-dark md:text-xl md:leading-normal md:tracking-widest lg:whitespace-nowrap lg:text-3xl lg:tracking-widest lg:hover:overflow-visible lg:hover:whitespace-normal'>
                   {work.title}
                 </h2>
                 <p className='hidden tracking-widest text-asya-dark lg:block'>{work.description}</p>
