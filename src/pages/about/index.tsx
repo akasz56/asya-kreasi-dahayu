@@ -46,14 +46,30 @@ const Index: NextPage = () => {
         >
           <motion.p
             variants={itemEffect}
-            className='asya-display-txt'
+            className='asya-txt text-center text-[20px] font-medium text-white lg:text-4xl xl:text-5xl'
           >
             Get To Know Asya Kreasi Dahayu, <br /> Where The Idea Starts
           </motion.p>
-          <ScrollArrow
-            scrollTo='#visi'
-            className='absolute bottom-0 mb-[5vw]'
-          />
+          <motion.a
+            href='#visi'
+            whileHover={{ y: -5 }}
+            className='absolute bottom-[40%] lg:bottom-0 lg:mb-[5vw]'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              strokeWidth='1.5'
+              stroke='currentColor'
+              className='h-7 w-7 text-white lg:h-12 lg:w-12'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                d='M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3'
+              />
+            </svg>
+          </motion.a>
         </motion.div>
       </section>
 
@@ -81,17 +97,20 @@ const Index: NextPage = () => {
         <div className='asya-container pt-20 lg:pt-36'>
           <div className='flex flex-col lg:h-56 lg:flex-row lg:justify-between lg:gap-16'>
             <h1 className='asya-title text-asya-dark lg:max-w-[587px] lg:flex-1'>Misi Asya Kreasi Dahayu</h1>
-            <p className='asya-description mx-auto max-w-sm text-asya-dark sm:max-w-lg lg:mx-0 lg:max-w-[587px] lg:flex-1'>
-              Dalam mewujudkan visi kami, kesejahteraan tim serta keseimbangan ekosistem kerja adalah yang utama. Kami
-              menciptakan lingkungan kerja yang aman dan nyaman serta memberikan kesempatan berkembang dengan membina
-              dan meningkatkan semangat yang tinggi kepada tim kami agar setiap level dari tim dapat bekerja sama untuk
-              mewujudkan pelayanan terbaik dan berkualitas sehingga tercipta hubungan kerja sama yang kuat dengan
-              pelanggan dan mitra kerja.
-              <div className='mb-4' />
-              Selain itu, kami menerapkan manajemen proyek yang terintegrasi dengan wilayah operasi di Indonesia agar
-              dapat memberikan kepuasan untuk pelanggan, anggota, dan perusahaan serta meningkatkan nilai yang tinggi
-              bagi investor atau pemegang saham.
-            </p>
+            <div className='asya-description mx-auto max-w-sm text-asya-dark sm:max-w-lg lg:mx-0 lg:max-w-[587px] lg:flex-1'>
+              <p className='mb-4'>
+                Dalam mewujudkan visi kami, kesejahteraan tim serta keseimbangan ekosistem kerja adalah yang utama. Kami
+                menciptakan lingkungan kerja yang aman dan nyaman serta memberikan kesempatan berkembang dengan membina
+                dan meningkatkan semangat yang tinggi kepada tim kami agar setiap level dari tim dapat bekerja sama
+                untuk mewujudkan pelayanan terbaik dan berkualitas sehingga tercipta hubungan kerja sama yang kuat
+                dengan pelanggan dan mitra kerja.
+              </p>
+              <p>
+                Selain itu, kami menerapkan manajemen proyek yang terintegrasi dengan wilayah operasi di Indonesia agar
+                dapat memberikan kepuasan untuk pelanggan, anggota, dan perusahaan serta meningkatkan nilai yang tinggi
+                bagi investor atau pemegang saham.
+              </p>
+            </div>
           </div>
           <Image
             src={misiImage}

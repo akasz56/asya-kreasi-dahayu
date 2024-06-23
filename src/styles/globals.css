@@ -139,6 +139,10 @@ a {
   } */
 }
 
+.asya-txt {
+  @apply leading-normal tracking-widest sm:leading-normal sm:tracking-widest md:leading-normal md:tracking-widest lg:leading-normal lg:tracking-widest xl:leading-normal xl:tracking-widest 2xl:leading-normal 2xl:tracking-widest !important;
+}
+
 .asya-link {
   @apply relative;
 }
