@@ -7,12 +7,14 @@ import image1 from '../../public/images/hero1.webp'
 import image2 from '../../public/images/hero2.webp'
 import image3 from '../../public/images/hero3.webp'
 import Slider from './Slider'
+import { Carousel } from 'flowbite-react'
 
 interface HeroCarouselProps {
   scrollTo: string
 }
 
-export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
+function HeroCarouselV2({ scrollTo }: HeroCarouselProps) {
+  const [mousePos, setMousePos] = useState<number[]>([])
   const [modalOpen, setModalOpen] = useState<boolean>(false)
   const videoHeroRef = useRef<HTMLVideoElement>(null)
   const videoModalRef = useRef<HTMLVideoElement>(null)
@@ -71,11 +73,16 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
         </motion.div>
       </div>
 
-      <div className='relative h-screen overflow-hidden'>
+      <div className='relative h-screen'>
         <button
           className='h-full w-full'
-          onClick={() => {
-            setModalOpen(true)
+          onMouseDown={(e) => {
+            setMousePos([e.clientX, e.clientY])
+          }}
+          onMouseUp={(e) => {
+            if (mousePos[0] == e.clientX && mousePos[1] == e.clientY) {
+              setModalOpen(true)
+            }
           }}
           aria-label='Watch the video'
         >
@@ -144,25 +151,26 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
         </Transition>
       </div>
 
-      <Image
-        src={image2}
-        alt='Hero Picture 2'
-        className='relative h-screen object-cover object-center'
-      />
+      <div className='relative h-screen'>
+        <Image
+          src={image2}
+          alt='Hero Picture 2'
+          className='absolute -z-10 h-full object-cover'
+        />
+      </div>
 
       <div className='relative h-screen'>
         <Image
           src={image3}
           alt='Hero Picture 3'
-          className='absolute -right-[22.5vw] h-full max-w-fit md:-right-52 xl:static xl:right-0 xl:w-full xl:max-w-none xl:object-cover xl:object-center'
+          className='absolute -right-[22.5vw] h-full max-w-fit md:-right-52 xl:right-0 xl:w-full xl:max-w-none xl:object-cover xl:object-center'
         />
       </div>
     </Slider>
   )
 }
 
-/*
-export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
+function HeroCarousel({ scrollTo }: HeroCarouselProps) {
   const [modalOpen, setModalOpen] = useState<boolean>(false)
   const videoHeroRef = useRef<HTMLVideoElement>(null)
   const videoModalRef = useRef<HTMLVideoElement>(null)
@@ -346,4 +354,5 @@ export default function HeroCarousel({ scrollTo }: HeroCarouselProps) {
     </Carousel>
   )
 }
-*/
+
+export default HeroCarouselV2

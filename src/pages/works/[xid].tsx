@@ -69,13 +69,14 @@ const WorkDetail: NextPage = () => {
         </div>
         <div className='fixed bottom-0 h-1/2 bg-white lg:right-0 lg:h-screen lg:w-1/2'>
           <div className='flex h-full flex-col px-6 py-8 lg:py-32 lg:pl-16 xl:pl-36'>
-            <h3 className='flex-1 text-4xl font-bold uppercase leading-normal tracking-widest text-asya-dark'>
+            <h3 className='flex-1 text-[28px] font-bold uppercase leading-normal tracking-widest text-asya-dark'>
               {data.title}
-              <span className='block text-xl font-normal tracking-widest'>{data.subtitle}</span>
+              <span className='block text-[18px] font-medium tracking-widest'>{data.subtitle}</span>
             </h3>
             <p className='text-base leading-normal tracking-widest text-asya-dark lg:max-w-[40em]'>
               {data.description}
             </p>
+            {/* title & desc sticky ke foto, terus dibawahnya ada description */}
           </div>
         </div>
       </div>

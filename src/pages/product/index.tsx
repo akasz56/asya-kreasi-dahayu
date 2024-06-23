@@ -2,67 +2,62 @@ import React, { useEffect, useState } from 'react'
 import { NextPage } from 'next'
 import CustomHead from '@/layouts/CustomHead'
 import { productImages } from '@/components/products'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useMotionValue } from 'framer-motion'
 import Image from 'next/image'
 
+const DEFAULT_DURATION = 5000
+const DRAG_BUFFER = 50
+
 const Index: NextPage = () => {
-  let duration = 5500
-  const [value, setValue] = useState(0)
+  const [imgIndex, setImgIndex] = useState(0)
+  const dragY = useMotionValue(0)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setValue((prevValue) => (prevValue < productImages.length - 1 ? prevValue + 1 : 0))
-    }, duration)
+  const onDragEnd = () => {
+    const y = dragY.get()
 
-    return () => clearInterval(interval)
-  }, [duration])
+    // if (y <= -DRAG_BUFFER && imgIndex < productImages.length - 1) {
+    //   setImgIndex((pv) => pv + 1)
+    // } else if (y >= DRAG_BUFFER && imgIndex > 0) {
+    //   setImgIndex((pv) => pv - 1)
+    // }
+  }
 
   return (
     <CustomHead
       title='Product'
       description='Product Page'
     >
-      <AnimatePresence>
-        <div className='relative overflow-hidden lg:h-screen'>
-          <div className='flex w-full overflow-hidden lg:absolute lg:h-screen'>
-            <Image
-              width={1920}
-              height={1800}
-              alt='image gallery'
-              src={productImages[value == 0 ? productImages.length - 1 : value - 1][0]}
-              className='w-full object-cover lg:min-h-screen lg:w-1/2 lg:object-right'
-            />
-            <Image
-              width={1920}
-              height={1800}
-              alt='image gallery'
-              src={productImages[value == 0 ? productImages.length - 1 : value - 1][1]}
-              className='hidden object-cover lg:block lg:min-h-screen lg:w-1/2 lg:object-left'
-            />
-          </div>
-          <motion.div
-            key={value}
-            initial={{ y: '150%' }}
-            animate={{ y: 0, transition: { duration: 5, ease: 'easeInOut' } }}
-            className='absolute top-0 flex w-full overflow-hidden lg:h-screen'
-          >
-            <Image
-              width={1920}
-              height={1800}
-              alt='image gallery'
-              src={productImages[value][0]}
-              className='w-full object-cover lg:min-h-screen lg:w-1/2 lg:object-right'
-            />
-            <Image
-              width={1920}
-              height={1800}
-              alt='image gallery'
-              src={productImages[value][1]}
-              className='hidden object-cover lg:block lg:min-h-screen lg:w-1/2 lg:object-left'
-            />
-          </motion.div>
-        </div>
-      </AnimatePresence>
+      <motion.div
+        drag='y'
+        dragConstraints={{
+          // top: 0,
+          bottom: 0,
+        }}
+        style={{
+          y: dragY,
+        }}
+        // animate={{
+        //   translateY: `-${imgIndex * 100}%`,
+        // }}
+        // transition={{
+        //   type: 'linear',
+        //   damping: 5,
+        //   stiffness: 100,
+        //   restDelta: 0.001,
+        // }}
+        onDragEnd={onDragEnd}
+        className='cursor-grab overflow-hidden active:cursor-grabbing'
+      >
+        {productImages.map((item, key) => (
+          <Image
+            key={key}
+            src={item[0]}
+            alt='test'
+            width={1920}
+            height={1920}
+          />
+        ))}
+      </motion.div>
     </CustomHead>
   )
 }

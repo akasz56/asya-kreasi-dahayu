@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
 import { Work, worksData } from '../../components/works'
-import WorksItem from '@/components/WorksItem'
 import Image from 'next/image'
 
 export type Client = {
@@ -36,7 +35,7 @@ const Index: NextPage = () => {
           animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
           className='asya-container py-16 text-center text-2xl font-medium leading-normal tracking-widest text-asya-dark md:text-3xl md:leading-normal md:tracking-widest lg:py-36 lg:text-4xl lg:leading-normal lg:tracking-widest'
         >
-          Works Asya Kreasi Dahayu, Where <br /> The Collaboration Begins
+          Works Asya Kreasi Dahayu, <br /> Where The Collaboration Begins
         </motion.h1>
         <div className='asya-container grid grid-cols-2 gap-[5vw] lg:mb-28 lg:gap-16'>
           {works.map((work, key) => {

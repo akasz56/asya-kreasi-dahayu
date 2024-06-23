@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NextPage } from 'next'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import CustomHead from '@/layouts/CustomHead'
 import Image from 'next/image'
 import heroImage from '../../../public/images/service.webp'
@@ -51,7 +51,7 @@ const Index: NextPage = () => {
           </motion.p>
         </motion.div>
         <motion.div
-          className='asya-container-alt flex flex-wrap justify-evenly xl:justify-between'
+          className='mx-auto flex flex-wrap justify-between px-4 lg:container lg:w-[1280px] lg:px-20'
           initial='hidden'
           animate='visible'
           variants={{ visible: { transition: { staggerChildren: 0.25 } } }}
@@ -61,16 +61,19 @@ const Index: NextPage = () => {
               key={key}
               href={'#service_' + key}
               variants={heroVariants}
-              className={'mb-16 min-w-[33%] xl:mb-0 xl:min-w-0' + (key == 1 ? ' xl:ml-8' : '')}
+              className={
+                'mb-16 min-w-[33%] grow basis-1/3 lg:min-w-0 lg:basis-1/5' +
+                (service.iconAdditionalClass ? ' ' + service.iconAdditionalClass : '')
+              }
             >
               <Image
                 src={service.icon}
                 alt={service.name}
                 width={360}
                 height={360}
-                className='mx-auto mb-8 h-14 w-14 fill-white'
+                className='mx-auto mb-4 h-11 w-11 fill-white lg:mb-8 lg:h-14 lg:w-14'
               />
-              <h4 className='text-center text-xl font-bold uppercase leading-normal tracking-widest text-white'>
+              <h4 className='asya-txt text-center text-[11px] font-bold uppercase text-white lg:text-xl'>
                 {service.nickname ?? service.name}
               </h4>
             </motion.a>
@@ -99,16 +102,18 @@ const Index: NextPage = () => {
               className='-mx-4 aspect-video w-screen max-w-none object-cover lg:mx-0 lg:w-full'
             />
 
-            <ul className='mx-8 mt-5 flex justify-between lg:mx-0 lg:mt-20 lg:grid lg:grid-cols-2 lg:gap-24'>
+            <ServiceFeatureSlider
+              className='mt-20 block lg:hidden'
+              content={service.feature}
+            />
+            <ul className='mx-0 mt-20 hidden grid-cols-2 justify-between gap-24 lg:grid'>
               {service.feature.map((feature: ServiceFeature, key: number) => (
                 <li
                   key={key}
                   className='flex flex-col'
                 >
-                  <h4 className='text-xl uppercase leading-normal tracking-widest text-asya-dark lg:mb-10 lg:text-2xl lg:font-bold'>
-                    {feature.title}
-                  </h4>
-                  <p className='hidden leading-normal tracking-widest text-asya-dark lg:block'>{feature.description}</p>
+                  <h4 className='asya-txt mb-10 text-2xl font-bold uppercase text-asya-dark'>{feature.title}</h4>
+                  <p className='asya-txt text-asya-dark'>{feature.description}</p>
                 </li>
               ))}
             </ul>
@@ -120,3 +125,44 @@ const Index: NextPage = () => {
 }
 
 export default Index
+
+interface ServiceFeatureSliderProps {
+  className?: string
+  content: ServiceFeature[]
+}
+
+function ServiceFeatureSlider({ className, content }: ServiceFeatureSliderProps) {
+  const [index, setIndex] = useState(0)
+  const [visible, setVisible] = useState(true)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisible(false)
+      setTimeout(() => {
+        setIndex((prevValue) => (prevValue < content.length - 1 ? prevValue + 1 : 0))
+        setVisible(true)
+      }, 1000)
+    }, 2000 + 1000)
+
+    return () => clearInterval(interval)
+  }, [content.length])
+
+  return (
+    <AnimatePresence>
+      <div className={'relative h-[148px] ' + (className ?? '')}>
+        {visible && (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } }}
+            exit={{ opacity: 0, transition: { duration: 0.5, ease: 'easeInOut', delay: 0.5 } }}
+            className='absolute w-full'
+          >
+            <h4 className='asya-txt text-xl font-bold uppercase text-asya-dark'>{content[index].title}</h4>
+            <p className='asya-txt text-asya-dark'>{content[index].description}</p>
+          </motion.div>
+        )}
+      </div>
+    </AnimatePresence>
+  )
+}

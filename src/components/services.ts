@@ -3,6 +3,7 @@ import { DisplayContentItem } from "./Display"
 export interface Service {
     name: string
     icon: string,
+    iconAdditionalClass?: string,
     asset: string,
     nickname?: string
     description: string
@@ -37,6 +38,7 @@ export const services: Service[] = [
     {
         name: 'Multimedia',
         icon: 'https://asyakreasidahayu.com/public/assets/icons/mulmed.svg',
+        iconAdditionalClass: 'lg:-ml-4',
         asset: '/images/services/service (2).webp',
         description:
             'Tim kami memberikan pelayanan yang lengkap mulai dari sistem, visual, dan perlengkapan lainnya dengan berkomitmen untuk kesempurnaan dan akurasi dalam berkolaborasi dengan sektor lain seperti MICE dan desain grafis.',

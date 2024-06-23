@@ -133,10 +133,6 @@ a {
     max-width: 1536px;
     @apply mx-auto px-20
   }
-
-  /* .asya-container-alt {
-    @apply container mx-auto px-20
-  } */
 }
 
 .asya-txt {
