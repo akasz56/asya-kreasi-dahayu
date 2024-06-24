@@ -153,6 +153,7 @@ function HeroCarouselV2({ scrollTo }: HeroCarouselProps) {
 
       <div className='relative h-screen'>
         <Image
+          draggable={false}
           src={image2}
           alt='Hero Picture 2'
           className='absolute -z-10 h-full object-cover'
@@ -161,6 +162,7 @@ function HeroCarouselV2({ scrollTo }: HeroCarouselProps) {
 
       <div className='relative h-screen'>
         <Image
+          draggable={false}
           src={image3}
           alt='Hero Picture 3'
           className='absolute -right-[22.5vw] h-full max-w-fit md:-right-52 xl:right-0 xl:w-full xl:max-w-none xl:object-cover xl:object-center'
