@@ -160,7 +160,7 @@ function HeroCarouselV2({ scrollTo }: HeroCarouselProps) {
         />
       </div>
 
-      <div className='relative h-screen'>
+      <div className='relative h-screen overflow-hidden'>
         <Image
           draggable={false}
           src={image3}
