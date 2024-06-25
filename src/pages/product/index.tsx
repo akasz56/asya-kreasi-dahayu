@@ -76,7 +76,7 @@ const Index = () => {
       window.removeEventListener('mouseup', handleMouseUp)
       window.removeEventListener('touchend', handleTouchUp)
     }
-  }, [clickStartPos])
+  }, [clickStartPos, imgIndex])
 
   const handleMouseDown = (event: any) => {
     setIsDragging(true)
