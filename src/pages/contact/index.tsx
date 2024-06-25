@@ -11,42 +11,41 @@ const Index: NextPage = () => {
     >
       <div
         id='contact'
-        className='asya-container space-y-8 py-32 lg:space-y-24'
+        className='mx-auto space-y-24 px-10 lg:max-w-screen-2xl lg:px-20 lg:py-32'
       >
         <motion.h1
           initial={{ opacity: 0, x: -25 }}
           animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
-          className='mx-auto max-w-2xl text-2xl font-medium leading-normal tracking-widest text-asya-dark md:text-4xl md:leading-normal md:tracking-widest lg:mx-0 lg:max-w-[1032px] lg:text-5xl lg:leading-normal lg:tracking-widest'
+          className='asya-txt mx-auto max-w-2xl text-[20px] font-medium text-asya-dark lg:mx-0 lg:max-w-[1032px] lg:text-[54px]'
         >
           Be the first to know about Asya, <br /> Contact Us Through
         </motion.h1>
         <motion.table
           initial={{ opacity: 0, x: 25 }}
           animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
-          className='mx-auto max-w-2xl text-asya-dark lg:mx-0 lg:ml-auto lg:max-w-[688px] lg:text-2xl'
+          className='mx-auto max-w-[688px] text-[10px] font-medium text-asya-dark sm:mr-20 sm:ml-auto lg:mr-0 lg:text-2xl'
         >
-          <tbody>
+          <tbody className='leading-9'>
             <tr>
-              <td className='hidden py-2 pr-8 align-top sm:table-cell'>E-mail</td>
-              <td className='hidden py-2 align-top md:table-cell'> : </td>
-              <td className='py-2 align-top md:pl-8'>
+              <td className='pr-2 align-top lg:py-2 lg:pr-8'>Phone</td>
+              <td className='align-top lg:py-2'> : </td>
+              <td className='pl-2 align-top lg:py-2 lg:pl-8'>
+                <a href='https://wa.me/+6281290900114'>+62 812-9090-0114</a>
+              </td>
+            </tr>
+            <tr>
+              <td className='pr-2 align-top lg:py-2 lg:pr-8'>E-mail</td>
+              <td className='align-top lg:py-2'> : </td>
+              <td className='pl-2 align-top lg:py-2 lg:pl-8'>
                 <a href='mailto:contact@asyakreasidahayu.com'>contact@asyakreasidahayu.com</a>
               </td>
             </tr>
             <tr>
-              <td className='hidden py-2 pr-8 align-top sm:table-cell'>Hotline</td>
-              <td className='hidden py-2 align-top md:table-cell'> : </td>
-              <td className='py-2 align-top md:pl-8'>
-                <a href='https://wa.me/+6281290900114'>0812-9090-0114</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td className='hidden py-2 pr-8 align-top sm:table-cell'>Address</td>
-              <td className='hidden py-2 align-top md:table-cell'> : </td>
-              <td className='py-2 align-top md:pl-8'>
-                Jl. Ring Road Bubulak No. A-4, Kelurahan Bubulak, Kec. Bogor Barat, Kota Bogor, Provinsi Jawa Barat,
-                16115
+              <td className='pr-2 align-top lg:py-2 lg:pr-8'>Address</td>
+              <td className='align-top lg:py-2'> : </td>
+              <td className='pl-2 align-top lg:py-2 lg:pl-8'>
+                Jl. Ring Road Bubulak No. A-4, <br /> Kelurahan Bubulak, Kec. Bogor Barat, <br /> Kota Bogor, Provinsi
+                Jawa Barat, 16115
               </td>
             </tr>
           </tbody>
