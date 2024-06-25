@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { productImages } from '@/components/products'
-import Image from 'next/image'
 
 const DEFAULT_DURATION = 5000
 const DRAG_BUFFER = 50
