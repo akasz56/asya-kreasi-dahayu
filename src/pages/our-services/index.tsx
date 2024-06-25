@@ -103,7 +103,7 @@ const Index: NextPage = () => {
             />
 
             <ServiceFeatureSlider
-              className='mt-20 block lg:hidden'
+              className='mt-12 block lg:hidden'
               content={service.feature}
             />
             <ul className='mx-0 mt-20 hidden grid-cols-2 justify-between gap-24 lg:grid'>
@@ -133,35 +133,31 @@ interface ServiceFeatureSliderProps {
 
 function ServiceFeatureSlider({ className, content }: ServiceFeatureSliderProps) {
   const [index, setIndex] = useState(0)
-  const [visible, setVisible] = useState(true)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setVisible(false)
-      setTimeout(() => {
-        setIndex((prevValue) => (prevValue < content.length - 1 ? prevValue + 1 : 0))
-        setVisible(true)
-      }, 1000)
-    }, 2000 + 1000)
+      setIndex((pv) => (pv < content.length - 1 ? pv + 1 : 0))
+    }, 500 + 5000)
 
     return () => clearInterval(interval)
-  }, [content.length])
+  }, [content])
 
   return (
     <AnimatePresence>
       <div className={'relative h-[148px] ' + (className ?? '')}>
-        {visible && (
+        {content.map((feature, key) => (
           <motion.div
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } }}
-            exit={{ opacity: 0, transition: { duration: 0.5, ease: 'easeInOut', delay: 0.5 } }}
+            key={key}
+            animate={{
+              opacity: key === index ? 1 : 0,
+              transition: { duration: 0.5, ease: 'easeInOut', delay: key === index ? 0.5 : 0 },
+            }}
             className='absolute w-full'
           >
-            <h4 className='asya-txt text-xl font-bold uppercase text-asya-dark'>{content[index].title}</h4>
-            <p className='asya-txt text-asya-dark'>{content[index].description}</p>
+            <h4 className='asya-txt text-xl font-bold uppercase text-asya-dark'>{feature.title}</h4>
+            <p className='asya-txt mt-8 text-xs font-light text-asya-dark'>{feature.description}</p>
           </motion.div>
-        )}
+        ))}
       </div>
     </AnimatePresence>
   )
