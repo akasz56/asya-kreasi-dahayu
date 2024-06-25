@@ -21,11 +21,11 @@ export const worksData: Work[] = [
       'Sebagai bagian dari komitmen kami dalam pelayanan sektor pengembangan, kami telah dipercaya untuk menyediakan layanan persiapan teknis dan peralatan lengkap yang dalam persiapan teknis dan perlengkapan acara mulai dari sistem, visual, dokumentasi, hingga akomodasi.',
     asset: [
       { src: 'https://www.youtube.com/embed/6XzlBX031pg', type: 'youtube' },
+      { src: '/assets/bimtek_banjabar_2022/image (5).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2022/image (1).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2022/image (2).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2022/image (3).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2022/image (4).jpg', type: 'image' },
-      { src: '/assets/bimtek_banjabar_2022/image (5).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2022/image (6).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2022/image (7).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2022/image (8).jpg', type: 'image' },
@@ -40,8 +40,8 @@ export const worksData: Work[] = [
     subtitle: 'EO, Multimedia',
     asset: [
       { src: 'https://www.youtube.com/embed/SVnCennKvtU', type: 'youtube' },
-      { src: '/assets/bimtek_banjabar_2023/image (1).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2023/image (2).jpg', type: 'image' },
+      { src: '/assets/bimtek_banjabar_2023/image (1).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2023/image (3).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2023/image (4).jpg', type: 'image' },
       { src: '/assets/bimtek_banjabar_2023/image (5).jpg', type: 'image' },
