@@ -72,9 +72,9 @@ const WorkDetail: NextPage = () => {
           <p className='asya-txt max-w-[40em] text-asya-dark'>{data.description}</p>
         </div>
       </div>
-      <div className='sticky bottom-0 bg-white px-6 py-8 lg:hidden'>
+      <div className='sticky bottom-0 bg-white px-6 pt-8 pb-6 lg:hidden'>
         <h3 className='asya-txt text-[28px] font-bold uppercase text-asya-dark'>{data.title}</h3>
-        <p className='asya-txt text-[18px] font-medium uppercase text-asya-dark'>{data.subtitle}</p>
+        <p className='asya-txt mt-3 text-[18px] font-medium uppercase text-asya-dark'>{data.subtitle}</p>
       </div>
       <p className='asya-txt mb-24 px-6 text-asya-dark lg:hidden'>{data.description}</p>
     </CustomHead>
