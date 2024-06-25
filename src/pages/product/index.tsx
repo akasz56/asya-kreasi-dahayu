@@ -11,6 +11,16 @@ const Index = () => {
   const [clickPos, setClickPos] = useState<number>(0)
   const [imgIndex, setImgIndex] = useState(0)
 
+  function preloadImages() {
+    productImages.forEach((pair) => {
+      pair.forEach((link) => {
+        let img = new Image()
+        img.src = link
+      })
+    })
+  }
+  preloadImages()
+
   useEffect(() => {
     const handleMouseMove = (event: any) => {
       if (isDragging) {
