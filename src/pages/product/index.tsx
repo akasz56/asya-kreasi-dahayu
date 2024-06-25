@@ -11,12 +11,14 @@ const Index = () => {
   const [imgIndex, setImgIndex] = useState(0)
 
   function preloadImages() {
-    productImages.forEach((pair) => {
-      pair.forEach((link) => {
-        let img = new Image()
-        img.src = link
+    if (typeof window !== 'undefined') {
+      productImages.forEach((pair) => {
+        pair.forEach((link) => {
+          let img = new Image()
+          img.src = link
+        })
       })
-    })
+    }
   }
   preloadImages()
 
