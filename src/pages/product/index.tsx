@@ -1,28 +1,21 @@
-import React, { useEffect, useState } from 'react'
+// TODO: auto slide
+import React, { useEffect, useRef, useState } from 'react'
 import { productImages } from '@/components/products'
+import Image from 'next/image'
 
 const DEFAULT_DURATION = 5000
 const DRAG_BUFFER = 50
 
 const Index = () => {
+  const componentRef = useRef<HTMLDivElement | null>(null)
   const [isDragging, setIsDragging] = useState(false)
   const [clickStartPos, setClickStartPos] = useState<number>(0)
   const [clickPos, setClickPos] = useState<number>(0)
+  const [animPos, setAnimPos] = useState<number>(0)
   const [imgIndex, setImgIndex] = useState(0)
 
-  function preloadImages() {
-    if (typeof window !== 'undefined') {
-      productImages.forEach((pair) => {
-        pair.forEach((link) => {
-          let img = new Image()
-          img.src = link
-        })
-      })
-    }
-  }
-  preloadImages()
-
   useEffect(() => {
+    // handleMove
     const handleMouseMove = (event: any) => {
       if (isDragging) {
         /* prevent dragdown on first element */
@@ -31,6 +24,7 @@ const Index = () => {
     }
 
     const handleTouchMove = (event: any) => {
+      event.preventDefault()
       if (isDragging) {
         /* prevent dragdown on first element */
         setClickPos(
@@ -41,23 +35,31 @@ const Index = () => {
       }
     }
 
-    window.addEventListener('mousemove', handleMouseMove)
-    window.addEventListener('touchmove', handleTouchMove)
+    if (componentRef.current) {
+      componentRef.current.addEventListener('mousemove', handleMouseMove)
+      componentRef.current.addEventListener('touchmove', handleTouchMove, { passive: false })
+    }
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-      window.removeEventListener('touchmove', handleTouchMove)
+      if (componentRef.current) {
+        componentRef.current.removeEventListener('mousemove', handleMouseMove)
+        componentRef.current.removeEventListener('touchmove', handleTouchMove)
+      }
     }
-  }, [isDragging, clickStartPos, imgIndex])
+  }, [componentRef, isDragging, clickStartPos, imgIndex])
 
   useEffect(() => {
+    // handleUp
     const handleMouseUp = (event: any) => {
       let value = event.clientY - clickStartPos
       setIsDragging(false)
       if (value <= -DRAG_BUFFER && imgIndex < productImages.length - 1) {
         setImgIndex((pv) => pv + 1)
+        let height = componentRef.current?.offsetHeight ?? 0
+        setAnimPos(height - event.clientY)
       } else if (value >= DRAG_BUFFER && imgIndex > 0) {
         setImgIndex((pv) => pv - 1)
+        setAnimPos(value)
       }
     }
 
@@ -66,19 +68,44 @@ const Index = () => {
       setIsDragging(false)
       if (value <= -DRAG_BUFFER && imgIndex < productImages.length - 1) {
         setImgIndex((pv) => pv + 1)
+        let height = componentRef.current?.offsetHeight ?? 0
+        setAnimPos(height - event.changedTouches[0].clientY)
       } else if (value >= DRAG_BUFFER && imgIndex > 0) {
         setImgIndex((pv) => pv - 1)
+        setAnimPos(value)
       }
     }
 
-    window.addEventListener('mouseup', handleMouseUp)
-    window.addEventListener('touchend', handleTouchUp)
+    if (componentRef.current) {
+      componentRef.current.addEventListener('mouseup', handleMouseUp)
+      componentRef.current.addEventListener('touchend', handleTouchUp)
+    }
 
     return () => {
-      window.removeEventListener('mouseup', handleMouseUp)
-      window.removeEventListener('touchend', handleTouchUp)
+      if (componentRef.current) {
+        componentRef.current.removeEventListener('mouseup', handleMouseUp)
+        componentRef.current.removeEventListener('touchend', handleTouchUp)
+      }
     }
-  }, [clickStartPos, imgIndex])
+  }, [componentRef, clickStartPos, imgIndex])
+
+  useEffect(() => {
+    // handleAnim
+    let moveIntvl: NodeJS.Timer
+    if (!isDragging && componentRef.current) {
+      moveIntvl = setInterval(() => {
+        let height = componentRef.current?.offsetHeight ?? 0
+        console.log({ height, animPos })
+
+        if (animPos < height && height - animPos > 0.1) {
+          setAnimPos((prevPos) => prevPos + (height - prevPos) / 2)
+        } else {
+          clearInterval(moveIntvl)
+        }
+      }, 10)
+    }
+    return () => clearInterval(moveIntvl)
+  }, [animPos, isDragging, componentRef])
 
   const handleMouseDown = (event: any) => {
     setIsDragging(true)
@@ -93,11 +120,28 @@ const Index = () => {
   }
 
   const getTransformValue = (num: number) => {
-    if (imgIndex === num && clickPos >= 0 && isDragging && imgIndex > 0) {
-      return `translateY(${clickPos}px)` /* moveTop */
-    } else if (imgIndex + 1 === num && clickPos < 0 && isDragging) {
-      return `translateY(calc(100% - ${-clickPos}px))` /* moveBottom */
-    } else if (imgIndex < num) {
+    if (num === 0) return `translateY(0)`
+
+    let moveTop = imgIndex === num && clickPos >= 0 && imgIndex > 0
+    let moveBottom = imgIndex + 1 === num && clickPos < 0
+
+    if (isDragging) {
+      if (moveTop) {
+        return `translateY(${clickPos}px)` /* moveTop */
+      } else if (moveBottom) {
+        return `translateY(calc(100% - ${-clickPos}px))` /* moveBottom */
+      }
+    }
+
+    if (!isDragging) {
+      if (imgIndex === num && clickPos < 0) {
+        return `translateY(calc(100% - ${animPos}px))`
+      } else if (imgIndex + 1 === num && clickPos > 0) {
+        return `translateY(${animPos}px)`
+      }
+    }
+
+    if (imgIndex < num) {
       return `translateY(100%)`
     } else {
       return `translateY(0)`
@@ -106,6 +150,7 @@ const Index = () => {
 
   return (
     <div
+      ref={componentRef}
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchDown}
       className='relative w-full flex-1 cursor-grab select-none overflow-hidden text-center active:cursor-grabbing lg:h-screen'
@@ -116,17 +161,21 @@ const Index = () => {
           className='absolute flex h-full w-full'
           style={{ transform: getTransformValue(key) }}
         >
-          <img
+          <Image
+            height={720}
+            width={720}
             draggable={false}
             src={item[0]}
             alt={key + '' + 0}
-            className='h-full object-cover'
+            className={'h-full w-1/2 object-cover ' + (key % 2 ? 'bg-asya-light' : 'bg-asya-dark')}
           />
-          <img
+          <Image
+            height={720}
+            width={720}
             draggable={false}
             src={item[1]}
             alt={key + '' + 1}
-            className='hidden h-full object-cover lg:block'
+            className={'hidden h-full w-1/2 object-cover lg:block ' + (key % 2 ? 'bg-asya-dark' : 'bg-asya-light')}
           />
         </div>
       ))}
