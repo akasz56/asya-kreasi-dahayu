@@ -137,7 +137,7 @@ function ServiceFeatureSlider({ className, content }: ServiceFeatureSliderProps)
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((pv) => (pv < content.length - 1 ? pv + 1 : 0))
-    }, 500 + 5000)
+    }, 500 + 4000)
 
     return () => clearInterval(interval)
   }, [content])
