@@ -16,26 +16,33 @@ export default function TeamPhoto({ teamMember }: TeamPhotoProps) {
 
   return (
     <>
-      <a
-        href='#'
-        className='relative block aspect-square lg:hidden'
+      <div
+        className='relative block aspect-square md:hidden'
+        onClick={() => setIsHovered((pv) => !pv)}
       >
         <Image
           src={teamMember.image}
           alt={teamMember.name}
-          className='absolute -z-10 aspect-square object-cover'
+          className='absolute aspect-square object-cover'
           width={1440}
           height={1440}
         />
-        <div className='absolute -z-10 h-full w-full bg-asya-dark opacity-50' />
-        <div className={innerBox}>
+        <div
+          style={{ opacity: isHovered ? 0.5 : 0 }}
+          className='absolute h-full w-full bg-asya-dark transition-opacity'
+        />
+        <motion.div
+          style={{ opacity: isHovered ? 1 : 0 }}
+          className={innerBox + ' transition-opacity'}
+          initial={{ x: -10 }}
+          whileHover={{ x: 0.01, transition: { duration: 0.5 } }}
+        >
           <h6 className={nama + ' text-[13px]'}>{teamMember.name}</h6>
           <p className={position + ' text-[11px]'}>{teamMember.position}</p>
-        </div>
-      </a>
-      <a
-        href='#'
-        className='relative hidden aspect-square lg:block'
+        </motion.div>
+      </div>
+      <div
+        className='relative hidden aspect-square md:block'
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -59,7 +66,7 @@ export default function TeamPhoto({ teamMember }: TeamPhotoProps) {
           <h6 className={nama + ' text-[24px]'}>{teamMember.name}</h6>
           <p className={position + ' text-[18px]'}>{teamMember.position}</p>
         </motion.div>
-      </a>
+      </div>
     </>
   )
 }
