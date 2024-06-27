@@ -1,9 +1,8 @@
-// TODO: auto slide
 import React, { useEffect, useRef, useState } from 'react'
 import { productImages } from '@/components/products'
 import Image from 'next/image'
 
-const DEFAULT_DURATION = 5000
+const DEFAULT_DURATION = 3000
 const DRAG_BUFFER = 50
 
 const Index = () => {
@@ -13,6 +12,20 @@ const Index = () => {
   const [clickPos, setClickPos] = useState<number>(0)
   const [animPos, setAnimPos] = useState<number>(0)
   const [imgIndex, setImgIndex] = useState(0)
+
+  useEffect(() => {
+    let timer: NodeJS.Timer
+
+    if (!isDragging && imgIndex < productImages.length - 1) {
+      timer = setInterval(() => {
+        setClickPos(-60)
+        setImgIndex((pv) => pv + 1)
+        setAnimPos(0)
+      }, DEFAULT_DURATION)
+    }
+
+    return () => clearInterval(timer)
+  }, [isDragging, componentRef, imgIndex])
 
   useEffect(() => {
     // handleMove
@@ -95,10 +108,8 @@ const Index = () => {
     if (!isDragging && componentRef.current) {
       moveIntvl = setInterval(() => {
         let height = componentRef.current?.offsetHeight ?? 0
-        console.log({ height, animPos })
-
         if (animPos < height && height - animPos > 0.1) {
-          setAnimPos((prevPos) => prevPos + (height - prevPos) / 2)
+          setAnimPos((prevPos) => prevPos + (height - prevPos) / 5)
         } else {
           clearInterval(moveIntvl)
         }
