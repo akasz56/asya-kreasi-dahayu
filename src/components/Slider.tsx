@@ -16,19 +16,19 @@ function SliderV2({ speed, duration, children }: SliderProps) {
   const [imgIndex, setImgIndex] = useState(0)
   const dragX = useMotionValue(0)
 
-  // useEffect(() => {
-  //   const intervalRef = setInterval(() => {
-  //     if (!children || !Array.isArray(children)) return
+  useEffect(() => {
+    const intervalRef = setInterval(() => {
+      if (!children || !Array.isArray(children)) return
 
-  //     const x = dragX.get()
+      const x = dragX.get()
 
-  //     if (x === 0) {
-  //       setImgIndex((pv) => (pv === children.length - 1 ? 0 : pv + 1))
-  //     }
-  //   }, duration)
+      if (x === 0) {
+        setImgIndex((pv) => (pv === children.length - 1 ? 0 : pv + 1))
+      }
+    }, duration)
 
-  //   return () => clearInterval(intervalRef)
-  // }, [duration, children, dragX])
+    return () => clearInterval(intervalRef)
+  }, [duration, children, dragX])
 
   const onDragEnd = () => {
     if (!children || !Array.isArray(children)) return
