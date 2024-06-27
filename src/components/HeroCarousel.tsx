@@ -51,7 +51,7 @@ function HeroCarouselV2({ scrollTo }: HeroCarouselProps) {
           initial='hidden'
           variants={variants}
           whileInView='visible'
-          className='flex h-full flex-col items-center justify-center gap-6'
+          className='flex h-full flex-col items-center justify-center gap-14'
         >
           <motion.p
             variants={firstChildVariant}
@@ -62,13 +62,13 @@ function HeroCarouselV2({ scrollTo }: HeroCarouselProps) {
           <motion.a
             href='/our-services'
             variants={firstChildVariant}
-            className='mt-7 rounded-md bg-asya-dark py-3 px-6 text-xs font-medium uppercase tracking-widest text-white lg:text-base'
+            className='rounded-md bg-asya-dark py-3 px-6 text-xs font-medium uppercase tracking-widest text-white lg:text-base'
           >
             Get started
           </motion.a>
           <ScrollArrow
             scrollTo={'#' + scrollTo}
-            className='absolute bottom-0 mb-[5vw]'
+            className='lg:absolute lg:bottom-0 lg:mb-[5vw]'
           />
         </motion.div>
       </div>
