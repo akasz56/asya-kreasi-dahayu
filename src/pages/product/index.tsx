@@ -164,29 +164,30 @@ const Index = () => {
       ref={componentRef}
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchDown}
-      className='relative w-full flex-1 cursor-grab select-none overflow-hidden text-center active:cursor-grabbing lg:h-screen'
+      className='relative w-full grow cursor-grab select-none overflow-hidden text-center active:cursor-grabbing'
     >
+      <div className='aspect-[69/100] lg:aspect-[138/100]'></div>
       {productImages.map((item, key) => (
         <div
           key={key}
-          className='absolute flex h-full w-full'
+          className='absolute top-0 flex h-full w-full'
           style={{ transform: getTransformValue(key) }}
         >
           <Image
             height={720}
-            width={720}
+            width={960}
             draggable={false}
             src={item[0]}
             alt={key + '' + 0}
-            className={'h-full w-1/2 object-cover ' + (key % 2 ? 'bg-asya-light' : 'bg-asya-dark')}
+            className={'h-full w-full object-cover lg:w-1/2'}
           />
           <Image
             height={720}
-            width={720}
+            width={960}
             draggable={false}
             src={item[1]}
             alt={key + '' + 1}
-            className={'hidden h-full w-1/2 object-cover lg:block ' + (key % 2 ? 'bg-asya-dark' : 'bg-asya-light')}
+            className={'hidden h-full w-1/2 object-cover lg:block'}
           />
         </div>
       ))}
