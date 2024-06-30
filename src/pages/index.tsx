@@ -59,7 +59,8 @@ const Home: NextPage = () => {
                 MICE (Meeting Incentive Convention Exhibition)
               </h2>
               <p className='asya-description text-center text-asya-dark lg:text-left'>
-                Kami memberikan pelayanan dan edukasi untuk bidang yang masih minim atensi: “the meetings industry”.
+                Kami memberikan pelayanan dan edukasi untuk bidang yang masih minim atensi: “
+                <span className='italic'>the meetings industry</span>”.
               </p>
             </Link>
             <Link href='/#'>
@@ -86,7 +87,8 @@ const Home: NextPage = () => {
                 Garment and Fashion
               </h2>
               <p className='asya-description text-center text-asya-dark lg:text-left'>
-                Kami menciptakan mode yang inovatif <br className='block lg:hidden' /> namun tak lekang oleh waktu.
+                Kami menciptakan mode yang inovatif <br className='block lg:hidden' />
+                dan trendy dengan kualitas terbaik untuk busana dan aksesoris muslim.
               </p>
             </Link>
             <Link href='/#'>
@@ -99,7 +101,8 @@ const Home: NextPage = () => {
                 Ticketing
               </h2>
               <p className='asya-description text-center text-asya-dark lg:text-left'>
-                Kami memberikan solusi untuk kemudahan <br className='block lg:hidden' /> dalam perancanaan bepergian.
+                Kami memberikan solusi untuk kemudahan <br className='block lg:hidden' /> dalam perencanaan perjalanan
+                kerja, perjalanan dinas & wisata dalam dan luar negeri dengan berbagai jenis transportasi dan akomodasi.
               </p>
             </Link>
             <Link href='/#'>

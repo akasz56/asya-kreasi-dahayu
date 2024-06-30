@@ -31,7 +31,7 @@ export const services: Service[] = [
             },
             {
                 title: 'Jasa yang disediakan',
-                description: 'Perencanaan jadwal, survei, pemesanan, transportasi, asistensi, dokumentasi, dan perangkat multimedia.'
+                description: 'Perencanaan jadwal, survei, perizinan, pemesanan, transportasi, asistensi, dokumentasi, dan perangkat multimedia.'
             }
         ],
     },
@@ -57,15 +57,15 @@ export const services: Service[] = [
         name: 'Ticketing',
         icon: 'https://asyakreasidahayu.com/public/assets/icons/ticketing.svg',
         asset: '/images/services/service (3).webp',
-        description: 'Tim kami memberikan kemudahan dalam perancanaan akomodasi perjalanan kerja dengan komitmen meningkatkan kepuasan dan pengalaman yang lebih baik dibanding dengan pelayanan konvensional.',
+        description: 'Tim kami memberikan kemudahan dalam perencanaan akomodasi perjalanan kerja dengan komitmen meningkatkan kepuasan dan pengalaman yang lebih baik dibanding dengan pelayanan konvensional untuk pemesanan tiket dan hotel baik dalam dan luar negeri.',
         feature: [
             {
                 title: 'Keunggulan',
-                description: 'Kami memberikan pelayanan perencanaan akomodasi perjalanan kerja dengan harga yang kompetitif dan terpercaya'
+                description: 'Kami memberikan pelayanan perencanaan akomodasi perjalanan kerja dengan harga yang kompetitif dan terpercaya untuk destinasi dalam dan luar negeri'
             },
             {
                 title: 'Jasa yang disediakan',
-                description: 'Perencanaan jadwal, pengelolaan anggaran, dan akomodasi.'
+                description: 'Perencanaan jadwal, pengelolaan anggaran, pemesanan tiket untuk berbagai jenis transportasi (kereta api, bus, pesawat), dan hotel.'
             }
         ],
     },
@@ -73,18 +73,12 @@ export const services: Service[] = [
         name: 'Garment & Fashion',
         icon: 'https://asyakreasidahayu.com/public/assets/icons/garment.svg',
         asset: '/images/services/service (5).webp',
-        description: 'Tim kami bekerja sama dalam menciptakan keindahan melalui mode kejatmikaan. Berdedikasi merancang menggunakan bahan berkualitas yang diolah dengan baik menjadi sebuah karya yang berkualitas, nyaman, dan tak lekang oleh waktu.',
+        description: 'Tim kami bekerja sama dalam menciptakan keindahan melalui desain mode busana dan aksesoris muslim. Sebagai jumlah populasi muslim terbesar di dunia, kami berdedikasi merancang menggunakan bahan yang diolah dengan jahitan terbaik menjadi sebuah karya yang berkualitas dan nyaman dengan mode yang trendy.',
         feature: [
             {
                 title: 'Keunggulan',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
+                description: 'Kami mendesain aksesoris dan busana muslim dengan menggunakan bahan dan kualitas jahitan yang terbaik dengan motif masa kini'
             },
-            {
-                title: 'Jasa yang disediakan',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-            }
         ],
     },
     {
