@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { TeamMember } from './team'
 import Image from 'next/image'
@@ -24,8 +24,8 @@ export default function TeamPhoto({ teamMember }: TeamPhotoProps) {
           src={teamMember.image}
           alt={teamMember.name}
           className='absolute aspect-square object-cover'
-          width={1440}
-          height={1440}
+          width={720}
+          height={720}
         />
         <div
           style={{ opacity: isHovered ? 0.5 : 0 }}
@@ -49,8 +49,8 @@ export default function TeamPhoto({ teamMember }: TeamPhotoProps) {
           src={teamMember.image}
           alt={teamMember.name}
           className='absolute aspect-square object-cover'
-          width={1440}
-          height={1440}
+          width={720}
+          height={720}
         />
         <div
           style={{ opacity: isHovered ? 0.5 : 0 }}

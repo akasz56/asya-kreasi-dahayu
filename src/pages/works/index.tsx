@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { NextPage } from 'next'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -15,13 +15,6 @@ export type Client = {
 
 const Index: NextPage = () => {
   const works: Work[] = worksData
-
-  const clients: Client[] = [...Array(12)].map((_, idx) => ({
-    name: 'Nama Klien Lorem Ipsum Dolor ' + idx,
-    description: 'Dolor Sit Amet, Lorem Ipsum Dolor Amet Sit',
-    year: '2019',
-    image: '/images/misi.webp',
-  }))
 
   return (
     <CustomHead
@@ -49,8 +42,8 @@ const Index: NextPage = () => {
                   <img
                     src={thumbnail.src}
                     alt={thumbnail.alt ?? ''}
-                    width={1080}
-                    height={1080}
+                    width={720}
+                    height={720}
                     className='mb-5 aspect-square object-cover lg:mb-16'
                   />
                 )}

@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, useMotionValue } from 'framer-motion'
+import { motion, useMotionValue } from 'framer-motion'
 import React, { ReactNode, useEffect, useState } from 'react'
 
 interface SliderProps {

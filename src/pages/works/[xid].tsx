@@ -33,15 +33,15 @@ const WorkDetail: NextPage = () => {
                     key={key}
                     src={item.src}
                     alt={item.alt ?? data.title + key}
-                    width={1080}
-                    height={1080}
+                    width={720}
+                    height={720}
                     className='block object-cover'
                   />
                 ) : item.type === 'video' ? (
                   <video
                     key={key}
-                    width={1920}
-                    height={1080}
+                    width={720}
+                    height={720}
                     controls
                     autoPlay={key === 0}
                   >

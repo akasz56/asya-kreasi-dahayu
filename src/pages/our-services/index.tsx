@@ -27,7 +27,7 @@ const Index: NextPage = () => {
         <img
           src={'https://asyakreasidahayu.com/public/images/service.webp'}
           alt={'Hero Image Service'}
-          className='absolute -z-10 h-full object-cover'
+          className='absolute -z-10 h-full w-full object-cover'
         />
         <motion.div
           className='asya-container items-center lg:grid lg:grid-cols-2'

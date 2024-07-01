@@ -1,5 +1,3 @@
-import { DisplayContentItem } from "./Display"
-
 export interface Service {
     name: string
     icon: string,
@@ -37,7 +35,7 @@ export const services: Service[] = [
     },
     {
         name: 'Multimedia',
-        icon: 'https://asyakreasidahayu.com/public/assets/icons/mulmed.svg',
+        icon: '/assets/icons/mulmed.svg',
         iconAdditionalClass: 'lg:-ml-4',
         asset: 'https://asyakreasidahayu.com/public/images/services/service (2).webp',
         description:
