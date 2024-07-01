@@ -133,10 +133,10 @@ a {
     max-width: 1536px;
     @apply mx-auto px-20
   }
+}
 
-  /* .asya-container-alt {
-    @apply container mx-auto px-20
-  } */
+.asya-txt {
+  @apply leading-normal tracking-widest sm:leading-normal sm:tracking-widest md:leading-normal md:tracking-widest lg:leading-normal lg:tracking-widest xl:leading-normal xl:tracking-widest 2xl:leading-normal 2xl:tracking-widest !important;
 }
 
 .asya-link {

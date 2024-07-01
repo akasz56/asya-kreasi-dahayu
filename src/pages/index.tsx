@@ -1,11 +1,14 @@
 import React from 'react'
 import { NextPage } from 'next'
-import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
 import HeroCarousel from '@/components/HeroCarousel'
-import { servicesDisplay } from '@/components/services'
-import { DisplayContentItem } from '@/components/Display'
+import image1 from '../../public/images/services/service (1).webp'
+import image2 from '../../public/images/services/service (2).webp'
+import image3 from '../../public/images/services/service (5).webp'
+import image4 from '../../public/images/services/service (3).webp'
+import image5 from '../../public/images/services/service (4).webp'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
@@ -32,7 +35,10 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section id='service'>
+      <section
+        id='service'
+        className='overflow-x-hidden'
+      >
         <div className='asya-container'>
           <div className='flex-row items-center py-20 lg:flex lg:py-32'>
             <h2 className='asya-title text-asya-dark lg:flex-1'>Our Service</h2>
@@ -43,28 +49,76 @@ const Home: NextPage = () => {
             </p>
           </div>
           <div className='mb-28 grid grid-cols-1 gap-24 lg:grid-cols-2 lg:gap-16'>
-            {servicesDisplay.map((service: DisplayContentItem, key: number) => (
-              <Link
-                key={key}
-                href={'#'}
-              >
-                {service.image ? (
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    width={1080}
-                    height={1080}
-                    className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
-                  />
-                ) : (
-                  <div className='-mx-4 mb-8 aspect-video w-screen max-w-none bg-asya-dark object-cover lg:mb-20 lg:aspect-square lg:rounded-3xl' />
-                )}
-                <h2 className='mb-10 overflow-hidden text-ellipsis whitespace-nowrap text-xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal md:text-2xl lg:mb-20 lg:text-3xl'>
-                  {service.title}
-                </h2>
-                <p className='asya-description text-center text-asya-dark lg:text-left'>{service.description}</p>
-              </Link>
-            ))}
+            <Link href='/#'>
+              <Image
+                src={image1}
+                alt='MICE (Meeting Incentive Convention Exhibition)'
+                className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
+              />
+              <h2 className='mb-10 overflow-hidden text-ellipsis whitespace-nowrap text-center text-xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal md:text-2xl lg:mb-20 lg:text-3xl'>
+                MICE (Meeting Incentive Convention Exhibition)
+              </h2>
+              <p className='asya-description text-center text-asya-dark lg:text-left'>
+                Kami memberikan pelayanan dan edukasi untuk bidang yang masih minim atensi: “
+                <span className='italic'>the meetings industry</span>”.
+              </p>
+            </Link>
+            <Link href='/#'>
+              <Image
+                src={image2}
+                alt='Multimedia'
+                className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
+              />
+              <h2 className='mb-10 overflow-hidden text-ellipsis whitespace-nowrap text-center text-xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal md:text-2xl lg:mb-20 lg:text-3xl'>
+                Multimedia
+              </h2>
+              <p className='asya-description text-center text-asya-dark lg:text-left'>
+                Kami menciptakan hasil eksplorasi dengan realisasi <br className='block lg:hidden' /> ide yang unik dan
+                berkelanjutan.
+              </p>
+            </Link>
+            <Link href='/#'>
+              <Image
+                src={image3}
+                alt='Garment and Fashion'
+                className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
+              />
+              <h2 className='mb-10 overflow-hidden text-ellipsis whitespace-nowrap text-center text-xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal md:text-2xl lg:mb-20 lg:text-3xl'>
+                Garment and Fashion
+              </h2>
+              <p className='asya-description text-center text-asya-dark lg:text-left'>
+                Kami menciptakan mode yang inovatif <br className='block lg:hidden' />
+                dan trendy dengan kualitas terbaik untuk busana dan aksesoris muslim.
+              </p>
+            </Link>
+            <Link href='/#'>
+              <Image
+                src={image4}
+                alt='Ticketing'
+                className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
+              />
+              <h2 className='mb-10 overflow-hidden text-ellipsis whitespace-nowrap text-center text-xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal md:text-2xl lg:mb-20 lg:text-3xl'>
+                Ticketing
+              </h2>
+              <p className='asya-description text-center text-asya-dark lg:text-left'>
+                Kami memberikan solusi untuk kemudahan <br className='block lg:hidden' /> dalam perencanaan perjalanan
+                kerja, perjalanan dinas & wisata dalam dan luar negeri dengan berbagai jenis transportasi dan akomodasi.
+              </p>
+            </Link>
+            <Link href='/#'>
+              <Image
+                src={image5}
+                alt='Konsultan Kreatif'
+                className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
+              />
+              <h2 className='mb-10 overflow-hidden text-ellipsis whitespace-nowrap text-center text-xl font-medium uppercase tracking-widest text-asya-dark hover:overflow-visible hover:whitespace-normal md:text-2xl lg:mb-20 lg:text-3xl'>
+                Konsultan Kreatif
+              </h2>
+              <p className='asya-description text-center text-asya-dark lg:text-left'>
+                Kami memberikan strategi dalam desain untuk <br className='block lg:hidden' /> membekali kreator dalam
+                bertumbuh dan <br className='block lg:hidden' /> menciptakan mahakarya ke depannya.
+              </p>
+            </Link>
           </div>
         </div>
       </section>

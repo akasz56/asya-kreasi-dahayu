@@ -9,59 +9,63 @@ type TeamPhotoProps = {
 
 export default function TeamPhoto({ teamMember }: TeamPhotoProps) {
   const [isHovered, setIsHovered] = useState<boolean>(false)
-  const [isMobileView, setIsMobileView] = useState<boolean>(false)
 
-  useEffect(() => {
-    function handleResize(e: any) {
-      setIsMobileView(window.innerWidth < 1024)
-    }
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  const nama = 'asya-txt font-bold uppercase text-white'
+  const position = 'asya-txt font-medium capitalize text-white'
+  const innerBox = 'flex h-full flex-col justify-between p-[11px]'
 
-  return isMobileView ? (
-    <a
-      href='#'
-      className='relative aspect-square'
-    >
-      <img
-        src={teamMember.image}
-        alt={teamMember.name}
-        className='absolute aspect-square object-cover'
-      />
-      <div className='absolute h-full w-full bg-asya-dark opacity-50' />
-      <motion.div className='flex h-full flex-col justify-between p-4'>
-        <h6 className='text-sm uppercase leading-normal tracking-widest text-white'>{teamMember.name}</h6>
-        <p className='text-xs capitalize leading-normal tracking-widest text-white'>{teamMember.position}</p>
-      </motion.div>
-    </a>
-  ) : (
-    <a
-      href='#'
-      className='relative aspect-square'
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <img
-        src={teamMember.image}
-        alt={teamMember.name}
-        className='absolute aspect-square object-cover'
-        width={1440}
-        height={1440}
-      />
+  return (
+    <>
       <div
-        style={{ opacity: isHovered ? 0.5 : 0 }}
-        className='absolute h-full w-full bg-asya-dark transition-opacity'
-      />
-      <motion.div
-        style={{ opacity: isHovered ? 1 : 0 }}
-        className='flex h-full flex-col justify-between p-4 transition-opacity'
-        initial={{ x: -10 }}
-        whileHover={{ x: 0.01, transition: { duration: 0.5 } }}
+        className='relative block aspect-square md:hidden'
+        onClick={() => setIsHovered((pv) => !pv)}
       >
-        <h6 className='text-2xl font-bold uppercase leading-normal tracking-widest text-white'>{teamMember.name}</h6>
-        <p className='text-lg capitalize leading-normal tracking-widest text-white'>{teamMember.position}</p>
-      </motion.div>
-    </a>
+        <Image
+          src={teamMember.image}
+          alt={teamMember.name}
+          className='absolute aspect-square object-cover'
+          width={1440}
+          height={1440}
+        />
+        <div
+          style={{ opacity: isHovered ? 0.5 : 0 }}
+          className='absolute h-full w-full bg-asya-dark transition-opacity'
+        />
+        <motion.div
+          style={{ opacity: isHovered ? 1 : 0 }}
+          className={innerBox + ' transition-opacity'}
+          animate={{ x: isHovered ? 0.01 : -10, transition: { duration: 0.5 } }}
+        >
+          <h6 className={nama + ' text-[13px]'}>{teamMember.name}</h6>
+          <p className={position + ' text-[11px]'}>{teamMember.position}</p>
+        </motion.div>
+      </div>
+      <div
+        className='relative hidden aspect-square md:block'
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <Image
+          src={teamMember.image}
+          alt={teamMember.name}
+          className='absolute aspect-square object-cover'
+          width={1440}
+          height={1440}
+        />
+        <div
+          style={{ opacity: isHovered ? 0.5 : 0 }}
+          className='absolute h-full w-full bg-asya-dark transition-opacity'
+        />
+        <motion.div
+          style={{ opacity: isHovered ? 1 : 0 }}
+          className={innerBox + ' transition-opacity'}
+          initial={{ x: -10 }}
+          whileHover={{ x: 0.01, transition: { duration: 0.5 } }}
+        >
+          <h6 className={nama + ' text-[24px]'}>{teamMember.name}</h6>
+          <p className={position + ' text-[18px]'}>{teamMember.position}</p>
+        </motion.div>
+      </div>
+    </>
   )
 }

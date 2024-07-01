@@ -3,6 +3,7 @@ import { DisplayContentItem } from "./Display"
 export interface Service {
     name: string
     icon: string,
+    iconAdditionalClass?: string,
     asset: string,
     nickname?: string
     description: string
@@ -18,7 +19,7 @@ export const services: Service[] = [
     {
         name: 'MICE & EO',
         // name: 'MICE (Meeting Incentive Convention Exhibition)',
-        icon: '/assets/icons/mice.svg',
+        icon: 'https://asyakreasidahayu.com/public/assets/icons/mice.svg',
         asset: 'https://asyakreasidahayu.com/public/images/services/service (1).webp',
         nickname: 'MICE',
         description:
@@ -30,13 +31,14 @@ export const services: Service[] = [
             },
             {
                 title: 'Jasa yang disediakan',
-                description: 'Perencanaan jadwal, survei, pemesanan, transportasi, asistensi, dokumentasi, dan perangkat multimedia.'
+                description: 'Perencanaan jadwal, survei, perizinan, pemesanan, transportasi, asistensi, dokumentasi, dan perangkat multimedia.'
             }
         ],
     },
     {
         name: 'Multimedia',
-        icon: '/assets/icons/mulmed.svg',
+        icon: 'https://asyakreasidahayu.com/public/assets/icons/mulmed.svg',
+        iconAdditionalClass: 'lg:-ml-4',
         asset: 'https://asyakreasidahayu.com/public/images/services/service (2).webp',
         description:
             'Tim kami memberikan pelayanan yang lengkap mulai dari sistem, visual, dan perlengkapan lainnya dengan berkomitmen untuk kesempurnaan dan akurasi dalam berkolaborasi dengan sektor lain seperti MICE dan desain grafis.',
@@ -53,41 +55,35 @@ export const services: Service[] = [
     },
     {
         name: 'Ticketing',
-        icon: '/assets/icons/ticketing.svg',
+        icon: 'https://asyakreasidahayu.com/public/assets/icons/ticketing.svg',
         asset: 'https://asyakreasidahayu.com/public/images/services/service (3).webp',
-        description: 'Tim kami memberikan kemudahan dalam perancanaan akomodasi perjalanan kerja dengan komitmen meningkatkan kepuasan dan pengalaman yang lebih baik dibanding dengan pelayanan konvensional.',
+        description: 'Tim kami memberikan kemudahan dalam perencanaan akomodasi perjalanan kerja dengan komitmen meningkatkan kepuasan dan pengalaman yang lebih baik dibanding dengan pelayanan konvensional untuk pemesanan tiket dan hotel baik dalam dan luar negeri.',
         feature: [
             {
                 title: 'Keunggulan',
-                description: 'Kami memberikan pelayanan perencanaan akomodasi perjalanan kerja dengan harga yang kompetitif dan terpercaya'
+                description: 'Kami memberikan pelayanan perencanaan akomodasi perjalanan kerja dengan harga yang kompetitif dan terpercaya untuk destinasi dalam dan luar negeri'
             },
             {
                 title: 'Jasa yang disediakan',
-                description: 'Perencanaan jadwal, pengelolaan anggaran, dan akomodasi.'
+                description: 'Perencanaan jadwal, pengelolaan anggaran, pemesanan tiket untuk berbagai jenis transportasi (kereta api, bus, pesawat), dan hotel.'
             }
         ],
     },
     {
         name: 'Garment & Fashion',
-        icon: '/assets/icons/garment.svg',
+        icon: 'https://asyakreasidahayu.com/public/assets/icons/garment.svg',
         asset: 'https://asyakreasidahayu.com/public/images/services/service (5).webp',
-        description: 'Tim kami bekerja sama dalam menciptakan keindahan melalui mode kejatmikaan. Berdedikasi merancang menggunakan bahan berkualitas yang diolah dengan baik menjadi sebuah karya yang berkualitas, nyaman, dan tak lekang oleh waktu.',
+        description: 'Tim kami bekerja sama dalam menciptakan keindahan melalui desain mode busana dan aksesoris muslim. Sebagai jumlah populasi muslim terbesar di dunia, kami berdedikasi merancang menggunakan bahan yang diolah dengan jahitan terbaik menjadi sebuah karya yang berkualitas dan nyaman dengan mode yang trendy.',
         feature: [
             {
                 title: 'Keunggulan',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
+                description: 'Kami mendesain aksesoris dan busana muslim dengan menggunakan bahan dan kualitas jahitan yang terbaik dengan motif masa kini'
             },
-            {
-                title: 'Jasa yang disediakan',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed',
-            }
         ],
     },
     {
         name: 'Konsultan Kreatif',
-        icon: '/assets/icons/kreatif.svg',
+        icon: 'https://asyakreasidahayu.com/public/assets/icons/kreatif.svg',
         asset: 'https://asyakreasidahayu.com/public/images/services/service (4).webp',
         description:
             'Tim kami membantu dalam memberikan panduan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',

@@ -22,7 +22,7 @@ const WorkDetail: NextPage = () => {
       title={data.title}
       description={data.description}
     >
-      <div className='flex flex-col lg:flex-row'>
+      <div className='lg:flex lg:flex-row'>
         <div className='space-y-12 lg:w-1/2'>
           {data &&
             data.asset
@@ -58,27 +58,25 @@ const WorkDetail: NextPage = () => {
                     title={data.title}
                     className='aspect-video w-full'
                     allow='autoplay;'
-                    // allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                    // referrerPolicy='strict-origin-when-cross-origin'
-                    // allowFullScreen
                   ></iframe>
                 ) : (
                   ''
                 )
               )}
         </div>
-        <div className='fixed bottom-0 h-1/2 bg-white lg:right-0 lg:h-screen lg:w-1/2'>
-          <div className='flex h-full flex-col px-6 py-8 lg:py-32 lg:pl-16 xl:pl-36'>
-            <h3 className='flex-1 text-4xl font-bold uppercase leading-normal tracking-widest text-asya-dark'>
-              {data.title}
-              <span className='block text-xl font-normal tracking-widest'>{data.subtitle}</span>
-            </h3>
-            <p className='text-base leading-normal tracking-widest text-asya-dark lg:max-w-[40em]'>
-              {data.description}
-            </p>
+        <div className='fixed top-0 right-0 hidden h-screen w-1/2 flex-col bg-white px-6 pt-44 pb-20 pl-16 lg:flex xl:pl-36'>
+          <div className='flex-1'>
+            <h3 className='asya-txt text-[28px] font-bold uppercase text-asya-dark'>{data.title}</h3>
+            <p className='asya-txt text-[18px] font-medium uppercase text-asya-dark'>{data.subtitle}</p>
           </div>
+          <p className='asya-txt max-w-[40em] text-asya-dark'>{data.description}</p>
         </div>
       </div>
+      <div className='sticky bottom-0 bg-white px-6 pt-8 pb-6 lg:hidden'>
+        <h3 className='asya-txt text-[28px] font-bold uppercase text-asya-dark'>{data.title}</h3>
+        <p className='asya-txt mt-3 text-[18px] font-medium uppercase text-asya-dark'>{data.subtitle}</p>
+      </div>
+      <p className='asya-txt mb-24 px-6 text-asya-dark lg:hidden'>{data.description}</p>
     </CustomHead>
   ) : (
     <></>
