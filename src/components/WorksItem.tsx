@@ -1,6 +1,5 @@
 import { Client } from '@/pages/works'
 import { useInView } from 'framer-motion'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
@@ -60,6 +59,7 @@ export default function WorksItem(props: WorksItemProps) {
           style={{ opacity: display ? 1 : 0 }}
         >
           <img
+            className='h-72 w-72'
             src={props.client.image}
             alt={props.client.name}
           />

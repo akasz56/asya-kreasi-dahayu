@@ -68,8 +68,6 @@ const Index: NextPage = () => {
               <img
                 src={service.icon}
                 alt={service.name}
-                width={360}
-                height={360}
                 className='mx-auto mb-4 h-11 w-11 fill-white lg:mb-8 lg:h-14 lg:w-14'
               />
               <h4 className='asya-txt text-center text-[11px] font-bold uppercase text-white lg:text-xl'>
@@ -96,8 +94,6 @@ const Index: NextPage = () => {
             <img
               src={service.asset}
               alt={service.name}
-              width={1920}
-              height={1080}
               className='-mx-4 aspect-video w-screen max-w-none object-cover lg:mx-0 lg:w-full'
             />
 

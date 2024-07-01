@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import CustomHead from '@/layouts/CustomHead'
 import { team as teamData } from '@/components/team'
 import TeamPhoto from '@/components/TeamPhoto'
-import Image from 'next/image'
 
 const Index: NextPage = () => {
   const section = {

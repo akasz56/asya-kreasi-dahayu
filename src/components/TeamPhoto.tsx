@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { TeamMember } from './team'
-import Image from 'next/image'
 
 type TeamPhotoProps = {
   teamMember: TeamMember
@@ -20,12 +19,10 @@ export default function TeamPhoto({ teamMember }: TeamPhotoProps) {
         className='relative block aspect-square md:hidden'
         onClick={() => setIsHovered((pv) => !pv)}
       >
-        <Image
+        <img
           src={teamMember.image}
           alt={teamMember.name}
           className='absolute aspect-square object-cover'
-          width={720}
-          height={720}
         />
         <div
           style={{ opacity: isHovered ? 0.5 : 0 }}
@@ -45,12 +42,10 @@ export default function TeamPhoto({ teamMember }: TeamPhotoProps) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <Image
+        <img
           src={teamMember.image}
           alt={teamMember.name}
           className='absolute aspect-square object-cover'
-          width={720}
-          height={720}
         />
         <div
           style={{ opacity: isHovered ? 0.5 : 0 }}

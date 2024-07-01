@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import CustomHead from '@/layouts/CustomHead'
 import { Work, worksData } from '../../components/works'
-import Image from 'next/image'
 
 export type Client = {
   name: string
@@ -42,8 +41,6 @@ const Index: NextPage = () => {
                   <img
                     src={thumbnail.src}
                     alt={thumbnail.alt ?? ''}
-                    width={720}
-                    height={720}
                     className='mb-5 aspect-square object-cover lg:mb-16'
                   />
                 )}

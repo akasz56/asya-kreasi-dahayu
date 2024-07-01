@@ -173,17 +173,13 @@ const Index = () => {
           className='absolute top-0 flex h-full w-full'
           style={{ transform: getTransformValue(key) }}
         >
-          <Image
-            width={720}
-            height={720}
+          <img
             draggable={false}
             src={item[0]}
             alt={key + '' + 0}
             className={'h-full w-full object-cover lg:w-1/2'}
           />
-          <Image
-            width={720}
-            height={720}
+          <img
             draggable={false}
             src={item[1]}
             alt={key + '' + 1}

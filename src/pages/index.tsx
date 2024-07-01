@@ -2,7 +2,6 @@ import React from 'react'
 import { NextPage } from 'next'
 import CustomHead from '@/layouts/CustomHead'
 import HeroCarousel from '@/components/HeroCarousel'
-import Image from 'next/image'
 import Link from 'next/link'
 
 const Home: NextPage = () => {
@@ -45,8 +44,8 @@ const Home: NextPage = () => {
           </div>
           <div className='mb-28 grid grid-cols-1 gap-24 lg:grid-cols-2 lg:gap-16'>
             <Link href='/#'>
-              <Image
-                src={'https://asyakreasidahayu.com/public/images/services/service (1).webp'}
+              <img
+                src='https://asyakreasidahayu.com/public/images/services/service (1).webp'
                 alt='MICE (Meeting Incentive Convention Exhibition)'
                 className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
               />
@@ -59,8 +58,8 @@ const Home: NextPage = () => {
               </p>
             </Link>
             <Link href='/#'>
-              <Image
-                src={'https://asyakreasidahayu.com/public/images/services/service (2).webp'}
+              <img
+                src='https://asyakreasidahayu.com/public/images/services/service (2).webp'
                 alt='Multimedia'
                 className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
               />
@@ -73,8 +72,8 @@ const Home: NextPage = () => {
               </p>
             </Link>
             <Link href='/#'>
-              <Image
-                src={'https://asyakreasidahayu.com/public/images/services/service (5).webp'}
+              <img
+                src='https://asyakreasidahayu.com/public/images/services/service (5).webp'
                 alt='Garment and Fashion'
                 className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
               />
@@ -87,8 +86,8 @@ const Home: NextPage = () => {
               </p>
             </Link>
             <Link href='/#'>
-              <Image
-                src={'https://asyakreasidahayu.com/public/images/services/service (3).webp'}
+              <img
+                src='https://asyakreasidahayu.com/public/images/services/service (3).webp'
                 alt='Ticketing'
                 className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
               />
@@ -101,8 +100,8 @@ const Home: NextPage = () => {
               </p>
             </Link>
             <Link href='/#'>
-              <Image
-                src={'https://asyakreasidahayu.com/public/images/services/service (4).webp'}
+              <img
+                src='https://asyakreasidahayu.com/public/images/services/service (4).webp'
                 alt='Konsultan Kreatif'
                 className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
               />

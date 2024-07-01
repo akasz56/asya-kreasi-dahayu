@@ -92,7 +92,7 @@ function HeroCarousel({ scrollTo }: HeroCarouselProps) {
             className='h-full w-full cursor-pointer object-cover object-center'
           >
             <source
-              src='/videos/hero_compro.mp4'
+              src='https://asyakreasidahayu.com/public/videos/hero_compro.mp4'
               type='video/mp4'
             />
             Your browser does not support the video tag.
@@ -137,7 +137,7 @@ function HeroCarousel({ scrollTo }: HeroCarouselProps) {
                     ref={videoModalRef}
                   >
                     <source
-                      src='/videos/hero_compro.mp4'
+                      src='https://asyakreasidahayu.com/public/videos/hero_compro.mp4'
                       type='video/mp4'
                     />
                     Your browser does not support the video tag.
@@ -150,9 +150,7 @@ function HeroCarousel({ scrollTo }: HeroCarouselProps) {
       </div>
 
       <div className='relative h-screen'>
-        <Image
-          width={1920}
-          height={1080}
+        <img
           draggable={false}
           src={'https://asyakreasidahayu.com/public/images/hero2.webp'}
           alt='Hero Picture 2'
@@ -161,9 +159,7 @@ function HeroCarousel({ scrollTo }: HeroCarouselProps) {
       </div>
 
       <div className='relative h-screen overflow-hidden'>
-        <Image
-          width={1920}
-          height={1080}
+        <img
           draggable={false}
           src={'https://asyakreasidahayu.com/public/images/hero3.webp'}
           alt='Hero Picture 3'
