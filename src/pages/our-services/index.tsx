@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import { AnimatePresence, motion } from 'framer-motion'
 import CustomHead from '@/layouts/CustomHead'
 import Image from 'next/image'
+import Image1 from '../../../public/images/service.webp'
 import { Service, ServiceFeature, services } from '@/components/services'
 
 const Index: NextPage = () => {
@@ -25,7 +26,7 @@ const Index: NextPage = () => {
         className='relative flex h-screen flex-col justify-evenly'
       >
         <Image
-          src='https://asyakreasidahayu.com/public/images/service.webp'
+          src={Image1}
           alt={'Hero Image Service'}
           className='absolute -z-10 h-full w-full object-cover'
         />

@@ -1,5 +1,3 @@
-import { DisplayContentItem } from "./Display"
-
 export interface Service {
     name: string
     icon: string,
@@ -19,7 +17,7 @@ export const services: Service[] = [
     {
         name: 'MICE & EO',
         // name: 'MICE (Meeting Incentive Convention Exhibition)',
-        icon: 'https://asyakreasidahayu.com/public/assets/icons/mice.svg',
+        icon: '/assets/icons/mice.svg',
         asset: '/images/services/service (1).webp',
         nickname: 'MICE',
         description:
@@ -37,7 +35,7 @@ export const services: Service[] = [
     },
     {
         name: 'Multimedia',
-        icon: 'https://asyakreasidahayu.com/public/assets/icons/mulmed.svg',
+        icon: '/assets/icons/mulmed.svg',
         iconAdditionalClass: 'lg:-ml-4',
         asset: '/images/services/service (2).webp',
         description:
@@ -55,7 +53,7 @@ export const services: Service[] = [
     },
     {
         name: 'Ticketing',
-        icon: 'https://asyakreasidahayu.com/public/assets/icons/ticketing.svg',
+        icon: '/assets/icons/ticketing.svg',
         asset: '/images/services/service (3).webp',
         description: 'Tim kami memberikan kemudahan dalam perencanaan akomodasi perjalanan kerja dengan komitmen meningkatkan kepuasan dan pengalaman yang lebih baik dibanding dengan pelayanan konvensional untuk pemesanan tiket dan hotel baik dalam dan luar negeri.',
         feature: [
@@ -71,7 +69,7 @@ export const services: Service[] = [
     },
     {
         name: 'Garment & Fashion',
-        icon: 'https://asyakreasidahayu.com/public/assets/icons/garment.svg',
+        icon: '/assets/icons/garment.svg',
         asset: '/images/services/service (5).webp',
         description: 'Tim kami bekerja sama dalam menciptakan keindahan melalui desain mode busana dan aksesoris muslim. Sebagai jumlah populasi muslim terbesar di dunia, kami berdedikasi merancang menggunakan bahan yang diolah dengan jahitan terbaik menjadi sebuah karya yang berkualitas dan nyaman dengan mode yang trendy.',
         feature: [
@@ -83,7 +81,7 @@ export const services: Service[] = [
     },
     {
         name: 'Konsultan Kreatif',
-        icon: 'https://asyakreasidahayu.com/public/assets/icons/kreatif.svg',
+        icon: '/assets/icons/kreatif.svg',
         asset: '/images/services/service (4).webp',
         description:
             'Tim kami membantu dalam memberikan panduan dan solusi dalam merancang identitas grafis yang unik dengan mengidentifikasi peluang komersial, konsumen, dan budaya untuk merek tersebut.',

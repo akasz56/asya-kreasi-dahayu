@@ -51,6 +51,8 @@ const Home: NextPage = () => {
           <div className='mb-28 grid grid-cols-1 gap-24 lg:grid-cols-2 lg:gap-16'>
             <Link href='/#'>
               <Image
+                width={720}
+                height={720}
                 src={image1}
                 alt='MICE (Meeting Incentive Convention Exhibition)'
                 className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
@@ -65,6 +67,8 @@ const Home: NextPage = () => {
             </Link>
             <Link href='/#'>
               <Image
+                width={720}
+                height={720}
                 src={image2}
                 alt='Multimedia'
                 className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
@@ -79,6 +83,8 @@ const Home: NextPage = () => {
             </Link>
             <Link href='/#'>
               <Image
+                width={720}
+                height={720}
                 src={image3}
                 alt='Garment and Fashion'
                 className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
@@ -93,6 +99,8 @@ const Home: NextPage = () => {
             </Link>
             <Link href='/#'>
               <Image
+                width={720}
+                height={720}
                 src={image4}
                 alt='Ticketing'
                 className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'
@@ -107,6 +115,8 @@ const Home: NextPage = () => {
             </Link>
             <Link href='/#'>
               <Image
+                width={720}
+                height={720}
                 src={image5}
                 alt='Konsultan Kreatif'
                 className='-mx-4 mb-8 aspect-video w-screen max-w-none object-cover lg:mb-20 lg:aspect-square lg:max-w-full lg:rounded-3xl'

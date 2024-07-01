@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { NextPage } from 'next'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -42,8 +42,8 @@ const Index: NextPage = () => {
                   <Image
                     src={thumbnail.src}
                     alt={thumbnail.alt ?? ''}
-                    width={1080}
-                    height={1080}
+                    width={720}
+                    height={720}
                     className='mb-5 aspect-square object-cover lg:mb-16'
                   />
                 )}
