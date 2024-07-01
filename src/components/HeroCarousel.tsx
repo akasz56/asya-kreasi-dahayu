@@ -7,7 +7,6 @@ import image1 from '../../public/images/hero1.webp'
 import image2 from '../../public/images/hero2.webp'
 import image3 from '../../public/images/hero3.webp'
 import Slider from './Slider'
-import { Carousel } from 'flowbite-react'
 
 interface HeroCarouselProps {
   scrollTo: string
@@ -40,37 +39,39 @@ function HeroCarousel({ scrollTo }: HeroCarouselProps) {
   }
 
   return (
-    <Slider>
+    <Slider withNavigator={false}>
       <div className='relative h-screen'>
         <Image
           src={image1}
           alt='Hero Picture 1'
           className='absolute -z-10 h-full object-cover'
         />
-        <motion.div
-          initial='hidden'
-          variants={variants}
-          whileInView='visible'
-          className='flex h-full flex-col items-center justify-center gap-14'
-        >
-          <motion.p
-            variants={firstChildVariant}
-            className='asya-display-txt'
+        <div className='flex h-full w-full items-center justify-center'>
+          <motion.div
+            initial='hidden'
+            variants={variants}
+            whileInView='visible'
+            className='flex flex-col items-center justify-between gap-14'
           >
-            Menghidupkan ambisi dalam berkreasi. <br /> Bersama Asya nyalakan kembali asa.
-          </motion.p>
-          <motion.a
-            href='/our-services'
-            variants={firstChildVariant}
-            className='rounded-md bg-asya-dark py-3 px-6 text-xs font-medium uppercase tracking-widest text-white lg:text-base'
-          >
-            Get started
-          </motion.a>
-          <ScrollArrow
-            scrollTo={scrollTo}
-            className='lg:absolute lg:bottom-0 lg:mb-[5vw]'
-          />
-        </motion.div>
+            <motion.p
+              variants={firstChildVariant}
+              className='asya-display-txt'
+            >
+              Menghidupkan ambisi dalam berkreasi. <br /> Bersama Asya nyalakan kembali asa.
+            </motion.p>
+            <motion.a
+              href='/our-services'
+              variants={firstChildVariant}
+              className='rounded-md bg-asya-dark py-3 px-6 text-xs font-medium uppercase tracking-widest text-white lg:text-base'
+            >
+              Get started
+            </motion.a>
+            <ScrollArrow
+              variants={firstChildVariant}
+              scrollTo={scrollTo}
+            />
+          </motion.div>
+        </div>
       </div>
 
       <div className='relative h-screen'>

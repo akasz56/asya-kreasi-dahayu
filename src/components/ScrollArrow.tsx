@@ -3,12 +3,14 @@ import React from 'react'
 
 interface ScrollArrowProps {
   className?: string
+  variants?: any
   scrollTo: string
 }
 
-export default function ScrollArrow({ className, scrollTo }: ScrollArrowProps) {
+export default function ScrollArrow({ className, variants, scrollTo }: ScrollArrowProps) {
   return (
     <motion.a
+      variants={variants}
       href={scrollTo}
       whileHover={{ y: -5 }}
       className={className}

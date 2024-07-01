@@ -5,30 +5,32 @@ interface SliderProps {
   speed?: number
   duration?: number
   children?: ReactNode | ReactNode[]
+  withNavigator?: boolean
 }
 
 const DEFAULT_DURATION = 5000
 const DRAG_BUFFER = 50
 
-function SliderV2({ speed, duration, children }: SliderProps) {
+function Slider({ speed, duration, children, withNavigator }: SliderProps) {
   duration = duration ? duration * 1000 : DEFAULT_DURATION
+  let intervalRef: NodeJS.Timer
 
   const [imgIndex, setImgIndex] = useState(0)
   const dragX = useMotionValue(0)
 
-  // useEffect(() => {
-  //   const intervalRef = setInterval(() => {
-  //     if (!children || !Array.isArray(children)) return
+  useEffect(() => {
+    intervalRef = setInterval(() => {
+      if (!children || !Array.isArray(children)) return
 
-  //     const x = dragX.get()
+      const x = dragX.get()
 
-  //     if (x === 0) {
-  //       setImgIndex((pv) => (pv === children.length - 1 ? 0 : pv + 1))
-  //     }
-  //   }, duration)
+      if (x === 0) {
+        setImgIndex((pv) => (pv === children.length - 1 ? 0 : pv + 1))
+      }
+    }, duration)
 
-  //   return () => clearInterval(intervalRef)
-  // }, [duration, children, dragX])
+    return () => clearInterval(intervalRef)
+  }, [duration, children, dragX])
 
   const onDragEnd = () => {
     if (!children || !Array.isArray(children)) return
@@ -76,52 +78,56 @@ function SliderV2({ speed, duration, children }: SliderProps) {
           </div>
         ))}
       </motion.div>
+      {withNavigator && (
+        <>
+          <div
+            className='absolute top-0 left-0 hidden h-full cursor-pointer items-center px-4 md:flex'
+            onClick={() => {
+              setImgIndex((pv) => (pv === 0 ? children.length - 1 : pv - 1))
+              clearInterval(intervalRef)
+            }}
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              strokeWidth='1.5'
+              stroke='currentColor'
+              className='h-7 w-7 rotate-90 text-white lg:h-12 lg:w-12'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                d='M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3'
+              />
+            </svg>
+          </div>
+          <div
+            className='absolute top-0 right-0 hidden h-full cursor-pointer items-center px-4 md:flex'
+            onClick={() => {
+              setImgIndex((pv) => (pv === children.length - 1 ? 0 : pv + 1))
+              clearInterval(intervalRef)
+            }}
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              strokeWidth='1.5'
+              stroke='currentColor'
+              className='h-7 w-7 -rotate-90 text-white lg:h-12 lg:w-12'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                d='M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3'
+              />
+            </svg>
+          </div>
+        </>
+      )}
     </div>
   )
 }
 
-function Slider({ speed, duration, children }: SliderProps) {
-  speed ??= 0.5
-  duration = duration ? duration * 1000 : DEFAULT_DURATION
-
-  const [index, setIndex] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (children && Array.isArray(children)) {
-        setIndex((prevValue) => (prevValue < children.length - 1 ? prevValue + 1 : 0))
-      }
-    }, duration)
-
-    return () => clearInterval(interval)
-  }, [children, duration])
-
-  return !children ? (
-    <></>
-  ) : !Array.isArray(children) ? (
-    <div className='h-screen overflow-hidden'>{children}</div>
-  ) : (
-    <AnimatePresence>
-      <div className='relative h-screen overflow-hidden'>
-        <motion.div
-          key={index + 2}
-          initial={{ x: 0 }}
-          animate={{ x: '-100%', transition: { duration: speed, ease: 'easeInOut' } }}
-          className='absolute left-0 h-full w-full'
-        >
-          {children[index == 0 ? children.length - 1 : index - 1]}
-        </motion.div>
-        <motion.div
-          key={index}
-          initial={{ x: '100%' }}
-          animate={{ x: 0, transition: { duration: speed, ease: 'easeInOut' } }}
-          className='absolute left-0 h-full w-full'
-        >
-          {children[index]}
-        </motion.div>
-      </div>
-    </AnimatePresence>
-  )
-}
-
-export default SliderV2
+export default Slider

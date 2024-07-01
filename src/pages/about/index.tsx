@@ -51,8 +51,8 @@ const Index: NextPage = () => {
             Get To Know Asya Kreasi Dahayu, <br /> Where The Idea Starts
           </motion.p>
           <ScrollArrow
+            variants={itemEffect}
             scrollTo='#visi'
-            className='absolute bottom-[40%] lg:bottom-0 lg:mb-[5vw]'
           />
         </motion.div>
       </section>
