@@ -99,36 +99,3 @@ export const services: Service[] = [
         ],
     },
 ]
-
-export const servicesDisplay: DisplayContentItem[] = [
-    {
-        title: 'MICE (Meeting Incentive Convention Exhibition)',
-        image: '/images/services/service (1).webp',
-        description: 'Kami memberikan pelayanan dan edukasi untuk bidang yang masih minim atensi: “the meetings industry”.',
-        href: '#',
-    },
-    {
-        title: 'Multimedia',
-        image: '/images/services/service (2).webp',
-        description: 'Kami menciptakan hasil eksplorasi dengan realisasi ide yang unik dan berkelanjutan.',
-        href: '#',
-    },
-    {
-        title: 'Garment and Fashion',
-        image: '/images/services/service (5).webp',
-        description: 'Kami menciptakan mode yang inovatif namun tak lekang oleh waktu.',
-        href: '#',
-    },
-    {
-        title: 'Ticketing',
-        image: '/images/services/service (3).webp',
-        description: 'Kami memberikan solusi untuk kemudahan dalam perancanaan bepergian.',
-        href: '#',
-    },
-    {
-        title: 'Konsultan Kreatif',
-        image: '/images/services/service (4).webp',
-        description: 'Kami memberikan strategi dalam desain untuk membekali kreator dalam bertumbuh dan menciptakan mahakarya ke depannya.',
-        href: '#',
-    },
-]
