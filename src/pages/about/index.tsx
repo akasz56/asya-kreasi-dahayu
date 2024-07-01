@@ -34,7 +34,7 @@ const Index: NextPage = () => {
         className='relative h-screen'
       >
         <Image
-          src={heroImage}
+          src='https://asyakreasidahayu.com/public/images/about.webp'
           alt='Hero Image'
           className='absolute -z-10 h-full object-cover object-center'
         />
@@ -69,7 +69,7 @@ const Index: NextPage = () => {
             </p>
           </div>
           <Image
-            src={visiImage}
+            src='https://asyakreasidahayu.com/public/images/visi.webp'
             alt='Visi'
             className='-mx-4 mt-32 aspect-video w-screen max-w-none object-cover lg:m-0 lg:aspect-square lg:w-[40vw] lg:max-w-[587px]'
           />
@@ -97,7 +97,7 @@ const Index: NextPage = () => {
             </div>
           </div>
           <Image
-            src={misiImage}
+            src='https://asyakreasidahayu.com/public/images/misi.webp'
             alt='Misi'
             className='-mx-4 mt-32 aspect-video w-screen max-w-none object-cover lg:m-0 lg:aspect-square lg:w-[40vw] lg:max-w-[587px]'
           />

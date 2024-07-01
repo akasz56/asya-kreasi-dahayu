@@ -42,9 +42,9 @@ function HeroCarousel({ scrollTo }: HeroCarouselProps) {
     <Slider withNavigator={false}>
       <div className='relative h-screen'>
         <Image
-          src={image1}
+          src='https://asyakreasidahayu.com/public/images/hero1.webp'
           alt='Hero Picture 1'
-          className='absolute -z-10 h-full object-cover'
+          className='absolute -z-10 h-full w-full object-cover'
         />
         <div className='flex h-full w-full items-center justify-center'>
           <motion.div
@@ -155,16 +155,16 @@ function HeroCarousel({ scrollTo }: HeroCarouselProps) {
       <div className='relative h-screen'>
         <Image
           draggable={false}
-          src={image2}
+          src='https://asyakreasidahayu.com/public/images/hero2.webp'
           alt='Hero Picture 2'
-          className='absolute -z-10 h-full object-cover'
+          className='absolute -z-10 h-full w-full object-cover'
         />
       </div>
 
       <div className='relative h-screen overflow-hidden'>
         <Image
           draggable={false}
-          src={image3}
+          src='https://asyakreasidahayu.com/public/images/hero3.webp'
           alt='Hero Picture 3'
           className='absolute -right-[22.5vw] h-full max-w-fit md:-right-52 xl:right-0 xl:w-full xl:max-w-none xl:object-cover xl:object-center'
         />

@@ -29,7 +29,6 @@ export default function WorksItem(props: WorksItemProps) {
 
   useEffect(() => {
     function handleResize() {
-      console.log(window.innerWidth)
       setIsMobileView(window.innerWidth < 1024)
     }
     window.addEventListener('resize', handleResize)

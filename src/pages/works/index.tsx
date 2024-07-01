@@ -16,13 +16,6 @@ export type Client = {
 const Index: NextPage = () => {
   const works: Work[] = worksData
 
-  const clients: Client[] = [...Array(12)].map((_, idx) => ({
-    name: 'Nama Klien Lorem Ipsum Dolor ' + idx,
-    description: 'Dolor Sit Amet, Lorem Ipsum Dolor Amet Sit',
-    year: '2019',
-    image: '/images/misi.webp',
-  }))
-
   return (
     <CustomHead
       title='Works'
