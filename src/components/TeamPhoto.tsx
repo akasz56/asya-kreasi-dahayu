@@ -34,8 +34,7 @@ export default function TeamPhoto({ teamMember }: TeamPhotoProps) {
         <motion.div
           style={{ opacity: isHovered ? 1 : 0 }}
           className={innerBox + ' transition-opacity'}
-          initial={{ x: -10 }}
-          whileHover={{ x: 0.01, transition: { duration: 0.5 } }}
+          animate={{ x: isHovered ? 0.01 : -10, transition: { duration: 0.5 } }}
         >
           <h6 className={nama + ' text-[13px]'}>{teamMember.name}</h6>
           <p className={position + ' text-[11px]'}>{teamMember.position}</p>

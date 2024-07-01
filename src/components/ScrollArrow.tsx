@@ -19,7 +19,7 @@ export default function ScrollArrow({ className, scrollTo }: ScrollArrowProps) {
         viewBox='0 0 24 24'
         strokeWidth='1.5'
         stroke='currentColor'
-        className='h-12 w-12 text-white'
+        className='h-7 w-7 text-white lg:h-12 lg:w-12'
       >
         <path
           strokeLinecap='round'

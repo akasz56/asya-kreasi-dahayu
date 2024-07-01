@@ -50,26 +50,10 @@ const Index: NextPage = () => {
           >
             Get To Know Asya Kreasi Dahayu, <br /> Where The Idea Starts
           </motion.p>
-          <motion.a
-            href='#visi'
-            whileHover={{ y: -5 }}
+          <ScrollArrow
+            scrollTo='#visi'
             className='absolute bottom-[40%] lg:bottom-0 lg:mb-[5vw]'
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              strokeWidth='1.5'
-              stroke='currentColor'
-              className='h-7 w-7 text-white lg:h-12 lg:w-12'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3'
-              />
-            </svg>
-          </motion.a>
+          />
         </motion.div>
       </section>
 
