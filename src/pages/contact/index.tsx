@@ -44,8 +44,9 @@ const Index: NextPage = () => {
               <td className='pr-2 align-top lg:py-2 lg:pr-8'>Address</td>
               <td className='align-top lg:py-2'> : </td>
               <td className='pl-2 align-top lg:py-2 lg:pl-8'>
-                Jl. Ring Road Bubulak No. A-4, <br /> Kelurahan Bubulak, Kec. Bogor Barat, <br /> Kota Bogor, Provinsi
-                Jawa Barat, 16115
+                Jl. Ring Road Bubulak No. A-4,
+                <span className='-mt-4 block lg:mt-0'>Kelurahan Bubulak, Kec. Bogor Barat,</span>
+                <span className='-mt-4 block lg:mt-0'>Kota Bogor, Provinsi Jawa Barat, 16115</span>
               </td>
             </tr>
           </tbody>

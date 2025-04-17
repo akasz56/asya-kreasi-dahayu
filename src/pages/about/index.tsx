@@ -32,7 +32,7 @@ const Index: NextPage = () => {
         <img
           src={'https://asyakreasidahayu.com/public/images/about.webp'}
           alt='Hero Image'
-          className='absolute -z-10 h-full object-cover object-center'
+          className='absolute -z-10 h-full w-full object-cover object-center'
         />
         <motion.div
           initial='hidden'
